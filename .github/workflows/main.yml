@@ -23,5 +23,5 @@ jobs:
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
           security: strict
-          local_dir: "./public_html"
-          delete: "false"
+          local_dir: ./dist/
+          delete: false
