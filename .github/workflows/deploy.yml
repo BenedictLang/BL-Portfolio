@@ -2,14 +2,13 @@ name: Website Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-        working-directory: ./deploy
     steps:
     - uses: actions/checkout@v2
       with:
@@ -27,9 +26,9 @@ jobs:
     - name: FTP Deploy (Production)
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ${{ secrets.ftp_server }}
-        ftp-username: ${{ secrets.ftp_user }}
-        ftp-password: ${{ secrets.ftp_password }}
+        server: ${{ secrets.ftp_server }}
+        username: ${{ secrets.ftp_user }}
+        password: ${{ secrets.ftp_password }}
         server-dir: portfolio/
         local-dir: ./dist/
         state-name: .log/.sync-state.json
