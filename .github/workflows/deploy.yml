@@ -1,0 +1,37 @@
+name: Website Deploy
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./deploy
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: npm install
+      run: npm install
+
+    - name: npm run bundle
+      run: npm run bundle
+
+    - name: FTP Deploy (Production)
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ${{ secrets.ftp_server }}
+        ftp-username: ${{ secrets.ftp_user }}
+        ftp-password: ${{ secrets.ftp_password }}
+        server-dir: portfolio/
+        local-dir: ./dist/
+        state-name: .log/.sync-state.json
+        log-level: standard
+        security: strict
