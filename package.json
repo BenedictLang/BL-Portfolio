@@ -1,0 +1,21 @@
+{
+  "name": "bl_portfolio",
+  "version": "1.0.0",
+  "author": "Benedict Lang",
+  "description": "",
+  "license": "GNU AGPLv3",
+  "main": "",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "script": "^0.1.4",
+    "smooth-scrollbar": "^8.6.3",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.38.1"
+  }
+}

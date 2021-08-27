@@ -1,0 +1,202 @@
+// *****************
+// COLORS
+// *****************
+/*=== Color Theme ===*/
+/*
+Mint:       146
+Orange:     19
+Turquoise:  173
+blue:       185
+water:      201
+purple:     252
+redBlue:    346
+red:        0
+//
+#CC3E3E  #A03038     #1f2025 linear-gradient(70deg, #18233C, #263f6e)
+*/
+
+
+/*:root {
+  --clr-primary: hsl(19, 72%, 60%);
+  --clr-secondary: #2C4A81;
+  --clr-container: #eff2ff;
+  --clr-scene: var(--clr-text);
+  --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
+  --clr-text: rgb(20, 27, 43);
+  --clr-icon: #141B2B;
+}*/
+
+$clr-text: 'clr-text';
+$clr-icon: 'clr-icon';
+$clr-primary: 'clr-primary';
+$clr-secondary: 'clr-secondary';
+$clr-container: 'clr-container';
+$clr-scene: 'clr-scene';
+$clr-background: 'clr-background';
+
+$themes: (
+        darkTheme:(
+                clr-primary: hsl(19, 72%, 60%),
+                clr-secondary: #fff,
+                clr-container: #283244,
+                clr-scene: #0c101a,
+                clr-background: linear-gradient(75deg, #141B2B, #243352),
+                clr-text: rgb(255, 255, 255),
+                clr-icon: #383838
+        ),
+        lightTheme: (
+                clr-primary: hsl(19, 72%, 60%),
+                clr-secondary: #2C4A81,
+                clr-container: #eff2ff,
+                clr-scene: rgb(20, 27, 43),
+                clr-background: linear-gradient(70deg, #ffffff, #f1f9ff),
+                clr-text: rgb(20, 27, 43),
+                clr-icon: #141B2B
+        )
+);
+
+@mixin themify() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+/*$themes: (
+  darkTheme:(
+    clr-primary: hsl(19, 72%, 60%),
+    clr-secondary: #fff,
+    clr-container: #283244,
+    clr-scene: #0c101a,
+    clr-background: linear-gradient(75deg, #141B2B, #243352),
+    clr-text: rgb(255, 255, 255),
+    clr-icon: #383838
+  ),
+  lightTheme: (
+    'clr-primary': hsl(19, 72%, 60%),
+    'clr-secondary': #2C4A81,
+    'clr-container': #eff2ff,
+    'clr-scene': rgb(20, 27, 43),
+    'clr-background': linear-gradient(70deg, #ffffff, #f1f9ff),
+    'clr-text': rgb(20, 27, 43),
+    'clr-icon': #141B2B
+  )
+);*/
+
+/*@mixin theme() {
+  @each $theme, $map in $themes {
+    $theme-map: $map !global;
+    .#{$theme} & {
+      @content;    // the content inside @include theme() {...}
+    }
+  }
+  // no use of the variable $theme-map now
+  $theme-map: null !global;
+}
+
+@function theme-get($key) {
+  @return map-get($theme-map, $key);
+}
+
+.darkTheme .content {
+  color: white;
+  background-color: #424242;
+}
+
+.lightTheme .content {
+  color: black;
+  background-color: #f5f5f5;
+}*/
+
+/*@mixin theme() {
+  @each $theme, $map in $themes {
+    $theme-map: $map;
+    .#{$theme} & {
+      @content;
+    }
+  }
+  $theme-map: null;
+}
+
+@function theme-get($key) {
+  @if ($theme-map: null) {
+    @return red;
+  } @else {
+    @return map-get($theme-map, $key);
+  }
+}
+
+body {
+  @include theme(){
+    background-color: theme-get('clr-primary');
+  }
+  overflow-x: hidden;
+}*/
+
+/*.darkmode {
+  --clr-secondary: #fff;
+  --clr-container: #283244;
+  --clr-scene: #0c101a;
+  --clr-background: linear-gradient(75deg, #141B2B, #243352);
+  --clr-text: rgb(255, 255, 255);
+  --clr-icon: #383838;
+}*/
+
+/*$clr-text: var(--clr-text) !default;
+$clr-icon: var(--clr-icon) !default;
+$clr-primary: var(--clr-primary) !default;
+$clr-secondary: var(--clr-secondary) !default;
+$clr-container: var(--clr-container) !default;
+$clr-scene: var(--clr-scene) !default;
+$clr-background: var(--clr-background) !default;*/
+
+
+//**************
+// BREAKPOINTS
+//**************
+$bp-mobile: 400px;
+$bp-tablet: 768px;
+$bp-laptop: 950px;
+$bp-desktop: 1200px;
+$bp-wideS: 1440px;
+
+// *******
+// FONTS
+// *******
+$ft-special: "Helvetica", sans-serif;
+$ft-light: "Helvetica", sans-serif;
+$ft-lighter: "Helvetica", sans-serif;
+$ft-medium: "Helvetica", sans-serif;
+$ft-bold: "Helvetica", sans-serif;
+
+/*
+Helvetica
+Poppins
+Raleway
+*/
+
+// *********
+// SCALING
+// *********
+:root {
+  $scale-element: 1;
+  $scale-font: 1;
+}
+
+@media (min-width: $bp-laptop){
+  :root {
+    $scale-element: 0.925;
+    $scale-font: 0.925;
+  }
+}

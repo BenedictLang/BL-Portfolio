@@ -1,0 +1,16 @@
+#dark-mode-toggle {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border-width: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  transition: all 1s;
+  transition-property: background-color, color;
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 0 3px;
+}

@@ -1,0 +1,64 @@
+@use '../1-helpers/variables' as v;
+/*@use '../1-helpers/functions' as f;*/
+/*@use '../1-helpers/mixins' as *;*/
+
+body {
+  font-family: v.$ft-light;
+}
+
+a {
+  @include v.themify() {
+    color: v.themed(v.$clr-primary);
+  }
+  text-decoration: none;
+  font-style: italic;
+}
+
+// ******
+// Text
+// ******
+h1, h2, h4, h5, h6 {
+  font-weight: normal;
+  font-family: 'Abril Fatface', cursive;
+}
+
+h1 {
+  /*color: var(--clr-text);*/
+  /*color: v.$clr-text;*/
+  font-size: clamp(1rem, 1rem + 10vw, 4rem);
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h6 {
+  /*@include v.theme() {
+    color: v.theme-get('clr-primary');
+  }*/
+}
+
+p,
+li,
+input {
+  font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.25rem);
+  line-height: clamp(0.7rem, calc(3rem + 1vw), 2.3rem);
+  font-weight: normal;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+@media (max-width: var(--bp-wideS)) {
+  .page .page-content .page-section h1 {
+    max-width: 720px;
+    font-size: calc(24px + 2.58vw);
+    line-height: calc(24px + 2.58vw);
+  }
+
+  p, li, input {
+    font-size: clamp(1.125rem, 1rem + 10vw, 3rem);
+  }
+}
