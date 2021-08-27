@@ -7,9 +7,9 @@ body {
 }
 
 a {
-  @include v.themify() {
+/*  @include v.themify() {
     color: v.themed(v.$clr-primary);
-  }
+  }*/
   text-decoration: none;
   font-style: italic;
 }
