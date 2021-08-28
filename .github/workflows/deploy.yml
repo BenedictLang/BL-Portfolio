@@ -11,10 +11,14 @@ jobs:
 #      run:
 #        working-directory: ./
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v2
       - name: Display the path
         run: echo $PATH
         shell: bash
+      - name: Run a multi-line script
+        run: |
+          echo test the checkout action,
+          ls -a
       # Here is the deployment action
   deploy:
     name: Deploy 🚀
