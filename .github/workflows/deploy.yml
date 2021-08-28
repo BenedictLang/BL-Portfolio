@@ -26,7 +26,7 @@ jobs:
         uses: airvzxf/ftp-deployment-action@master
         with:
           server: ${{ secrets.ftp_server }}
-          remote_dir: ./portfolio
+#          remote_dir: ./portfolio
           user: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
 #          local_dir: ./dist
