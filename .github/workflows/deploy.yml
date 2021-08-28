@@ -28,5 +28,5 @@ jobs:
           remote_dir: ./portfolio
           user: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
-          local_dir: ./dist
+          local_dir: github/workspace/dist
 #valid inputs are ['entryPoint', 'args', 'server', 'user', 'password', 'local_dir', 'remote_dir', 'delete', 'max_retries', 'no_symlinks', 'ftp_ssl_allow', 'ftp_use_feat', 'ftp_nop_interval', 'net_max_retries', 'net_persist_retries', 'net_timeout', 'dns_max_retries', 'dns_fatal_timeout']
