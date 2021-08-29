@@ -191,42 +191,8 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"script/darkMode.js":[function(require,module,exports) {
 // Dark mode
-//theme-toggler
 
-/*const getTheme = window.localStorage && window.localStorage.getItem("theme");
-const themeToggle = document.querySelector(".theme-toggle");
-const isDark = getTheme === "darkTheme";
-
-if (getTheme !== null) {
-    document.body.classList.toggle("dark-theme", isDark);
-}
-
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("toggleTheme");
-    window.localStorage &&
-    window.localStorage.setItem(
-        "theme",
-        document.body.classList.contains("dark-theme") ? "darkTheme" : "light"
-    );
-});
-console.log()*/
-
-/*new vue({
-    el: "#app",
-    data: function(){
-        return {
-            darkTheme:false
-        }
-    },
-    methods: {
-        toggleTheme: function () {
-            this.darkTheme = !this.darkTheme;
-        }
-    }
-})*/
-
-/*
-darkModeInit();
+/*darkModeInit();
 function darkModeInit() {
     let darkMode = null;
     if (typeof(Storage) !== "undefined") {
@@ -245,15 +211,15 @@ function darkModeInit() {
         }
     }
     if (darkMode === true) {
-        document.documentElement.classList.add('darkmode');
+        document.documentElement.classList.add('darkMode');
     } else if (darkMode === false) {
-        document.documentElement.classList.remove('darkmode');
+        document.documentElement.classList.remove('darkMode');
     }
 }
 function darkModeToggle() {
-    document.documentElement.classList.toggle('darkmode');
+    document.documentElement.classList.toggle('darkMode');
     if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("darkMode", document.documentElement.classList.contains('darkmode'));
+        localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode'));
     }
 }*/
 },{}],"../node_modules/tslib/tslib.es6.js":[function(require,module,exports) {
@@ -6667,6 +6633,44 @@ require("./styles/main.scss");
 require("./script/darkMode");
 
 require("./script/main");
+
+darkModeInit();
+
+function darkModeInit() {
+  var darkMode = null;
+
+  if (typeof Storage !== "undefined") {
+    switch (localStorage.getItem("darkMode")) {
+      case 'true':
+        darkMode = true;
+        break;
+
+      case 'false':
+        darkMode = false;
+        break;
+    }
+  }
+
+  if (darkMode === null) {
+    if (window.matchMedia) {
+      darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+  }
+
+  if (darkMode === true) {
+    document.documentElement.classList.add('darkMode');
+  } else if (darkMode === false) {
+    document.documentElement.classList.remove('darkMode');
+  }
+}
+
+function darkModeToggle() {
+  document.documentElement.classList.toggle('darkMode');
+
+  if (typeof Storage !== "undefined") {
+    localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode'));
+  }
+}
 },{"./styles/main.scss":"styles/main.scss","./script/darkMode":"script/darkMode.js","./script/main":"script/main.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -6695,7 +6699,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50712" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

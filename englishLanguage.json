@@ -1,0 +1,624 @@
+{
+  "componentChunkName": "component---src-templates-page-tsx",
+  "path": "/terms-of-service",
+  "result": {
+    "data": {
+      "prismic": {
+        "template_page": {
+          "_meta": {
+            "uid": "terms-of-service"
+          },
+          "page_title": [
+            {
+              "type": "heading1",
+              "text": "Terms of Service",
+              "spans": []
+            }
+          ],
+          "page_img_desktop": null,
+          "page_img_mobile": null,
+          "meta_title": [
+            {
+              "type": "paragraph",
+              "text": "Terms of Service",
+              "spans": []
+            }
+          ],
+          "meta_description": [
+            {
+              "type": "paragraph",
+              "text": "These Terms of Service (“Terms of Service”) are entered into by and between you and Aurora Innovation, Inc.",
+              "spans": []
+            }
+          ],
+          "social_cards__image_facebook__1200x630px_": null,
+          "social_cards__image_twitter": null,
+          "meta_noindex": false,
+          "body": [
+            {
+              "__typename": "PRISMIC_Template_pageBodyText",
+              "type": "text",
+              "label": null,
+              "primary": {
+                "page_slice_richtext": [
+                  {
+                    "type": "heading3",
+                    "text": "Acceptance of the Terms of Service",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "These Terms of Service (“Terms of Service”) are entered into by and between you and Aurora Operations, Inc. (\"Aurora\") and govern your access to and use of https://aurora.tech (\"Website\"), including any content, functionality, and services offered on or through the Website.",
+                    "spans": [
+                      {
+                        "start": 156,
+                        "end": 175,
+                        "type": "hyperlink",
+                        "data": {
+                          "link_type": "Web",
+                          "url": "https://aurora.tech"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "By using the Website, you accept and agree to be bound and abide by these Terms of Service and Aurora’s Privacy Policy (“Privacy Policy”), found at https://aurora.tech/privacy If you do not want to agree to the Terms of Service or the Privacy Policy, you should not access or use the Website. ",
+                    "spans": [
+                      {
+                        "start": 148,
+                        "end": 175,
+                        "type": "hyperlink",
+                        "data": {
+                          "id": "X7L81hMAACEA0XpS",
+                          "type": "template_page",
+                          "tags": [],
+                          "slug": "privacy-policy",
+                          "lang": "en-us",
+                          "first_publication_date": "2020-11-16T22:27:45+0000",
+                          "last_publication_date": "2021-05-12T15:12:57+0000",
+                          "uid": "privacy",
+                          "link_type": "Document",
+                          "isBroken": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Aurora may revise the content of this Website and these Terms of Service from time to time. All changes to the Terms of Service are effective when posted to this Website. Your continued use of the Website following the posting of the revised Terms of Service means that you agree to the revisions.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Accessing the Website",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "By using this Website, you represent and warrant that (1) you are 18 years of age or older, or an emancipated minor, or possess legal parental or guardian consent; (2) you are fully able and competent to enter into these Terms of Service; and (3) all information you provide on or through the Website is, to your knowledge, correct and governed by the Privacy Policy.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Prohibited Uses",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "You may use the Website only for lawful purposes and in accordance with these Terms of Service. You agree not to:",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Transmit, or procure the sending of, any advertising or promotional material, including any \"junk mail,\" \"chain letter,\" \"spam,\" or any other similar solicitation.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Impersonate or attempt to impersonate Aurora, an employee of Aurora, another user, or any other person or entity.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Use the Website in any way that violates any applicable federal, state, local, or international law or regulation.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Use the Website in any manner that could disable, overburden, damage, or impair the Website or interfere with Aurora or any users of the Website.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Use any automatic method to access the Website for any purpose, including but not limited to any robot or spider.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Use any automatic or manual process to monitor or copy any of the material on the Website, or for any other purpose not expressly authorized in these Terms of Service, without our prior written consent.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Use any device, software, or routine that interferes with the proper working of the Website.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Introduce any viruses, Trojan horses, worms, logic bombs, or other materials that are malicious or technologically harmful.",
+                    "spans": []
+                  },
+                  {
+                    "type": "o-list-item",
+                    "text": "Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Website or servers, computers, or databases connected to the Website.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Intellectual Property Rights",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The Website and its entire contents, features, and functionality are owned by Aurora, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. Aurora’s name, all related names, logos, product and service names, designs, and slogans are trademarks of Aurora or its affiliates or licensors. You must not use such marks without the prior written permission of Aurora. All other names, logos, product and service names, designs, and slogans on this Website are the trademarks of their respective owners. ",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "These Terms of Service permit you to use the Website for your personal and non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on the Website.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Third Party Content",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This Website may include or provide access to content provided by third parties, including materials provided by other users, bloggers, and third-party licensors, syndicators, aggregators, and/or reporting services. All statements and/or opinions expressed in these materials, and all articles and responses to questions and other content, other than the content provided by Aurora, are solely the opinions and the responsibility of the person or entity providing those materials. These materials do not necessarily reflect the opinion of Aurora. Aurora is not responsible, or liable to you or any third party, for the content or accuracy of any materials provided by any third parties.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Processing of Data",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This Website is for use only by persons located in the United States. By using the Website, you consent to the processing, transfer and storage of information about you in and to the United States and other countries, in accordance with these Terms of Service and the Privacy Policy.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Governing Law and Jurisdiction",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "All matters relating to the Website and these Terms of Service, and any dispute or claim arising from or related to (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of California without giving effect to any choice or conflict of law provision or rule (whether of the State of California or any other jurisdiction).",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Any legal suit, action, or proceeding arising out of, or related to, these Terms of Service or the Website shall be instituted exclusively in the federal courts of the United States or the courts of the State of California, Santa Clara County. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Disclaimer of Warranties",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Your use of the Website, its content, and any services or items obtained through the Website is at your own risk. The Website, its content, and any services or items obtained through the Website are provided on an \"as is\" and \"as available\" basis. To the fullest extent provided by law, Aurora hereby disclaims all warranties of any kind related to the Website, its content, and any services or items obtained through the Website, whether express or implied, statutory, or otherwise, including but not limited to any warranties of accuracy, security, completeness, availability, merchantability, non-infringement, and fitness for a particular purpose.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Limitation on Liability",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "To the fullest extent provided by law, Aurora and its affiliates, or their licensors, service providers, employees, agents, officers, or directors (“Aurora Parties”) will not be liable to you for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Website, any websites linked to the Website, any content on the Website or such other websites.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "To the fullest extent provided by law, the collective liability of the Aurora Parties and their assigns to any party arising out of or in connection with your use, or inability to use, the Website, any websites linked to the Website, any content on the Website or such other websites will not exceed $50.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The limitation of liability set out above does not (1) apply to liability resulting from Aurora’s gross negligence or willful misconduct or (2) affect any liability that cannot be excluded or limited under applicable law.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Indemnification",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "You agree to defend, indemnify, and hold harmless the Aurora Parties and their assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys’ fees) arising out of or relating to your violation of these Terms of Service or your use of the Website, including, but not limited to, the information you provide Aurora through the Website, any use of the Website’s content, services, and products other than as expressly authorized in these Terms of Service, or your use of any information obtained from the Website.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Waiver and Severability",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "No waiver by Aurora of any term or condition set out in these Terms of Service shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Aurora to assert a right or provision under these Terms of Service shall not constitute a waiver of such right or provision.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "If any provision of these Terms of Service is held by a court or other tribunal of competent jurisdiction to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Service will continue in full force and effect.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Your Comments and Concerns",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This Website is operated by Aurora. All notices of copyright infringement claims, and any other comments or concerns, should be sent to copyright-ext@aurora.tech.",
+                    "spans": []
+                  },
+                  {
+                    "type": "heading3",
+                    "text": "Feedback",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Any kind of feedback that Aurora receives from you, including your comments, suggestions, and requests (“Suggestions”) will be considered non-confidential. You hereby assign to Aurora all right, title, and interest in and to such Suggestions, without acknowledgement or compensation to you.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "",
+                    "spans": []
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "allShared_contentsuis": {
+          "edges": [
+            {
+              "node": {
+                "global_page_billboard_title": [
+                  {
+                    "type": "heading2",
+                    "text": "Follow our journey",
+                    "spans": []
+                  }
+                ],
+                "global_page_billboard_richtext": [
+                  {
+                    "type": "paragraph",
+                    "text": "Check out our Aurora Autonomy blog for the latest news on our team, our technology, and our progress as we chart the course that will deliver self-driving technology to the world.",
+                    "spans": []
+                  }
+                ],
+                "global_page_billboard_link_label": [
+                  {
+                    "type": "paragraph",
+                    "text": "Read the blog",
+                    "spans": []
+                  }
+                ],
+                "global_page_billboard_link_destination": {
+                  "__typename": "PRISMIC_News_page",
+                  "_meta": {
+                    "uid": "blog"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "pageContext": {
+      "lang": "en-us",
+      "uid": "terms-of-service",
+      "pageData": {
+        "_meta": {
+          "uid": "terms-of-service"
+        },
+        "page_title": [
+          {
+            "type": "heading1",
+            "text": "Terms of Service",
+            "spans": []
+          }
+        ],
+        "page_img_desktop": null,
+        "page_img_mobile": null,
+        "meta_title": [
+          {
+            "type": "paragraph",
+            "text": "Terms of Service",
+            "spans": []
+          }
+        ],
+        "meta_description": [
+          {
+            "type": "paragraph",
+            "text": "These Terms of Service (“Terms of Service”) are entered into by and between you and Aurora Innovation, Inc.",
+            "spans": []
+          }
+        ],
+        "social_cards__image_facebook__1200x630px_": null,
+        "social_cards__image_twitter": null,
+        "meta_noindex": false,
+        "body": [
+          {
+            "type": "text",
+            "label": null,
+            "primary": {
+              "page_slice_richtext": [
+                {
+                  "type": "heading3",
+                  "text": "Acceptance of the Terms of Service",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "These Terms of Service (“Terms of Service”) are entered into by and between you and Aurora Operations, Inc. (\"Aurora\") and govern your access to and use of https://aurora.tech (\"Website\"), including any content, functionality, and services offered on or through the Website.",
+                  "spans": [
+                    {
+                      "start": 156,
+                      "end": 175,
+                      "type": "hyperlink",
+                      "data": {
+                        "link_type": "Web",
+                        "url": "https://aurora.tech"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "By using the Website, you accept and agree to be bound and abide by these Terms of Service and Aurora’s Privacy Policy (“Privacy Policy”), found at https://aurora.tech/privacy If you do not want to agree to the Terms of Service or the Privacy Policy, you should not access or use the Website. ",
+                  "spans": [
+                    {
+                      "start": 148,
+                      "end": 175,
+                      "type": "hyperlink",
+                      "data": {
+                        "id": "X7L81hMAACEA0XpS",
+                        "type": "template_page",
+                        "tags": [],
+                        "slug": "privacy-policy",
+                        "lang": "en-us",
+                        "first_publication_date": "2020-11-16T22:27:45+0000",
+                        "last_publication_date": "2021-05-12T15:12:57+0000",
+                        "uid": "privacy",
+                        "link_type": "Document",
+                        "isBroken": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Aurora may revise the content of this Website and these Terms of Service from time to time. All changes to the Terms of Service are effective when posted to this Website. Your continued use of the Website following the posting of the revised Terms of Service means that you agree to the revisions.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Accessing the Website",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "By using this Website, you represent and warrant that (1) you are 18 years of age or older, or an emancipated minor, or possess legal parental or guardian consent; (2) you are fully able and competent to enter into these Terms of Service; and (3) all information you provide on or through the Website is, to your knowledge, correct and governed by the Privacy Policy.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Prohibited Uses",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "You may use the Website only for lawful purposes and in accordance with these Terms of Service. You agree not to:",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Transmit, or procure the sending of, any advertising or promotional material, including any \"junk mail,\" \"chain letter,\" \"spam,\" or any other similar solicitation.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Impersonate or attempt to impersonate Aurora, an employee of Aurora, another user, or any other person or entity.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Use the Website in any way that violates any applicable federal, state, local, or international law or regulation.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Use the Website in any manner that could disable, overburden, damage, or impair the Website or interfere with Aurora or any users of the Website.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Use any automatic method to access the Website for any purpose, including but not limited to any robot or spider.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Use any automatic or manual process to monitor or copy any of the material on the Website, or for any other purpose not expressly authorized in these Terms of Service, without our prior written consent.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Use any device, software, or routine that interferes with the proper working of the Website.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Introduce any viruses, Trojan horses, worms, logic bombs, or other materials that are malicious or technologically harmful.",
+                  "spans": []
+                },
+                {
+                  "type": "o-list-item",
+                  "text": "Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Website or servers, computers, or databases connected to the Website.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Intellectual Property Rights",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The Website and its entire contents, features, and functionality are owned by Aurora, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. Aurora’s name, all related names, logos, product and service names, designs, and slogans are trademarks of Aurora or its affiliates or licensors. You must not use such marks without the prior written permission of Aurora. All other names, logos, product and service names, designs, and slogans on this Website are the trademarks of their respective owners. ",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "These Terms of Service permit you to use the Website for your personal and non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on the Website.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Third Party Content",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "This Website may include or provide access to content provided by third parties, including materials provided by other users, bloggers, and third-party licensors, syndicators, aggregators, and/or reporting services. All statements and/or opinions expressed in these materials, and all articles and responses to questions and other content, other than the content provided by Aurora, are solely the opinions and the responsibility of the person or entity providing those materials. These materials do not necessarily reflect the opinion of Aurora. Aurora is not responsible, or liable to you or any third party, for the content or accuracy of any materials provided by any third parties.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Processing of Data",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "This Website is for use only by persons located in the United States. By using the Website, you consent to the processing, transfer and storage of information about you in and to the United States and other countries, in accordance with these Terms of Service and the Privacy Policy.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Governing Law and Jurisdiction",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "All matters relating to the Website and these Terms of Service, and any dispute or claim arising from or related to (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of California without giving effect to any choice or conflict of law provision or rule (whether of the State of California or any other jurisdiction).",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Any legal suit, action, or proceeding arising out of, or related to, these Terms of Service or the Website shall be instituted exclusively in the federal courts of the United States or the courts of the State of California, Santa Clara County. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Disclaimer of Warranties",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Your use of the Website, its content, and any services or items obtained through the Website is at your own risk. The Website, its content, and any services or items obtained through the Website are provided on an \"as is\" and \"as available\" basis. To the fullest extent provided by law, Aurora hereby disclaims all warranties of any kind related to the Website, its content, and any services or items obtained through the Website, whether express or implied, statutory, or otherwise, including but not limited to any warranties of accuracy, security, completeness, availability, merchantability, non-infringement, and fitness for a particular purpose.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Limitation on Liability",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "To the fullest extent provided by law, Aurora and its affiliates, or their licensors, service providers, employees, agents, officers, or directors (“Aurora Parties”) will not be liable to you for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Website, any websites linked to the Website, any content on the Website or such other websites.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "To the fullest extent provided by law, the collective liability of the Aurora Parties and their assigns to any party arising out of or in connection with your use, or inability to use, the Website, any websites linked to the Website, any content on the Website or such other websites will not exceed $50.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The limitation of liability set out above does not (1) apply to liability resulting from Aurora’s gross negligence or willful misconduct or (2) affect any liability that cannot be excluded or limited under applicable law.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Indemnification",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "You agree to defend, indemnify, and hold harmless the Aurora Parties and their assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys’ fees) arising out of or relating to your violation of these Terms of Service or your use of the Website, including, but not limited to, the information you provide Aurora through the Website, any use of the Website’s content, services, and products other than as expressly authorized in these Terms of Service, or your use of any information obtained from the Website.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Waiver and Severability",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "No waiver by Aurora of any term or condition set out in these Terms of Service shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Aurora to assert a right or provision under these Terms of Service shall not constitute a waiver of such right or provision.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If any provision of these Terms of Service is held by a court or other tribunal of competent jurisdiction to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Service will continue in full force and effect.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Your Comments and Concerns",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "This Website is operated by Aurora. All notices of copyright infringement claims, and any other comments or concerns, should be sent to copyright-ext@aurora.tech.",
+                  "spans": []
+                },
+                {
+                  "type": "heading3",
+                  "text": "Feedback",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Any kind of feedback that Aurora receives from you, including your comments, suggestions, and requests (“Suggestions”) will be considered non-confidential. You hereby assign to Aurora all right, title, and interest in and to such Suggestions, without acknowledgement or compensation to you.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rootQuery": "\n  query template_page($uid: String!) {\n    prismic {\n      template_page(uid: $uid, lang: \"en-us\") {\n        _meta {\n          uid\n        }\n        \n        page_title\n        page_img_desktop\n        page_img_mobile\n\n        meta_title\n        meta_description\n        social_cards__image_facebook__1200x630px_\n        social_cards__image_twitter\n        meta_noindex\n\n        body {\n          ... on PRISMIC_Template_pageBodyText {\n            type\n            label\n            primary {\n              page_slice_richtext\n            }\n          }\n          ... on PRISMIC_Template_pageBodyQuote {\n            type\n            label\n            primary {\n              page_slice_quote\n              page_slice_quote_author\n              page_slice_quote_portrait\n            }\n          }\n          ... on PRISMIC_Template_pageBodyImage {\n            type\n            label\n            primary {\n              page_slice_img\n              page_slice_img_caption\n              page_slice_img_layout\n            }\n          }\n          ... on PRISMIC_Template_pageBody2Col_text_image {\n            type\n            label\n            primary {\n              page_slice_2col_mirrored\n              page_slice_2col_img\n              page_slice_2col_title\n              page_slice_2col_richtext\n              page_slice_2col_link_label\n              page_slice_2col_link_destination {\n                __typename\n                ... on PRISMIC__ExternalLink {\n                  url\n                }\n                ... on PRISMIC__FileLink {\n                  name\n                  url\n                  size\n                }\n                ... on PRISMIC__Document {\n                  __typename\n                  _meta {\n                    uid\n                  }\n                }\n              }\n            }\n          }\n          ... on PRISMIC_Template_pageBodyBlockquote {\n            type\n            label\n            primary {\n              blockquote\n              credits\n            }\n          }\n          ... on PRISMIC_Template_pageBodyList_interactive {\n            type\n            label\n            primary {\n              page_slice_list_richtext\n              page_slice_list_title\n            }\n            fields {\n              img\n              richtext\n              title\n            }\n          }\n          ... on PRISMIC_Template_pageBodyVideo {\n            type\n            label\n            primary {\n              page_video_url\n              page_video_caption\n            }\n          }\n          ... on PRISMIC_Template_pageBodyCta_button {\n            type\n            label\n            primary {\n              label\n              destination {\n                __typename\n                ... on PRISMIC__ExternalLink {\n                  url\n                }\n                ... on PRISMIC__FileLink {\n                  name\n                  url\n                  size\n                }\n                ... on PRISMIC__Document {\n                  __typename\n                  _meta {\n                    uid\n                  }\n                }\n              }\n            }\n          }\n          ... on PRISMIC_Template_pageBodyEmbed_code {\n            type\n            label\n            primary {\n              embed_code\n            }\n          }\n          ... on PRISMIC_Template_pageBodyImages_carousel {\n            type\n            label\n            fields {\n              image\n              caption\n            }\n          }\n        }\n      }\n      allShared_contentsuis {\n        edges {\n          node {\n            global_page_billboard_title\n            global_page_billboard_richtext\n            global_page_billboard_link_label\n            global_page_billboard_link_destination {\n              __typename\n              ... on PRISMIC__ExternalLink {\n                url\n              }\n              ... on PRISMIC__FileLink {\n                name\n                url\n                size\n              }\n              ... on PRISMIC__Document {\n                __typename\n                _meta {\n                  uid\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n"
+    }
+  },
+  "staticQueryHashes": [
+    "2230013286",
+    "3324960530",
+    "639945887"
+  ]
+}

@@ -1,0 +1,50 @@
+@use '../1-helpers/variables' as v;
+
+html {
+  transition-property: background-color, color;
+}
+
+body {
+  transition: 500ms;
+
+  &:before {
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+#main-grid {
+  padding: 5em;
+  margin: 0 2em;
+  max-width: 60rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 1em;
+  max-width: 60rem;
+}
+
+@media (min-width: 40em) {
+  .split {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+section#slider{
+  padding: 45vh v.$pdd-side 10vh v.$pdd-side;
+  min-height: 100vh;
+}
+
+section.page-section {
+    padding: v.$pdd-side;
+    min-height: 70vh;
+}
+
+section:nth-of-type(2) {
+  background: v.$clr-primary;
+}

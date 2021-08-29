@@ -1,0 +1,23 @@
+@use '../1-helpers/variables' as v;
+
+/* Footer */
+footer {
+
+}
+.footer {
+  width: 100vw;
+  padding: 3em v.$pdd-side;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  background: var(--clr-scene);
+  border-top-right-radius: 70px;
+}
+
+.copyright {
+
+}
+
+.social-links {
+  display: flex;
+}

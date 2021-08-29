@@ -1,6 +1,5 @@
-/*
 @use '../1-helpers/variables' as v;
-!*@use '../1-helpers/mixins' as *;*!
+/*@use '../1-helpers/mixins' as *;*/
 
 * {
   box-sizing: border-box;
@@ -11,60 +10,26 @@
 html {
   height: 100vh;
   width: 100vw;
-  transition: all 1s;
-  transition-property: background-color, color;
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
 }
 
 body {
-  transition: 500ms;
   position: relative;
   margin: 0;
   height: 100vh;
-  @include v.theme() {
-    color: v.theme-get('clr-text');
-  }
-  font-size: calc((.175vw + 13px));
-  font-family: 'Raleway', sans-serif;
+  color: v.$clr-text;
   &:before {
-    @include v.theme() {
-      background: v.theme-get('clr-background') no-repeat;
-    }
+    background: v.$clr-background no-repeat;
     content:"";
-    position:fixed;
     height: 100vh;
     width: 100vw;
-    z-index:-1;
-  }
-}
-
-#main-grid {
-  padding: 5em;
-  margin: 0 2em;
-  max-width: 60rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  padding: 0 1em;
-  margin: 0 auto;
-  max-width: 60rem;
-}
-
-@media (min-width: 40em) {
-  .split {
-    display: flex;
-    gap: 2em;
   }
 }
 
 footer {
   margin-top: auto;
-  padding: 3em;
+  padding: 0;
 }
 
 img {
@@ -76,4 +41,4 @@ img {
 .btn {
   &-primary {}
   &-secondary {}
-}*/
+}

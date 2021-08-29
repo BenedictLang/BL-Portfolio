@@ -3,28 +3,28 @@
 /*@use '../1-helpers/mixins' as *;*/
 
 body {
-  font-family: v.$ft-light;
+  font-size: calc((.175vw + 13px));
+  font-family: v.$ft-medium;
 }
 
 a {
-/*  @include v.themify() {
-    color: v.themed(v.$clr-primary);
-  }*/
+  color: v.$clr-primary;
   text-decoration: none;
   font-style: italic;
+  font-weight: lighter;
 }
 
 // ******
 // Text
 // ******
 h1, h2, h4, h5, h6 {
+  color: v.$clr-icon;
   font-weight: normal;
-  font-family: 'Abril Fatface', cursive;
+  font-family: v.$ft-title;
 }
 
 h1 {
-  /*color: var(--clr-text);*/
-  /*color: v.$clr-text;*/
+  color: v.$clr-text;
   font-size: clamp(1rem, 1rem + 10vw, 4rem);
 }
 
@@ -33,22 +33,24 @@ h2 {
 }
 
 h6 {
-  /*@include v.theme() {
-    color: v.theme-get('clr-primary');
-  }*/
+    color: v.$clr-primary;
 }
 
 p,
 li,
 input {
   font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.25rem);
-  line-height: clamp(0.7rem, calc(3rem + 1vw), 2.3rem);
+  line-height: clamp(0.5rem, calc(1.5rem + 1vw), 3rem);
   font-weight: normal;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+span {
+  color: v.$clr-text;
 }
 
 @media (max-width: var(--bp-wideS)) {
@@ -58,7 +60,7 @@ input {
     line-height: calc(24px + 2.58vw);
   }
 
-  p, li, input {
+  p, li, input, span {
     font-size: clamp(1.125rem, 1rem + 10vw, 3rem);
   }
 }

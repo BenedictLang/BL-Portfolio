@@ -15,8 +15,8 @@ red:        0
 #CC3E3E  #A03038     #1f2025 linear-gradient(70deg, #18233C, #263f6e)
 */
 
-
-/*:root {
+/* default style */
+:root {
   --clr-primary: hsl(19, 72%, 60%);
   --clr-secondary: #2C4A81;
   --clr-container: #eff2ff;
@@ -24,93 +24,54 @@ red:        0
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
   --clr-text: rgb(20, 27, 43);
   --clr-icon: #141B2B;
-}*/
+}
 
-$clr-text: 'clr-text';
-$clr-icon: 'clr-icon';
-$clr-primary: 'clr-primary';
-$clr-secondary: 'clr-secondary';
-$clr-container: 'clr-container';
-$clr-scene: 'clr-scene';
-$clr-background: 'clr-background';
-
-/*$themes: (
-        darkTheme:(
-                clr-primary: hsl(19, 72%, 60%),
-                clr-secondary: #fff,
-                clr-container: #283244,
-                clr-scene: #0c101a,
-                clr-background: linear-gradient(75deg, #141B2B, #243352),
-                clr-text: rgb(255, 255, 255),
-                clr-icon: #383838
-        ),
-        lightTheme: (
-                clr-primary: hsl(19, 72%, 60%),
-                clr-secondary: #2C4A81,
-                clr-container: #eff2ff,
-                clr-scene: rgb(20, 27, 43),
-                clr-background: linear-gradient(70deg, #ffffff, #f1f9ff),
-                clr-text: rgb(20, 27, 43),
-                clr-icon: #141B2B
-        )
-);*/
-
-/*$themes: (
-  darkTheme:(
-    clr-primary: hsl(19, 72%, 60%),
-    clr-secondary: #fff,
-    clr-container: #283244,
-    clr-scene: #0c101a,
-    clr-background: linear-gradient(75deg, #141B2B, #243352),
-    clr-text: rgb(255, 255, 255),
-    clr-icon: #383838
-  ),
-  lightTheme: (
-    'clr-primary': hsl(19, 72%, 60%),
-    'clr-secondary': #2C4A81,
-    'clr-container': #eff2ff,
-    'clr-scene': rgb(20, 27, 43),
-    'clr-background': linear-gradient(70deg, #ffffff, #f1f9ff),
-    'clr-text': rgb(20, 27, 43),
-    'clr-icon': #141B2B
-  )
-);*/
-
-/*.darkmode {
+/* theme dark style */
+.darkMode {
   --clr-secondary: #fff;
   --clr-container: #283244;
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
   --clr-text: rgb(255, 255, 255);
   --clr-icon: #383838;
-}*/
+}
 
-/*$clr-text: var(--clr-text) !default;
+$clr-text: var(--clr-text) !default;
 $clr-icon: var(--clr-icon) !default;
 $clr-primary: var(--clr-primary) !default;
 $clr-secondary: var(--clr-secondary) !default;
 $clr-container: var(--clr-container) !default;
 $clr-scene: var(--clr-scene) !default;
-$clr-background: var(--clr-background) !default;*/
+$clr-background: var(--clr-background) !default;
 
 
 //**************
 // BREAKPOINTS
 //**************
+/* Small devices (phones) */
 $bp-mobile: 400px;
+
+/* Medium devices (tablets) */
 $bp-tablet: 768px;
+
+/* Large devices (desktops) */
 $bp-laptop: 950px;
+
+/* Extra large devices (large desktops) */
 $bp-desktop: 1200px;
+
+/* Widescreen devices (wide desktops) */
 $bp-wideS: 1440px;
 
 // *******
 // FONTS
 // *******
-$ft-special: "Helvetica", sans-serif;
-$ft-light: "Helvetica", sans-serif;
-$ft-lighter: "Helvetica", sans-serif;
-$ft-medium: "Helvetica", sans-serif;
-$ft-bold: "Helvetica", sans-serif;
+$ft-special: 'Raleway', sans-serif;;
+$ft-light: 'Raleway', sans-serif;;
+$ft-lighter: 'Raleway', sans-serif;;
+$ft-medium: 'Raleway', sans-serif;;
+$ft-bold: 'Raleway', sans-serif;;
+$ft-title: 'Abril Fatface', cursive;
 
 /*
 Helvetica
@@ -130,5 +91,14 @@ Raleway
   :root {
     $scale-element: 0.925;
     $scale-font: 0.925;
+  }
+}
+
+/* Paddings & grid */
+$pdd-side: clamp(3vw, 20vw, 40vw);
+
+@media (min-width: $bp-tablet) {
+  :root{
+    $pdd-side: 5vw;
   }
 }
