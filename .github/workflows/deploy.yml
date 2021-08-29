@@ -1,37 +1,27 @@
-name: Website Deploy
-
-on:
+# This is a workflow for github - ftp host synchronization
+on: 
   push:
-    branches: [ master ]
+    branches: [ main ]
+    
+name: 🚀 Deploy website on push
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./deploy
     steps:
-    - uses: actions/checkout@v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    - name: Current repo dir
+      run: |
+        echo test the checkout action,
+        ls -a
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        fetch-depth: 2
-
-    - name: Install Composer Dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: npm install
-      run: npm install
-
-    - name: npm run bundle
-      run: npm run bundle
-
-    - name: FTP Deploy (Production)
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ${{ secrets.ftp_server }}
-        ftp-username: ${{ secrets.ftp_user }}
-        ftp-password: ${{ secrets.ftp_password }}
-        server-dir: portfolio/
-        local-dir: ./dist/
-        state-name: .log/.sync-state.json
-        log-level: standard
-        security: strict
+          server: ${{ secrets.ftp_server }}
+          server-dir: ./portfolio/
+          dangerous-clean-slate: true
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
