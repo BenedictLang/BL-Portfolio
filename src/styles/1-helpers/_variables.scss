@@ -18,7 +18,7 @@ red:        0
 /* default style */
 :root {
   --clr-primary: hsl(19, 72%, 60%);
-  --clr-secondary: #2C4A81;
+  --clr-secondary: rgba(20, 27, 43, 0.7);
   --clr-container: #eff2ff;
   --clr-scene: var(--clr-text);
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
@@ -32,7 +32,7 @@ red:        0
 
 /* theme dark style */
 .darkMode {
-  --clr-secondary: #fff;
+  --clr-secondary: rgba(255, 255, 255, 0.35);
   --clr-container: #283244;
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
@@ -105,4 +105,4 @@ Raleway
 /* Paddings & grid */
 $pdd-side: clamp(4vw, calc(1.15em + 12vw), 40vw);
 
-$radius: .7em;
+$radius: .6em;

@@ -38,18 +38,21 @@ img {
 }
 
 .btn {
+  margin-top: 1rem;
+  font-weight: bolder;
   padding: 12px 28px;
   border-radius: .7em;
   transition-duration: .4s;
   border: 0.15em solid v.$clr-text;
   color: v.$clr-text;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,.2), 0 17px 50px 0 rgba(0,0,0,.17);
   &:active {
     color: v.$clr-bg;
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
   }
   &:hover {
+
     color: v.$clr-bg;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.12);
   }
@@ -86,13 +89,13 @@ img {
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(50deg, transparent, #2C4A81, v.$clr-primary, v.$clr-primary, #2C4A81, transparent);
+  background: linear-gradient(50deg, transparent, #2C4A81, v.$clr-primary, v.$clr-primary, #22c0fa, #488fc7, #274377,transparent);
   position: absolute;
   top: -2px;
   left:-2px;
   background-size: 400%;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(7px);
   width: calc(100% + 5px);
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
@@ -109,12 +112,13 @@ img {
 
 .glow-on-hover:hover:before {
   opacity: 1;
+  filter: blur(9px);
 }
 
 .glow-on-hover:hover:after {
   top: -2px;
   left:-2px;
-  background: v.$clr-text;
+  background: v.$clr-secondary;
   border: 0.15em solid v.$clr-text;
   border-radius: v.$radius;
 }

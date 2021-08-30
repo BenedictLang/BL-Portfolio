@@ -53,6 +53,10 @@ span {
   color: v.$clr-text;
 }
 
+button {
+  font-size: clamp(0.125rem, 1rem + 1vw, 1rem);
+}
+
 @media (max-width: var(--bp-wideS)) {
   .page .page-content .page-section h1 {
     max-width: 720px;
