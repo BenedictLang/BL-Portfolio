@@ -5,7 +5,9 @@ html {
 }
 
 body {
-  transition: 500ms;
+  &>*{
+    transition: 500ms;
+  }
 
   &:before {
     position: fixed;
@@ -36,7 +38,7 @@ body {
 }
 
 section#slider{
-  padding: 45vh v.$pdd-side 10vh v.$pdd-side;
+  padding: 55vh v.$pdd-side 15vh v.$pdd-side;
   min-height: 100vh;
 }
 

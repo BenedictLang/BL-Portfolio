@@ -21,7 +21,7 @@
           data-basehost="benedict.lang-familie.de">
 </head>
 
-<body>
+<body id="scrollable">
 <div id="main-grid page scrollable">
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="dark mode toggle"
             onclick="darkModeToggle()">
@@ -80,13 +80,14 @@
 
     <main class="page-content">
         <section id="slider">
+            <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
             <h1 class="title">Hi, ich bin Benny</h1>
+            <br>
             <h3 id="jobs">Frontend Entwickler</h3>
             <p class="description">
                 Erfahren in Web Design, UX und Web Entwicklung.
             </p>
-            <img class="profile-picture" src="" alt="">
-            <button class="btn contactMe">Kontaktieren</button>
+            <button class="btn glow-on-hover contactMe">Kontaktieren</button>
         </section>
         <section class="page-section">
             <h2>Title</h2>
@@ -158,5 +159,13 @@
     </footer>
 </div>
 <script src="./index.js" defer></script>
+<script>
+    function darkModeToggle() {
+    document.documentElement.classList.toggle('darkMode');
+    if (typeof(Storage) !== "undefined") {
+        /* TODO fix datatype */
+        localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode'));
+    }
+}</script>
 </body>
 </html>

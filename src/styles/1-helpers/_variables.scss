@@ -22,8 +22,12 @@ red:        0
   --clr-container: #eff2ff;
   --clr-scene: var(--clr-text);
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
+  --clr-bg: #ffffff;
   --clr-text: rgb(20, 27, 43);
   --clr-icon: #141B2B;
+  --alpha: 0.8;
+  --beta: 0.55;
+  --gamma: 0.3;
 }
 
 /* theme dark style */
@@ -32,6 +36,7 @@ red:        0
   --clr-container: #283244;
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
+  --clr-bg: #243352;
   --clr-text: rgb(255, 255, 255);
   --clr-icon: #383838;
 }
@@ -43,7 +48,10 @@ $clr-secondary: var(--clr-secondary) !default;
 $clr-container: var(--clr-container) !default;
 $clr-scene: var(--clr-scene) !default;
 $clr-background: var(--clr-background) !default;
-
+$clr-bg: var(--clr-bg)!default;
+$clr-alpha: var(--alpha) !default;
+$clr-beta: var(--beta) !default;
+$clr-gamma: var(--gamma) !default;
 
 //**************
 // BREAKPOINTS
@@ -95,10 +103,6 @@ Raleway
 }
 
 /* Paddings & grid */
-$pdd-side: clamp(3vw, 20vw, 40vw);
+$pdd-side: clamp(4vw, calc(1.15em + 12vw), 40vw);
 
-@media (min-width: $bp-tablet) {
-  :root{
-    $pdd-side: 5vw;
-  }
-}
+$radius: .7em;

@@ -1,4 +1,18 @@
+@use '../1-helpers/variables' as v;
+
 /*===== Scrollbar =====*/
+.scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  width: 15px !important;
+
+  .scrollbar-thumb {
+    border-radius: 10px;
+    background-color: v.$clr-text;
+    width: 4px;
+    left: 5px;
+  }
+}
+
 /*::-webkit-scrollbar {
     width: clamp(5px, 0.6rem + 6vw, 1rem);
 }

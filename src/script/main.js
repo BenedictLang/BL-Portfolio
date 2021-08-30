@@ -1,21 +1,42 @@
 /*General*/
-import Scrollbar from 'smooth-scrollbar';
+import Scrollbar, { ScrollbarPlugin } from 'smooth-scrollbar';
 //Scrollbar listener
-Scrollbar.init(document.querySelector('#scrollable'));
-/*let scrollbar_thumb = document.querySelector(".scrollbar_thumb");
-window.addEventListener('scroll', this.handleScroll, true);
-handleScroll = () => {
-    if (scrollbar_thumb.classList.contains("show-scrollbar") === false) {
-        scrollbar_thumb.classList.toggle("show-scrollbar");
+const options = {
+    damping: 0.7,
+    thumbMinSize: 30,
+    plugins: {
+        overscroll: true
     }
-}*/
+};/*
+class DisableScrollPlugin extends ScrollbarPlugin {
+    static pluginName = 'disableScroll';
 
-/*window.addEventListener('scroll', this.handleScroll, true);
-handleScroll = (e) => {
-    if (e.target.classList.contains("show-scrollbar") === false) {
-        e.target.classList.add("show-scrollbar");
+    static defaultOptions = {
+        direction: null,
+    };
+
+    transformDelta(delta, _evt) {
+        if (this.options.direction) {
+            delta[this.options.direction] = 0;
+        }
+
+        return { ...delta };
+    }
+}
+
+Scrollbar.use(DisableScrollPlugin);
+class SomeComponent extends Component {
+    render() {
+        return (
+            <Scrollbar plugins={{
+                disableScroll: { direction: 'x' }
+            }}>
+                ...
+            </Scrollbar>
+        );
     }
 }*/
+Scrollbar.init(document.querySelector('#scrollable'), options);
 
 //sets current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();

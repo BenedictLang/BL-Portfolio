@@ -6,7 +6,7 @@ footer {
 }
 .footer {
   width: 100vw;
-  padding: 3em v.$pdd-side;
+  padding: 2.5em v.$pdd-side;
   display: flex;
   justify-content: space-between;
   margin-top: auto;
@@ -15,7 +15,9 @@ footer {
 }
 
 .copyright {
-
+  font-size: smaller;
+  font-weight: lighter;
+  color: v.$clr-text;
 }
 
 .social-links {

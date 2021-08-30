@@ -1,5 +1,5 @@
 // Dark mode
-/*darkModeInit();
+darkModeInit();
 function darkModeInit() {
     let darkMode = null;
     if (typeof(Storage) !== "undefined") {
@@ -23,9 +23,3 @@ function darkModeInit() {
         document.documentElement.classList.remove('darkMode');
     }
 }
-function darkModeToggle() {
-    document.documentElement.classList.toggle('darkMode');
-    if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode'));
-    }
-}*/
