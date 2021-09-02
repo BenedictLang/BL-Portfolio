@@ -19,7 +19,7 @@ red:        0
 :root {
   --clr-primary: hsl(19, 72%, 60%);
   --clr-secondary: rgba(20, 27, 43, 0.7);
-  --clr-container: #eff2ff;
+  --clr-container: linear-gradient(20deg, #E27E50FF 22%, var(--clr-primary) 55%, rgba(63, 87, 150, 0.9) 100%);
   --clr-scene: var(--clr-text);
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
   --clr-bg: #ffffff;
@@ -32,8 +32,8 @@ red:        0
 
 /* theme dark style */
 .darkMode {
-  --clr-secondary: rgba(255, 255, 255, 0.35);
-  --clr-container: #283244;
+  --clr-secondary: rgba(255, 255, 255, 0.4);
+  --clr-container: linear-gradient(20deg, #E27E50FF 22%, rgba(226, 126, 80, 0.6) 35%, rgba(63, 87, 150, 0.2) 80%, rgba(38, 49, 80, 0) 95%);
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
   --clr-bg: #243352;
@@ -63,7 +63,7 @@ $bp-mobile: 400px;
 $bp-tablet: 768px;
 
 /* Large devices (desktops) */
-$bp-laptop: 950px;
+$bp-laptop: 968px;
 
 /* Extra large devices (large desktops) */
 $bp-desktop: 1200px;
@@ -101,8 +101,26 @@ Raleway
     $scale-font: 0.925;
   }
 }
+/* heights */
+$header-h: clamp(4vh, 9vh, 13vh); /*3rem*/
+
+$icon-size: 1.5em;
+$mb-025: .25rem;
+$mb-05: .5rem;
+$mb-075: .75rem;
+$mb-1: 1rem;
+$mb-15: 1.5rem;
+$mb-2: 2rem;
+$mb-25: 2.5rem;
+$mb-3: 3rem;
+
+/* Z-indizes*/
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
 
 /* Paddings & grid */
 $pdd-side: clamp(4vw, calc(1.15em + 12vw), 40vw);
 
-$radius: .6em;
+$radius: .6rem;
+$radius-wide: 1.5rem;

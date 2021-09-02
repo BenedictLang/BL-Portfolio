@@ -12,6 +12,11 @@ a {
   text-decoration: none;
   font-style: italic;
   font-weight: lighter;
+  &.nav__link {
+    color: v.$clr-text;
+    font-weight: lighter;
+    font-style: normal;
+  }
 }
 
 // ******
@@ -38,10 +43,11 @@ h6 {
 
 p,
 li,
-input {
+input,
+.nav__link {
   font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.25rem);
   line-height: clamp(0.5rem, calc(1.5rem + 1vw), 3rem);
-  font-weight: normal;
+  font-weight: bold;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;

@@ -4,10 +4,8 @@
         style="fill: black">
 
     <style>
-        @media (prefers-color-scheme: dark) {
-            path {
-                fill: var(--color, white);
-            }
+        path {
+            fill: var(--clr-secondary, white);
         }
     </style>
 
