@@ -28,13 +28,14 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 //Scrollbar listener
+/*
 const options = {
     damping: 0.7,
     thumbMinSize: 30,
     plugins: {
         overscroll: true
     }
-};/*
+};/!*
 class DisableScrollPlugin extends ScrollbarPlugin {
     static pluginName = 'disableScroll';
 
@@ -62,8 +63,9 @@ class SomeComponent extends Component {
             </Scrollbar>
         );
     }
-}*/
+}*!/
 Scrollbar.init(document.querySelector('#scrollable'), options);
+*/
 
 //sets current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();

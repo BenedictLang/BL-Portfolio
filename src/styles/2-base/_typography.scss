@@ -30,11 +30,18 @@ h1, h2, h4, h5, h6 {
 
 h1 {
   color: v.$clr-text;
-  font-size: clamp(1rem, 1rem + 10vw, 4rem);
+  font-size: clamp(.9rem, 1rem + 10vw, 4rem);
+  line-height: 1.1;
 }
 
 h2 {
 
+}
+
+h3 {
+  font-size: clamp(.4rem, .5rem + 7vw, 1.5rem);
+  font-family: v.$ft-subtitle;
+  font-weight: bolder;
 }
 
 h6 {
@@ -47,9 +54,9 @@ input,
 .nav__link {
   font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.25rem);
   line-height: clamp(0.5rem, calc(1.5rem + 1vw), 3rem);
-  font-weight: bold;
+  font-weight: normal;
   display: block;
-  margin-block-start: 1em;
+  margin-block-start: 1.4em;
   margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;

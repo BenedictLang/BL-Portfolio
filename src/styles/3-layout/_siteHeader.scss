@@ -8,6 +8,7 @@
   left: 0;
   z-index: v.$z-fixed;
   background: v.$clr-background;
+  box-shadow: 0 -4px 9px rgba(0 0 0 /.4);
   /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.70), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
   /*display: flex;
   flex-flow: row wrap;
@@ -83,7 +84,6 @@ button#dark-mode-toggle-header {
     box-shadow: 0 -4px 9px rgba(0 0 0 /.3);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: .3s;
-
   }
 }
 
@@ -164,10 +164,3 @@ button#dark-mode-toggle-header {
   transition: background-color, color 1s ease-in-out;
   cursor: pointer;
 }*/
-
-#dark-mode-toggle-header {
-/*  padding: 0 0 3px;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;*/
-}

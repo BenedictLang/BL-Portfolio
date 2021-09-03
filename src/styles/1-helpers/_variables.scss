@@ -74,12 +74,13 @@ $bp-wideS: 1440px;
 // *******
 // FONTS
 // *******
-$ft-special: 'Raleway', sans-serif;;
-$ft-light: 'Raleway', sans-serif;;
-$ft-lighter: 'Raleway', sans-serif;;
-$ft-medium: 'Raleway', sans-serif;;
-$ft-bold: 'Raleway', sans-serif;;
+$ft-special: 'Raleway', sans-serif;
+$ft-light: 'Raleway', sans-serif;
+$ft-lighter: 'Raleway', sans-serif;
+$ft-medium: 'Raleway', sans-serif;
+$ft-bold: 'Raleway', sans-serif;
 $ft-title: 'Abril Fatface', cursive;
+$ft-subtitle: 'Raleway', sans-serif;
 
 /*
 Helvetica
@@ -120,7 +121,8 @@ $z-fixed: 100;
 $z-modal: 1000;
 
 /* Paddings & grid */
-$pdd-side: clamp(4vw, calc(1.15em + 12vw), 40vw);
+$pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
+$pdd-tb: 10vh;
 
 $radius: .6rem;
 $radius-wide: 1.5rem;

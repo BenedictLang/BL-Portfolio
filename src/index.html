@@ -131,19 +131,85 @@
 
     </header>
 
-    <main class="page-content">
-        <section id="slider" aria-label="slider">
-            <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
-            <h1 class="title">Hi, ich bin Benny</h1>
-            <br>
-            <h3 id="jobs">Frontend Entwickler</h3>
-            <p class="description">
-                Erfahren in Web Design, UX und Web Entwicklung.
-            </p>
-            <button class="btn glow-on-hover contactMe">Kontaktieren</button>
+    <main class="main page-content">
+        <section id="home" aria-label="slider" class="home section slider">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__socials">
+                        <a href="https://github.com/BenedictLang" class="home__social-icon" aria-label="GitHub Profil (new tab)"
+                           target="_blank">
+                            <i class="uil uil-github-alt social-img" aria-label="GitHub logo"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/benedict-lang-72b78721a" class="home__social-icon"
+                           aria-label="linkedIn Profil (new tab)" target="_blank">
+                            <i class="uil uil-linkedin-alt social-img" aria-label="linkedIn logo"></i>
+                        </a>
+                        <a href="https://discord.gg/QMjhZnBxgV"
+                           aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
+                           class="home__social-icon" target="_blank">
+                            <!--<i class="uim uil-discord social-img" aria-label="Discord logo"></i>-->
+                            <i class="icon" aria-label="Discord logo">
+                                <svg class="disco-ico social-img icon" aria-label="Discord logo"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                    <style>
+                                        .discord_path {
+                                            fill: var(--clr-primary);
+                                        }
+                                    </style>
+                                    <path class="discord_path"
+                                          d="M89.37,7.1233a10.8712,10.8712,0,0,1,10.9586,10.7831l0,.0552v94.3672l-11.4521-9.9946L82.4,96.4384l-6.7836-6.2576,2.8274,9.7315H18.0274A10.8711,10.8711,0,0,1,7.0688,89.1292l0-.0552V17.9616A10.8712,10.8712,0,0,1,17.9722,7.123l.0552,0H89.37M89.37,0H18.0274A18.0165,18.0165,0,0,0,0,17.9616V89.0849a18.0165,18.0165,0,0,0,18.0384,17.9617H83.43l.6028.5589.0657.0548h.0658l11.452,9.9945L107.3973,128V17.9616A18.0165,18.0165,0,0,0,89.37,0Z"/>
+                                    <path class="discord_path"
+                                          d="M66.6844,74.5864c1.841,2.3074,4.0476,4.9049,4.0476,4.9049,13.5422-.4287,18.75-9.2047,18.75-9.2047a80.308,80.308,0,0,0-8.8264-35.3057,30.5527,30.5527,0,0,0-17.2115-6.3046l-.8574.971C73.0016,32.8,77.8436,37.3389,77.8436,37.3389A50.437,50.437,0,0,0,59.4089,31.526a52.4689,52.4689,0,0,0-12.37.1261,6.1087,6.1087,0,0,0-1.0465.1261,46.4508,46.4508,0,0,0-13.87,3.7828c-2.32,1.0591-3.6441,1.7526-3.6441,1.7526s5.0437-4.7788,16.1145-7.9311l-.6178-.7314a30.5519,30.5519,0,0,0-17.2115,6.3046,80.3081,80.3081,0,0,0-8.8265,35.3057s5.1446,8.8264,18.6868,9.2047c0,0,2.27-2.7236,4.1106-5.0437-7.78-2.2948-10.7178-7.1368-10.7178-7.1368s.6179.4288,1.7149,1.034a.8457.8457,0,0,0,.24.1765c.1891.1261.3656.1766.5548.3026a36.1013,36.1013,0,0,0,4.4762,2.0553,51.8915,51.8915,0,0,0,9.003,2.5975,43.4376,43.4376,0,0,0,15.8623,0,40.6959,40.6959,0,0,0,8.8264-2.5975,35.2139,35.2139,0,0,0,7.0486-3.5684S74.7165,72.3545,66.6844,74.5864ZM43.9879,66.1508c-3.4045,0-6.2037-3.1144-6.2037-6.9224a6.2415,6.2415,0,1,1,12.3948,0,6.5693,6.5693,0,0,1-6.1841,6.9333l-.0322.0017Zm22.18,0c-3.4171.0126-6.1659-3.0514-6.1659-6.91a6.2415,6.2415,0,1,1,6.2037,6.9224Z"/>
+                                </svg>
+                            </i>
+                        </a>
+                        <a href="https://www.instagram.com/bl_design.de/" class="home__social-icon"
+                           aria-label="Instagram Profile (new tab)"
+                           target="_blank">
+                            <i class="uil uil-instagram social-img" aria-label="Instagram logo"></i>
+                        </a>
+                    </div>
+                    <div class="home__image">
+                        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="maskImage" mask-type="alpha" >
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#maskImage)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                <image class="home__mask-img" xlink:href="./media/Profilbild-Benedict-Lang-2021-(3).png" height="110%" width="110%" x="-6" y="-19"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="home__data">
+                        <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
+                        <h1 class="title">Hi, ich bin Benny</h1>
+                        <br>
+                        <h3 id="jobs">Fullstack Developer</h3>
+                        <p class="description">
+                            Erfahren in Webdesign, UX und Webentwicklung.
+                            Java, JS & mehr.
+                        </p>
+                        <button class="btn glow-on-hover contactMe">Kontaktieren<i class="uil uil-message icon button__icon"></i></button>
+                    </div>
+                    <div class="home__scroll">
+                        <a href="#portfolio" class="home__scroll-button button__flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scrollen</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
 
         </section>
-        <!--<section class="page-section">
+        <section id="portfolio" class="page-section">
             <h2>Title</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, alias commodi cum cupiditate
@@ -180,7 +246,7 @@
                 sit vel voluptate. Aspernatur aut autem beatae cum esse harum iste, officia quis tempore ullam
                 velit?
             </p>
-        </section>-->
+        </section>
     </main>
     <footer>
         <div class="sub-footer">
