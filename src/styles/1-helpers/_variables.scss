@@ -32,7 +32,7 @@ red:        0
 
 /* theme dark style */
 .darkMode {
-  --clr-secondary: rgba(255, 255, 255, 0.4);
+  --clr-secondary: rgba(255, 255, 255, 0.2);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, rgba(226, 126, 80, 0.6) 35%, rgba(63, 87, 150, 0.2) 80%, rgba(38, 49, 80, 0) 95%);
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
@@ -102,8 +102,12 @@ Raleway
     $scale-font: 0.925;
   }
 }
+
 /* heights */
-$header-h: clamp(4vh, 9vh, 13vh); /*3rem*/
+$header-h: clamp(4vh, 20px + 9vh, 13vh); /*3rem*/
+
+$radius: .6rem;
+$radius-wide: 1.5rem;
 
 $icon-size: 1.5em;
 $mb-025: .25rem;
@@ -124,5 +128,3 @@ $z-modal: 1000;
 $pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
 $pdd-tb: 10vh;
 
-$radius: .6rem;
-$radius-wide: 1.5rem;
