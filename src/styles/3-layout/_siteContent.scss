@@ -68,7 +68,10 @@ section:nth-of-type(2) {
 
 /* ==== HOME SECTION==== */
 section.slider{
-  min-height: 100vh;
+  min-height: 94vh;
+  @media screen and (min-width: v.$bp-tablet) {
+    min-height: 100vh;
+  }
 }
 
 .home__container  {
@@ -156,6 +159,7 @@ section.slider{
 }
 
 .portfolio__button-more{
+  color: v.$clr-bg;
   display: none;
   @media screen and (min-width: v.$bp-laptop) {
     display: inline;
@@ -163,6 +167,5 @@ section.slider{
   padding: 14px 14px;
   margin: 15px 10px;
   font-size: small;
-  background-color: v.$clr-bg;
   align-items: center;
 }
