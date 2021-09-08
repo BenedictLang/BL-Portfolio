@@ -1,7 +1,9 @@
 @use '../1-helpers/variables' as v;
 /*@use '../1-helpers/mixins' as *;*/
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -50,9 +52,17 @@ hr {
   opacity: .06;
 }
 
+abbr {
+  color: v.$clr-primary;
+}
+
 .button__icon {
   font-size: 1.4em;
   margin-left: v.$mb-05;
+}
+
+button {
+  border-width: 0;
 }
 
 .btn {

@@ -41,9 +41,9 @@ footer {
 
 .footer {
   max-width: 100%;
-  padding: 2.5rem v.$pdd-side v.$header-h v.$pdd-side;
+  padding: 1.5rem v.$pdd-side v.$header-h v.$pdd-side;
   @media screen and (min-width: v.$bp-tablet){
-    padding: 2.5rem v.$pdd-side;
+    padding: 1.5rem v.$pdd-side;
     box-shadow: 3px -5px 12px rgba(0 0 0 /.7);
   }
   display: flex;

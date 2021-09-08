@@ -3,7 +3,7 @@ import Scrollbar, { ScrollbarPlugin } from 'smooth-scrollbar';
 
 /* ==== NAV MENU HEADER ====*/
 const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
+    navToggle = document.getElementById('nav-mobile-toggle'),
     navClose = document.getElementById('nav-close');
 
 //Show Menu

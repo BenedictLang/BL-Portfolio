@@ -7,7 +7,6 @@
     <meta name="author" content="Benedict Lang">
     <meta name="copyright" content="&copy; 2020 Benedict Lang">
     <link rel="icon" type="image/svg+xml" href="./media/icons/favicon/favicon.svg">
-    <!--<link rel="alternate icon" href="./favicon.ico">-->
     <meta name="theme-color" content="#E27E50">
     <meta name="msapplication-TileColor" content="#E27E50">
     <meta name="viewport"
@@ -25,6 +24,44 @@
 <div id="main-grid page scrollable">
     <!--    headerHidden headerSticky-->
     <header id="header" class="header header_container">
+        <button id="main-menu-toggle" class="NavButton--navButton--1l740" aria-label="main-menu toggle button" aria-controls="main-menu"
+                aria-expanded="false" style="opacity: 1; top: 50%; pointer-events: all;">
+            <svg class="NavButton--navButton__hamburger--Rnj6d" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                <defs>
+                    <style>
+                        .group1 {
+                            fill: var(--clr-text);
+                        }
+                    </style>
+                </defs>
+                <g class="group1" transform="translate(0 1)">
+                    <rect y="0" width="26" height="1" style="width: 26px;"></rect>
+                    <rect y="9" x="3" width="26" height="1" style="width: 23px;"></rect>
+                    <rect y="18" x="11" width="15" height="1" style="width: 15px;"></rect>
+                </g>
+            </svg>
+            <svg class="NavButton--navButton__close--phpQ-" width="22px" height="23px" viewBox="0 0 22 23">
+                <defs>
+                    <style>
+                        .group2 {
+                            fill: var(--clr-primary);
+                        }
+                    </style>
+                </defs>
+                <g class="group2" transform="translate(0, 0)" fill-rule="nonzero">
+                    <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 0)" width="1" height="30"
+                          style="height: 0;"></rect>
+                    <rect x="0" y="0" transform="matrix(-0.7071 .7071 -0.7071 -0.7071 22 0)" width="30" height="1"
+                          style="width: 0;"></rect>
+                    <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 21)" width="30" height="1"
+                          style="width: 0;"></rect>
+                    <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 22 22)" width="1" height="0"
+                          style="height: 0;"></rect>
+                    <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 1 22.0)" width="1" height="0"
+                          style="height: 0;"></rect>
+                </g>
+            </svg>
+        </button>
         <nav class="nav container">
             <!--    <object id="logo" data="media/Wappen_modern_SW_minimalistisch.svg" type="image/svg+xml"></object>-->
             <!--    <use xlink:href=""></use>-->
@@ -77,7 +114,7 @@
                         <i class="theme-icon uil"></i>
                     </button>
                 </div>
-                <hr>
+                <hr class="nav__separator">
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
@@ -115,20 +152,18 @@
                             Kontaktieren
                         </a>
                     </li>
-
                 </ul>
-                <hr>
+                <hr class="nav__separator">
                 <i id="nav-close" class="uil uil-multiply nav__close"></i>
             </div>
 
             <div class="nav__btn">
-                <div id="nav-toggle" class="nav__toggle">
+                <div id="nav-mobile-toggle" class="nav-mobile__toggle">
                     <i class="uil uil-apps"></i>
                 </div>
             </div>
 
         </nav>
-
     </header>
 
     <main class="main page-content">
@@ -136,7 +171,8 @@
             <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__socials">
-                        <a href="https://github.com/BenedictLang" class="home__social-icon" aria-label="GitHub Profil (new tab)"
+                        <a href="https://github.com/BenedictLang" class="home__social-icon"
+                           aria-label="GitHub Profil (new tab)"
                            target="_blank">
                             <i class="uil uil-github-alt" aria-label="GitHub logo"></i>
                         </a>
@@ -170,8 +206,9 @@
                         </a>
                     </div>
                     <div class="home__image">
-                        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="maskImage" mask-type="alpha" >
+                        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="maskImage" mask-type="alpha">
                                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                                         130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                         97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
@@ -182,7 +219,8 @@
                                         165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__mask-img" xlink:href="./media/Profilbild-Benedict-Lang-2021-(3).png" height="110%" width="110%" x="-6" y="-19"/>
+                                <image class="home__mask-img" xlink:href="./media/Profilbild-Benedict-Lang-2021-(3).png"
+                                       height="110%" width="110%" x="-6" y="-19"/>
                             </g>
                         </svg>
                     </div>
@@ -191,7 +229,7 @@
                         <h1 class="title">Hi, ich bin Benny</h1>
                         <br>
                         <h3 id="jobs">Fullstack Developer</h3>
-                        <p class="benefits">
+                        <p class="benefits" style="display: none;">
                             Ich schaffe <strong>Struktur</strong>, <strong>Ästhetik</strong> und
                             ein durchdachtes <strong>Nutzererlebnis</strong>.
                         </p>
@@ -200,7 +238,9 @@
                             Backend Erfahrung mit Java, SQL, JS & mehr.
                         </p>
                         <button class="btn glow-on-hover contactMe" aria-label="Contact information"
-                                onclick="window.location.href='#portfolio';">Entdecken<i class="uil uil-mouse-alt icon button__icon"></i></button>
+                                onclick="window.location.href='#portfolio';">Entdecken<i
+                                class="uil uil-mouse-alt icon button__icon"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -209,8 +249,10 @@
         </section>
         <section id="portfolio" class="page-section">
             <div class="portfolio__head">
-                <a href="https://www.apps.benedict.lang-familie.de"  target="_blank" aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
-                <a type="button" href="https://www.apps.benedict.lang-familie.de"  target="_blank" aria-label="My portfolio site (new tab)" class="portfolio__button-more" >- Mehr entdecken!</a>
+                <a href="https://www.apps.benedict.lang-familie.de" target="_blank"
+                   aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
+                <a type="button" href="https://www.apps.benedict.lang-familie.de" target="_blank"
+                   aria-label="My portfolio site (new tab)" class="portfolio__button-more">- Mehr entdecken!</a>
             </div>
 
             <h4>Ein kleiner Einblick in ein paar Projekte</h4>
@@ -234,19 +276,30 @@
                 Eum fugiat nemo perspiciatis sed. Assumenda aut cum eveniet explicabo ipsa magnam quae, tempora
                 veritatis voluptatum?
             </p>
+            <button class="btn" aria-label="Contact information"
+                    onclick="window.location.href='#portfolio';">Gesamtes Portfolio<i
+                    class="uil uil-archive icon button__icon"></i>
+            </button>
         </section>
-        <section class="page-section">
+        <section id="about" class="page-section">
             <h2>Über mich</h2>
             <p>
                 Ich bin Student an der Hochschule der Medien (<abbr title="Hochschule der Medien">HdM</abbr>) im Bereich
-                Informatik und Medienanwendungen (Mobile Medien). Nach vielen Jahre Erfahrung in Grafikdesign entwickle ich
-                meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>, <abbr title="User Interface">UI</abbr>
+                Informatik und Medienanwendungen (Mobile Medien). Nach vielen Jahre Erfahrung in Grafikdesign entwickle
+                ich
+                meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>, <abbr
+                    title="User Interface">UI</abbr>
                 Design und Software Entwicklung.
-                Je vernetzter unsere Umwelt ist, desto wichtiger ist es, dass jegliche Interaktionen einem gewohnten Schema entsprechen
-                und an den richtigen Stellen Akzente für neue Interaktions-Optimierung zu setzen, um die Nutzer zufriedenzustellen.
-                Meine Leidenschaft ist das Entwickeln von Software mit herausragendem und klaren Design welches zu einer hervorragenden barrierefreien <span lang="en">User Experience</span>
+                Meine Leidenschaft ist das Entwickeln von Software mit herausragendem und klaren Design welches zu einer
+                hervorragenden barrierefreien <span lang="en">User Experience</span>
                 beiträgt.
             </p>
+            <div class="about__button">
+                <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
+                   class="btn button__flex">
+                    CV herunterladen<i class="uil uil-download-alt button__icon"></i>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
