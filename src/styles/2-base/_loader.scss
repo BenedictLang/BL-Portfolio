@@ -1,0 +1,64 @@
+@use '../1-helpers/variables' as v;
+@use '../1-helpers/mixins' as m;
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: v.$clr-background;
+  @include m.flex;
+  z-index: v.$z-modal;
+}
+
+main{
+  animation: blur 1.3s ease-in-out;
+}
+
+#loader-logo {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 35vw;
+  background-color: transparent;
+}
+
+#loader-logo .loader-element:nth-child(1) {
+  @include m.stroke-anim;
+}
+
+#loader-logo .loader-element:nth-child(2) {
+  @include m.stroke-anim;
+}
+
+#loader-logo .loader-element:nth-child(3) {
+  @include m.stroke-anim;
+}
+
+@keyframes blur {
+  0%{
+      filter: blur(10px);
+  }
+  100%{
+    filter: blur(0);
+  }
+}
+
+@keyframes line-anim {
+  0%{
+    stroke-dashoffset: 80;
+  }
+  45% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 100;
+  }
+}

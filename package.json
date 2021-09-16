@@ -10,11 +10,13 @@
     "prod": "parcel build src/index.html"
   },
   "dependencies": {
+    "npm": "^7.23.0",
+    "sal.js": "^0.8.5",
     "script": "^0.1.4",
-    "smooth-scrollbar": "^8.6.3",
     "src": "^1.1.2"
   },
   "devDependencies": {
+    "jquery": "^1.11.1",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.38.1"
   }

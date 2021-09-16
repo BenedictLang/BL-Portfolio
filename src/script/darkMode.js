@@ -31,7 +31,7 @@ function darkModeInit() {
     }
 }
 
-function darkModeIcon() {
+/*function darkModeIcon() {
     if (document.querySelector('.theme-icon').classList.contains('uil-moon')){
         document.querySelector('.theme-icon').classList.remove('uil-moon');
         document.querySelector('.theme-icon').classList.add('uil-sun');
@@ -40,10 +40,10 @@ function darkModeIcon() {
         document.querySelector('.theme-icon').classList.add('uil-moon');
     }
 }
-/*darkModeToggle();*/
+/!*darkModeToggle();*!/
 function darkModeToggle() {
     document.documentElement.classList.toggle('darkMode');
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode').toString());
     }
-}
+}*/

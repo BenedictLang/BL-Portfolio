@@ -4,6 +4,18 @@
   background-position: 0 0;
 }
 
+@mixin flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin transition{
   transition: (all 0.15s ease-out 0s);
+}
+
+@mixin stroke-anim{
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: line-anim 5s infinite ease-in-out;
 }

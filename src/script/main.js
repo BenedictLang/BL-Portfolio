@@ -1,5 +1,6 @@
 /*General*/
-import Scrollbar, { ScrollbarPlugin } from 'smooth-scrollbar';
+/*import sal from "sal.js";
+data-sal-duration="1200" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce"*/
 
 /* ==== NAV MENU HEADER ====*/
 const navMenu = document.getElementById('nav-menu'),
@@ -10,6 +11,7 @@ const navMenu = document.getElementById('nav-menu'),
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show__menu');
+        document.body;
     })
 }
 //Hide Menu
@@ -25,47 +27,39 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+/* ==== 3D HEADER ====*/
+//TODO
 
+/* ==== 3D FOOTER ====*/
+$(document).ready(function($) {
 
-//Scrollbar listener
-/*
-const options = {
-    damping: 0.7,
-    thumbMinSize: 30,
-    plugins: {
-        overscroll: true
-    }
-};/!*
-class DisableScrollPlugin extends ScrollbarPlugin {
-    static pluginName = 'disableScroll';
+    //Scroll to top btn
+    $(window).on('scroll', function() {
 
-    static defaultOptions = {
-        direction: null,
-    };
-
-    transformDelta(delta, _evt) {
-        if (this.options.direction) {
-            delta[this.options.direction] = 0;
+        //ADD .TIGHT
+        if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
+            $('body').addClass('tight');
+            $('.arrow').hide();
+        } else {
+            $('body').removeClass('tight');
+            if ($(window).width() > 767) {
+                $('.arrow').show();
+            }
         }
+    });
 
-        return { ...delta };
-    }
-}
+    //BACK TO PRESENTATION MODE
+    $("html").on("click", "body.tight .wrapper", function() {
+        $('html, body').animate({
+            scrollTop: $('.wrapper').outerHeight() - $(window).height()
+        }, 500);
+    });
 
-Scrollbar.use(DisableScrollPlugin);
-class SomeComponent extends Component {
-    render() {
-        return (
-            <Scrollbar plugins={{
-                disableScroll: { direction: 'x' }
-            }}>
-                ...
-            </Scrollbar>
-        );
-    }
-}*!/
-Scrollbar.init(document.querySelector('#scrollable'), options);
-*/
+});
+
+$('.arrow').click(function(){
+    $("html").animate({ scrollTop: $('html').prop("scrollHeight")}, 1200);
+});
 
 //sets current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();

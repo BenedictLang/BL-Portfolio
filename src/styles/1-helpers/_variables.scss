@@ -106,7 +106,7 @@ Raleway
 /* heights */
 $header-h: clamp(4vh, 20px + 9vh, 13vh); /*3rem*/
 
-$radius: .6rem;
+$radius: .7rem;
 $radius-wide: 1.5rem;
 
 $icon-size: 1.5em;
@@ -128,3 +128,7 @@ $z-modal: 1000;
 $pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
 $pdd-tb: 10vh;
 
+// *********
+// OTHERS
+// *********
+$fx-dropShadow: 0 12px 16px 0 rgba(0, 0, 0, .2), 0 17px 50px 0 rgba(0, 0, 0, .17);

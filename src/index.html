@@ -18,300 +18,338 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="canonical" href="https://benedict.lang-familie.de/" data-baseprotocol="https:"
           data-basehost="www.benedict.lang-familie.de">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body id="scrollable">
-<div id="main-grid page scrollable">
-    <!--    headerHidden headerSticky-->
-    <header id="header" class="header header_container">
-        <button id="main-menu-toggle" class="NavButton--navButton--1l740" aria-label="main-menu toggle button" aria-controls="main-menu"
-                aria-expanded="false" style="opacity: 1; top: 50%; pointer-events: all;">
-            <svg class="NavButton--navButton__hamburger--Rnj6d" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                <defs>
-                    <style>
-                        .group1 {
-                            fill: var(--clr-text);
-                        }
-                    </style>
-                </defs>
-                <g class="group1" transform="translate(0 1)">
-                    <rect y="0" width="26" height="1" style="width: 26px;"></rect>
-                    <rect y="9" x="3" width="26" height="1" style="width: 23px;"></rect>
-                    <rect y="18" x="11" width="15" height="1" style="width: 15px;"></rect>
-                </g>
-            </svg>
-            <svg class="NavButton--navButton__close--phpQ-" width="22px" height="23px" viewBox="0 0 22 23">
-                <defs>
-                    <style>
-                        .group2 {
-                            fill: var(--clr-primary);
-                        }
-                    </style>
-                </defs>
-                <g class="group2" transform="translate(0, 0)" fill-rule="nonzero">
-                    <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 0)" width="1" height="30"
-                          style="height: 0;"></rect>
-                    <rect x="0" y="0" transform="matrix(-0.7071 .7071 -0.7071 -0.7071 22 0)" width="30" height="1"
-                          style="width: 0;"></rect>
-                    <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 21)" width="30" height="1"
-                          style="width: 0;"></rect>
-                    <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 22 22)" width="1" height="0"
-                          style="height: 0;"></rect>
-                    <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 1 22.0)" width="1" height="0"
-                          style="height: 0;"></rect>
-                </g>
-            </svg>
-        </button>
-        <nav class="nav container">
-            <!--    <object id="logo" data="media/Wappen_modern_SW_minimalistisch.svg" type="image/svg+xml"></object>-->
-            <!--    <use xlink:href=""></use>-->
-            <!--    <div id="logo"></div>-->
-            <object id="logo" class="nav__logo" aria-label="Website Logo leads">
-                <a href="https://www.benedict.lang-familie.de" aria-label="back to main page">
-                    <svg id="logo-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.9668 22.4229">
+<div id="main-grid page">
+    <div id="wrapper" class="wrapper">
+        <div class="wrap">
+            <!-- Scroll to top btn-->
+            <div class="arrow"><i class="uil uil-angle-up scroll__arrow"></i></div>
+            <!--    headerHidden headerSticky-->
+            <header id="header" class="header header_container">
+                <button id="main-menu-toggle" class="nav__hamButton" aria-label="main-menu toggle button"
+                        aria-controls="main-menu"
+                        aria-expanded="false" style="opacity: 1; top: 50%; pointer-events: all;">
+                    <svg class="navButton__hamburger" width="26" height="22" viewBox="0 0 26 22"
+                         fill="none">
                         <defs>
-                            <style>.logo-group {
-                                fill: var(--clr-text);
-                            }
+                            <style>
+                                .group1 {
+                                    fill: var(--clr-text);
+                                }
 
-                            .logo-group:hover {
-                                fill: var(--clr-primary);
-                            }
+                                .group1:hover {
+                                    transform: translateX(-10px);
+                                }
                             </style>
                         </defs>
-                        <a xlink:href="https://www.benedict.lang-familie.de" aria-label="back to main page">
-                            <g class="logo-group">
-                                <rect class="a" x="23.626" width="1.75" height="22.4229"/>
-                                <path class="a"
-                                      d="M7.8066,11.4434a2.6109,2.6109,0,0,0,.375-.3106A2.7994,2.7994,0,0,0,9.02,9.0811a3.2316,3.2316,0,0,0-.9033-2.3819A3.3354,3.3354,0,0,0,5.668,5.73H0V17.792H5.6016a3.6066,3.6066,0,0,0,2.6474-.9033,3.7069,3.7069,0,0,0,1.1016-2.7129,3.0673,3.0673,0,0,0-.9043-2.251A3.028,3.028,0,0,0,7.8066,11.4434Zm-.7939,2.7324a1.6046,1.6046,0,0,1-.4854,1.1894,1.688,1.688,0,0,1-1.2568.42H2.2715V12.5h2.999a1.7714,1.7714,0,0,1,1.3223.4844A1.6008,1.6008,0,0,1,7.0127,14.1758ZM2.2715,10.4922V7.7363h3.33a.977.977,0,0,1,.7265.2862,1.35,1.35,0,0,1,.42.9931,1.5046,1.5046,0,0,1-.42,1.124,1.1556,1.1556,0,0,1-.8584.3526Z"/>
-                                <polygon class="a"
-                                         points="13.254 5.729 10.982 5.729 10.982 17.792 19.34 17.792 19.34 15.785 13.254 15.785 13.254 5.729"/>
-                                <path class="a"
-                                      d="M34.1641,5.0488H29.3994V17.5537h4.7481a6.2525,6.2525,0,0,0,.0166-12.5049Zm-3.9444.82h3.8955a5.4322,5.4322,0,1,1,0,10.8643H30.22Z"/>
-                                <polygon class="a"
-                                         points="42.439 17.554 50.415 17.554 50.415 16.733 43.244 16.733 43.244 11.567 49.919 11.567 49.919 10.747 43.244 10.747 43.244 5.869 50.415 5.869 50.415 5.049 42.439 5.049 42.439 17.554"/>
-                                <path class="a"
-                                      d="M55.3789,5.0488a3.3233,3.3233,0,0,0,0,6.6465,2.5269,2.5269,0,1,1-2.52,2.5186v-.25h-.8037v.25a3.3232,3.3232,0,1,0,3.3232-3.3067,2.5191,2.5191,0,1,1,2.5186-2.5195v.25h.8046v-.25A3.3353,3.3353,0,0,0,55.3789,5.0488Z"/>
-                                <rect class="a" x="61.3193" y="5.0488" width="0.8037" height="12.5049"/>
-                                <path class="a"
-                                      d="M70.8418,11.44h5.6963a5.5236,5.5236,0,0,1-5.4463,5.3095A5.4483,5.4483,0,1,1,74.917,7.4131l.1709.168.5918-.5479L75.4932,6.85a6.2382,6.2382,0,1,0,1.8828,4.4512v-.6983H70.8418Z"/>
-                                <path class="a"
-                                      d="M89.1475,5.0488V16.2656L80.25,5.0488h-.8994V17.5537h.82V6.335l8.93,11.2187h.8662V5.0488Z"/>
-                            </g>
-                        </a>
+                        <g class="group1" transform="translate(0 1)">
+                            <rect y="0" width="26" height="1" style="width: 26px;"></rect>
+                            <rect y="9" x="3" width="26" height="1" style="width: 23px;"></rect>
+                            <rect y="18" x="11" width="15" height="1" style="width: 15px;"></rect>
+                        </g>
                     </svg>
-                </a>
-            </object>
-            <div id="nav-menu" class="nav__menu">
-                <div class="service__items">
-                    <button id="accessibility" class="accessibility-toggle" aria-label="show accessibility modes"
-                            onclick="">
-                        <i class="uil uil-accessible-icon-alt"></i>
-                    </button>
-                    <button id="dark-mode-toggle-header" class="dark-mode-toggle" aria-label="dark mode toggle"
-                            onclick="e()">
-                        <!--🌓-->
-                        <i class="theme-icon uil"></i>
-                    </button>
-                </div>
-                <hr class="nav__separator">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class="nav__icon uil uil-estate"></i>
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="nav__icon uil uil-presentation-play"></i>
-                            Portfolio
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="nav__icon uil uil-user"></i>
-                            Über mich
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="nav__icon uil uil-book-alt"></i>
-                            Skills
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">
-                            <i class="nav__icon uil uil-suitcase"></i>
-                            Leistungen
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="nav__icon uil uil-message"></i>
-                            Kontaktieren
-                        </a>
-                    </li>
-                </ul>
-                <hr class="nav__separator">
-                <i id="nav-close" class="uil uil-multiply nav__close"></i>
-            </div>
+                    <svg class="navButton--close" width="22px" height="23px" viewBox="0 0 22 23">
+                        <defs>
+                            <style>
+                                .group2 {
+                                    fill: var(--clr-primary);
+                                }
+                            </style>
+                        </defs>
+                        <g class="group2" transform="translate(0, 0)" fill-rule="nonzero">
+                            <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 0)" width="1" height="30"
+                                  style="height: 0;"></rect>
+                            <rect x="0" y="0" transform="matrix(-0.7071 .7071 -0.7071 -0.7071 22 0)" width="30"
+                                  height="1"
+                                  style="width: 0;"></rect>
+                            <rect x="0" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0 21)" width="30"
+                                  height="1"
+                                  style="width: 0;"></rect>
+                            <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 22 22)" width="1" height="0"
+                                  style="height: 0;"></rect>
+                            <rect x="0" y="0" transform="matrix(-1.00 0.00 -0.00 -1.00 1 22.0)" width="1" height="0"
+                                  style="height: 0;"></rect>
+                        </g>
+                    </svg>
+                </button>
+                <nav class="nav container">
+                    <!--    <object id="logo" data="media/Wappen_modern_SW_minimalistisch.svg" type="image/svg+xml"></object>-->
+                    <!--    <use xlink:href=""></use>-->
+                    <!--    <div id="logo"></div>-->
+                    <object id="logo" class="nav__logo" aria-label="Website Logo leads">
+                        <a href="https://www.benedict.lang-familie.de" aria-label="back to main page">
+                            <svg id="logo-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.9668 22.4229">
+                                <defs>
+                                    <style>.logo-group {
+                                        fill: var(--clr-text);
+                                    }
 
-            <div class="nav__btn">
-                <div id="nav-mobile-toggle" class="nav-mobile__toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-
-        </nav>
-    </header>
-
-    <main class="main page-content">
-        <section id="home" aria-label="slider" class="home section slider">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__socials">
-                        <a href="https://github.com/BenedictLang" class="home__social-icon"
-                           aria-label="GitHub Profil (new tab)"
-                           target="_blank">
-                            <i class="uil uil-github-alt" aria-label="GitHub logo"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/benedict-lang-72b78721a" class="home__social-icon"
-                           aria-label="linkedIn Profil (new tab)" target="_blank">
-                            <i class="uil uil-linkedin-alt" aria-label="linkedIn logo"></i>
-                        </a>
-                        <a href="https://discord.gg/QMjhZnBxgV"
-                           aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
-                           class="home__social-icon" target="_blank">
-                            <!--<i class="uim uil-discord social-img" aria-label="Discord logo"></i>-->
-                            <i class="icon" aria-label="Discord logo">
-                                <svg class="disco-ico icon" aria-label="Discord logo"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                    <defs>
-                                        <style>
-                                            .discord_path {
-                                                fill: var(--clr-primary);
-                                            }
-                                            .discord_path:hover {
-                                                fill: var(--clr-text);
-                                            }
-                                        </style>
-                                    </defs>
-                                    <g class="discord_path">
-                                    <path
-                                          d="M89.37,7.1233a10.8712,10.8712,0,0,1,10.9586,10.7831l0,.0552v94.3672l-11.4521-9.9946L82.4,96.4384l-6.7836-6.2576,2.8274,9.7315H18.0274A10.8711,10.8711,0,0,1,7.0688,89.1292l0-.0552V17.9616A10.8712,10.8712,0,0,1,17.9722,7.123l.0552,0H89.37M89.37,0H18.0274A18.0165,18.0165,0,0,0,0,17.9616V89.0849a18.0165,18.0165,0,0,0,18.0384,17.9617H83.43l.6028.5589.0657.0548h.0658l11.452,9.9945L107.3973,128V17.9616A18.0165,18.0165,0,0,0,89.37,0Z"/>
-                                    <path
-                                          d="M66.6844,74.5864c1.841,2.3074,4.0476,4.9049,4.0476,4.9049,13.5422-.4287,18.75-9.2047,18.75-9.2047a80.308,80.308,0,0,0-8.8264-35.3057,30.5527,30.5527,0,0,0-17.2115-6.3046l-.8574.971C73.0016,32.8,77.8436,37.3389,77.8436,37.3389A50.437,50.437,0,0,0,59.4089,31.526a52.4689,52.4689,0,0,0-12.37.1261,6.1087,6.1087,0,0,0-1.0465.1261,46.4508,46.4508,0,0,0-13.87,3.7828c-2.32,1.0591-3.6441,1.7526-3.6441,1.7526s5.0437-4.7788,16.1145-7.9311l-.6178-.7314a30.5519,30.5519,0,0,0-17.2115,6.3046,80.3081,80.3081,0,0,0-8.8265,35.3057s5.1446,8.8264,18.6868,9.2047c0,0,2.27-2.7236,4.1106-5.0437-7.78-2.2948-10.7178-7.1368-10.7178-7.1368s.6179.4288,1.7149,1.034a.8457.8457,0,0,0,.24.1765c.1891.1261.3656.1766.5548.3026a36.1013,36.1013,0,0,0,4.4762,2.0553,51.8915,51.8915,0,0,0,9.003,2.5975,43.4376,43.4376,0,0,0,15.8623,0,40.6959,40.6959,0,0,0,8.8264-2.5975,35.2139,35.2139,0,0,0,7.0486-3.5684S74.7165,72.3545,66.6844,74.5864ZM43.9879,66.1508c-3.4045,0-6.2037-3.1144-6.2037-6.9224a6.2415,6.2415,0,1,1,12.3948,0,6.5693,6.5693,0,0,1-6.1841,6.9333l-.0322.0017Zm22.18,0c-3.4171.0126-6.1659-3.0514-6.1659-6.91a6.2415,6.2415,0,1,1,6.2037,6.9224Z"/>
+                                    .logo-group:hover {
+                                        fill: var(--clr-primary);
+                                    }
+                                    </style>
+                                </defs>
+                                <a xlink:href="https://www.benedict.lang-familie.de" aria-label="back to main page">
+                                    <g class="logo-group">
+                                        <rect class="a" x="23.626" width="1.75" height="22.4229"/>
+                                        <path class="a"
+                                              d="M7.8066,11.4434a2.6109,2.6109,0,0,0,.375-.3106A2.7994,2.7994,0,0,0,9.02,9.0811a3.2316,3.2316,0,0,0-.9033-2.3819A3.3354,3.3354,0,0,0,5.668,5.73H0V17.792H5.6016a3.6066,3.6066,0,0,0,2.6474-.9033,3.7069,3.7069,0,0,0,1.1016-2.7129,3.0673,3.0673,0,0,0-.9043-2.251A3.028,3.028,0,0,0,7.8066,11.4434Zm-.7939,2.7324a1.6046,1.6046,0,0,1-.4854,1.1894,1.688,1.688,0,0,1-1.2568.42H2.2715V12.5h2.999a1.7714,1.7714,0,0,1,1.3223.4844A1.6008,1.6008,0,0,1,7.0127,14.1758ZM2.2715,10.4922V7.7363h3.33a.977.977,0,0,1,.7265.2862,1.35,1.35,0,0,1,.42.9931,1.5046,1.5046,0,0,1-.42,1.124,1.1556,1.1556,0,0,1-.8584.3526Z"/>
+                                        <polygon class="a"
+                                                 points="13.254 5.729 10.982 5.729 10.982 17.792 19.34 17.792 19.34 15.785 13.254 15.785 13.254 5.729"/>
+                                        <path class="a"
+                                              d="M34.1641,5.0488H29.3994V17.5537h4.7481a6.2525,6.2525,0,0,0,.0166-12.5049Zm-3.9444.82h3.8955a5.4322,5.4322,0,1,1,0,10.8643H30.22Z"/>
+                                        <polygon class="a"
+                                                 points="42.439 17.554 50.415 17.554 50.415 16.733 43.244 16.733 43.244 11.567 49.919 11.567 49.919 10.747 43.244 10.747 43.244 5.869 50.415 5.869 50.415 5.049 42.439 5.049 42.439 17.554"/>
+                                        <path class="a"
+                                              d="M55.3789,5.0488a3.3233,3.3233,0,0,0,0,6.6465,2.5269,2.5269,0,1,1-2.52,2.5186v-.25h-.8037v.25a3.3232,3.3232,0,1,0,3.3232-3.3067,2.5191,2.5191,0,1,1,2.5186-2.5195v.25h.8046v-.25A3.3353,3.3353,0,0,0,55.3789,5.0488Z"/>
+                                        <rect class="a" x="61.3193" y="5.0488" width="0.8037" height="12.5049"/>
+                                        <path class="a"
+                                              d="M70.8418,11.44h5.6963a5.5236,5.5236,0,0,1-5.4463,5.3095A5.4483,5.4483,0,1,1,74.917,7.4131l.1709.168.5918-.5479L75.4932,6.85a6.2382,6.2382,0,1,0,1.8828,4.4512v-.6983H70.8418Z"/>
+                                        <path class="a"
+                                              d="M89.1475,5.0488V16.2656L80.25,5.0488h-.8994V17.5537h.82V6.335l8.93,11.2187h.8662V5.0488Z"/>
                                     </g>
-                                </svg>
-                            </i>
+                                </a>
+                            </svg>
                         </a>
-                        <a href="https://www.instagram.com/bl_design.de/" class="home__social-icon"
-                           aria-label="Instagram Profile (new tab)"
-                           target="_blank">
-                            <i class="uil uil-instagram " aria-label="Instagram logo"></i>
-                        </a>
+                    </object>
+                    <div id="nav-menu" class="nav__menu">
+                        <div class="service__items">
+                            <button id="accessibility" class="accessibility-toggle"
+                                    aria-label="show accessibility modes"
+                                    onclick="">
+                                <i class="uil uil-accessible-icon-alt"></i>
+                            </button>
+                            <button id="dark-mode-toggle-header" class="dark-mode-toggle" aria-label="dark mode toggle"
+                                    onclick="e()">
+                                <!--🌓-->
+                                <i class="theme-icon uil"></i>
+                            </button>
+                        </div>
+                        <hr class="nav__separator">
+                        <ul class="nav__list grid">
+                            <li class="nav__item">
+                                <a href="#home" class="nav__link">
+                                    <i class="nav__icon uil uil-estate"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#portfolio" class="nav__link">
+                                    <i class="nav__icon uil uil-presentation-play"></i>
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#about" class="nav__link">
+                                    <i class="nav__icon uil uil-user"></i>
+                                    Über mich
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#skills" class="nav__link">
+                                    <i class="nav__icon uil uil-book-alt"></i>
+                                    Skills
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">
+                                    <i class="nav__icon uil uil-suitcase"></i>
+                                    Leistungen
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link">
+                                    <i class="nav__icon uil uil-message"></i>
+                                    Kontaktieren
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="accessibility__settings">
+                                    <i class="nav__icon uil uil-message"></i>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis dignissimos eos facere itaque mollitia soluta tempore veritatis. Asperiores cum delectus et mollitia natus nihil, perspiciatis ratione velit voluptas voluptatibus!</span>
+                                    <!--<span>Corporis dignissimos, expedita incidunt labore odio quisquam reprehenderit vel! Animi assumenda corporis dolor libero non obcaecati provident, reiciendis! Accusantium aperiam distinctio dolor dolorem ducimus incidunt maxime nostrum ratione sit sunt.</span>
+                                    <span>Aliquid animi at dicta exercitationem, facilis non praesentium quas quibusdam quo, repellendus repudiandae saepe veritatis. Excepturi, itaque, tempore. Dicta numquam, vero. Enim, iusto, neque! Ducimus error et harum odio omnis.</span>
+                                    <span>At blanditiis maxime minus nam praesentium quibusdam quos, velit! Beatae deserunt, ex expedita explicabo magnam magni natus quam quas quisquam ratione soluta voluptatibus? Amet consectetur consequatur dicta odit, quidem reiciendis.</span>
+                                    <span>Consequatur cumque debitis dicta dolorem ducimus eius enim et eum illo impedit ipsam laborum laudantium mollitia nam nisi porro praesentium provident quod quos ratione sed sequi, sunt veritatis voluptatem voluptatibus?</span>-->
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="nav__separator">
+                        <i id="nav-close" class="uil uil-multiply nav__close"></i>
                     </div>
-                    <div class="home__image">
-                        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="maskImage" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+
+                    <div class="nav__btn">
+                        <div id="nav-mobile-toggle" class="nav-mobile__toggle">
+                            <i class="uil uil-apps"></i>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main class="main page-content">
+                <section id="home" aria-label="slider" class="home section slider">
+                    <div class="home__container container grid">
+                        <div class="home__content grid">
+                            <div class="home__socials">
+                                <a href="https://github.com/BenedictLang" class="home__social-icon"
+                                   aria-label="GitHub Profil (new tab)"
+                                   target="_blank">
+                                    <i class="uil uil-github-alt" aria-label="GitHub logo"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/benedict-lang-72b78721a" class="home__social-icon"
+                                   aria-label="linkedIn Profil (new tab)" target="_blank">
+                                    <i class="uil uil-linkedin-alt" aria-label="linkedIn logo"></i>
+                                </a>
+                                <a href="https://discord.gg/QMjhZnBxgV"
+                                   aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
+                                   class="home__social-icon" target="_blank">
+                                    <!--<i class="uim uil-discord social-img" aria-label="Discord logo"></i>-->
+                                    <i class="icon" aria-label="Discord logo">
+                                        <svg class="disco-ico" aria-label="Discord logo"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 120">
+                                            <defs>
+                                                <style>
+                                                    .discord_path {
+                                                        fill: var(--clr-primary);
+                                                    }
+
+                                                    .discord_path:hover {
+                                                        fill: var(--clr-text);
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <g class="discord_path">
+                                                <path
+                                                        d="M89.37,7.1233a10.8712,10.8712,0,0,1,10.9586,10.7831l0,.0552v94.3672l-11.4521-9.9946L82.4,96.4384l-6.7836-6.2576,2.8274,9.7315H18.0274A10.8711,10.8711,0,0,1,7.0688,89.1292l0-.0552V17.9616A10.8712,10.8712,0,0,1,17.9722,7.123l.0552,0H89.37M89.37,0H18.0274A18.0165,18.0165,0,0,0,0,17.9616V89.0849a18.0165,18.0165,0,0,0,18.0384,17.9617H83.43l.6028.5589.0657.0548h.0658l11.452,9.9945L107.3973,128V17.9616A18.0165,18.0165,0,0,0,89.37,0Z"/>
+                                                <path
+                                                        d="M66.6844,74.5864c1.841,2.3074,4.0476,4.9049,4.0476,4.9049,13.5422-.4287,18.75-9.2047,18.75-9.2047a80.308,80.308,0,0,0-8.8264-35.3057,30.5527,30.5527,0,0,0-17.2115-6.3046l-.8574.971C73.0016,32.8,77.8436,37.3389,77.8436,37.3389A50.437,50.437,0,0,0,59.4089,31.526a52.4689,52.4689,0,0,0-12.37.1261,6.1087,6.1087,0,0,0-1.0465.1261,46.4508,46.4508,0,0,0-13.87,3.7828c-2.32,1.0591-3.6441,1.7526-3.6441,1.7526s5.0437-4.7788,16.1145-7.9311l-.6178-.7314a30.5519,30.5519,0,0,0-17.2115,6.3046,80.3081,80.3081,0,0,0-8.8265,35.3057s5.1446,8.8264,18.6868,9.2047c0,0,2.27-2.7236,4.1106-5.0437-7.78-2.2948-10.7178-7.1368-10.7178-7.1368s.6179.4288,1.7149,1.034a.8457.8457,0,0,0,.24.1765c.1891.1261.3656.1766.5548.3026a36.1013,36.1013,0,0,0,4.4762,2.0553,51.8915,51.8915,0,0,0,9.003,2.5975,43.4376,43.4376,0,0,0,15.8623,0,40.6959,40.6959,0,0,0,8.8264-2.5975,35.2139,35.2139,0,0,0,7.0486-3.5684S74.7165,72.3545,66.6844,74.5864ZM43.9879,66.1508c-3.4045,0-6.2037-3.1144-6.2037-6.9224a6.2415,6.2415,0,1,1,12.3948,0,6.5693,6.5693,0,0,1-6.1841,6.9333l-.0322.0017Zm22.18,0c-3.4171.0126-6.1659-3.0514-6.1659-6.91a6.2415,6.2415,0,1,1,6.2037,6.9224Z"/>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="https://www.instagram.com/bl_design.de/" class="home__social-icon"
+                                   aria-label="Instagram Profile (new tab)"
+                                   target="_blank">
+                                    <i class="uil uil-instagram " aria-label="Instagram logo"></i>
+                                </a>
+                            </div>
+                            <div class="home__image">
+                                <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <mask id="maskImage" mask-type="alpha">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
                                         130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                         97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
                                         0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            </mask>
-                            <g mask="url(#maskImage)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    </mask>
+                                    <g mask="url(#maskImage)">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
                                         165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__mask-img" xlink:href="./media/Profilbild-Benedict-Lang-2021-(3).png"
-                                       height="110%" width="110%" x="-6" y="-19"/>
-                            </g>
-                        </svg>
+                                        <image class="home__mask-img"
+                                               xlink:href="./media/Profilbild-Benedict-Lang-2021-(3)-min.png"
+                                               height="110%" width="110%" x="-6" y="-19"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="home__data">
+                                <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
+                                <h1 class="title">Hi, ich bin Benny</h1>
+                                <br>
+                                <h3 id="jobs">Fullstack Developer</h3>
+                                <p class="benefits" style="display: none;">
+                                    Ich schaffe <strong>Struktur</strong>, <strong>Ästhetik</strong> und
+                                    ein durchdachtes <strong>Nutzererlebnis</strong>.
+                                </p>
+                                <p class="description">
+                                    Erfahren in Grafikdesign, Webdesign, UX und Webentwicklung.
+                                    Backend Erfahrung mit Java, SQL, JS & mehr.
+                                </p>
+                                <button class="btn contactMe glow-on-hover" aria-label="Contact information"
+                                        onclick="window.location.href='#portfolio';">Entdecken<i
+                                        class="uil uil-mouse-alt icon button__icon"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="home__data">
-                        <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
-                        <h1 class="title">Hi, ich bin Benny</h1>
-                        <br>
-                        <h3 id="jobs">Fullstack Developer</h3>
-                        <p class="benefits" style="display: none;">
-                            Ich schaffe <strong>Struktur</strong>, <strong>Ästhetik</strong> und
-                            ein durchdachtes <strong>Nutzererlebnis</strong>.
-                        </p>
-                        <p class="description">
-                            Erfahren in Grafikdesign, Webdesign, UX und Webentwicklung.
-                            Backend Erfahrung mit Java, SQL, JS & mehr.
-                        </p>
-                        <button class="btn contactMe glow-on-hover" aria-label="Contact information"
-                                onclick="window.location.href='#portfolio';">Entdecken<i
-                                class="uil uil-mouse-alt icon button__icon"></i>
-                        </button>
+
+
+                </section>
+                <section id="portfolio" class="page-section">
+                    <div class="portfolio__head">
+                        <a href="https://www.apps.benedict.lang-familie.de" target="_blank"
+                           aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
+                        <a type="button" href="https://www.apps.benedict.lang-familie.de" target="_blank"
+                           aria-label="My portfolio site (new tab)" class="portfolio__button-more link draw">- Mehr
+                            entdecken!</a>
                     </div>
-                </div>
-            </div>
 
-
-        </section>
-        <section id="portfolio" class="page-section">
-            <div class="portfolio__head">
-                <a href="https://www.apps.benedict.lang-familie.de" target="_blank"
-                   aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
-                <a type="button" href="https://www.apps.benedict.lang-familie.de" target="_blank"
-                   aria-label="My portfolio site (new tab)" class="portfolio__button-more link">- Mehr entdecken!</a>
-            </div>
-
-            <h4>Ein kleiner Einblick in ein paar Projekte</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, alias commodi cum cupiditate
-                deleniti, est incidunt ipsa iste itaque laborum modi, omnis quia rem sed similique vitae voluptas
-                voluptate voluptatem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid amet autem consequatur
-                deserunt error fugiat, impedit maxime natus numquam odio, optio repudiandae voluptatum! Consequuntur
-                fugit in iusto officiis praesentium.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore minus quidem quis
-                recusandae
-                sit vel voluptate. Aspernatur aut autem beatae cum esse harum iste, officia quis tempore ullam
-                velit?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos exercitationem laudantium mollitia.
-                Dolore dolorem et eum expedita harum, in iure libero molestiae perferendis praesentium quas
-                quibusdam
-                quos sunt voluptatum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugit ipsum mollitia placeat
-                voluptatem!
-                Eum fugiat nemo perspiciatis sed. Assumenda aut cum eveniet explicabo ipsa magnam quae, tempora
-                veritatis voluptatum?
-            </p>
-            <button class="btn btn__contrast" aria-label="Contact information"
-                    onclick="window.open('https://www.apps.benedict.lang-familie.de', '_blank');">Gesamtes Portfolio<i
-                    class="uil uil-archive icon button__icon"></i>
-            </button>
-        </section>
-        <section id="about" class="page-section">
-            <h2>Über mich</h2>
-            <p>
-                Ich bin Student an der Hochschule der Medien <abbr title="Hochschule der Medien">HdM</abbr> Stuttgart im Bereich
-                Informatik und Medienanwendungen (Mobile Medien). Nach vielen Jahre Erfahrung in Grafikdesign entwickle
-                ich
-                meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>, <abbr
-                    title="User Interface">UI</abbr>
-                Design und Software Entwicklung.
-                Meine Leidenschaft ist das Entwickeln von Software mit herausragendem und klaren Design welches zu einer
-                hervorragenden barrierefreien <span lang="en">User Experience</span>
-                beiträgt.
-            </p>
-            <div class="about__button link__button">
-                <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
-                   class="btn button__flex">
-                    CV herunterladen<i class="uil uil-download-alt button__icon"></i>
-                </a>
-            </div>
-        </section>
-    </main>
+                    <h4>Ein kleiner Einblick in ein paar Projekte</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, alias commodi cum
+                        cupiditate
+                        deleniti, est incidunt ipsa iste itaque laborum modi, omnis quia rem sed similique vitae
+                        voluptas
+                        voluptate voluptatem.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid amet autem
+                        consequatur
+                        deserunt error fugiat, impedit maxime natus numquam odio, optio repudiandae voluptatum!
+                        Consequuntur
+                        fugit in iusto officiis praesentium.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore minus quidem quis
+                        recusandae
+                        sit vel voluptate. Aspernatur aut autem beatae cum esse harum iste, officia quis tempore ullam
+                        velit?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos exercitationem laudantium
+                        mollitia.
+                        Dolore dolorem et eum expedita harum, in iure libero molestiae perferendis praesentium quas
+                        quibusdam
+                        quos sunt voluptatum.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugit ipsum mollitia placeat
+                        voluptatem!
+                        Eum fugiat nemo perspiciatis sed. Assumenda aut cum eveniet explicabo ipsa magnam quae, tempora
+                        veritatis voluptatum?
+                    </p>
+                    <button class="btn btn__contrast" aria-label="Contact information"
+                            onclick="window.open('https://www.apps.benedict.lang-familie.de', '_blank');">Gesamtes
+                        Portfolio<i
+                                class="uil uil-archive icon button__icon"></i>
+                    </button>
+                </section>
+                <section id="about" class="page-section">
+                    <h2>Über mich</h2>
+                    <p>
+                        Ich bin Student an der Hochschule der Medien <abbr title="Hochschule der Medien">HdM</abbr>
+                        Stuttgart im Bereich
+                        Informatik und Medienanwendungen (Mobile Medien). Nach vielen Jahren Erfahrung in Grafikdesign
+                        entwickle
+                        ich
+                        meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>, <abbr
+                            title="User Interface">UI</abbr>
+                        Design und Software Entwicklung. <br>
+                        Meine Leidenschaft ist das Entwickeln von Software mit herausragendem und klaren Design welches
+                        zu einer
+                        hervorragenden barrierefreien <span lang="en">User Experience</span>
+                        beiträgt.
+                    </p>
+                    <div class="about__button link__button">
+                        <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
+                           class="btn button__flex">
+                            CV herunterladen<i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
     <footer>
         <div class="sub-footer">
-            <a href="https://www.lang-familie.de" class=""
+            <a href="https://www.lang-familie.de" title="Wappen Lang" class=""
                aria-label="Lang Family site"
                target="_blank">
                 <svg id="footer-coa" aria-label="Hintergrund Wappen"
@@ -351,16 +389,17 @@
                     </g>
                 </svg>
             </a>
+            <button id="dark-mode-toggle-footer" class="dark-mode-toggle" aria-label="dark mode toggle"
+                    onclick="e()">
+                🌓
+                <i class="theme-icon uil"></i>
+            </button>
         </div>
         <div class="footer darkMode">
             <div class="footer__info">
                 <span class="copyright" lang="en">
                 All rights reserved. Copyright &copy; 2020 - <span id="currentYear"></span> by Benedict Lang.
             </span>
-                <button id="dark-mode-toggle-footer" class="dark-mode-toggle" aria-label="dark mode toggle"
-                        onclick="e()">
-                    <i class="theme-icon uil"></i>
-                </button>
             </div>
             <div class="social__links">
                 <a href="https://github.com/BenedictLang" class="social-link" aria-label="GitHub Profil (new tab)"
@@ -376,17 +415,25 @@
                    class="social-link" target="_blank">
                     <!--<i class="uim uil-discord social-img" aria-label="Discord logo"></i>-->
                     <i class="social-img icon " aria-label="Discord logo">
-                        <svg class="disco-ico social-img icon" aria-label="Discord logo"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.3973 128">
-                            <style>
-                                .discord_path {
-                                    fill: var(--clr-primary);
-                                }
-                            </style>
-                            <path class="discord_path"
-                                  d="M89.37,7.1233a10.8712,10.8712,0,0,1,10.9586,10.7831l0,.0552v94.3672l-11.4521-9.9946L82.4,96.4384l-6.7836-6.2576,2.8274,9.7315H18.0274A10.8711,10.8711,0,0,1,7.0688,89.1292l0-.0552V17.9616A10.8712,10.8712,0,0,1,17.9722,7.123l.0552,0H89.37M89.37,0H18.0274A18.0165,18.0165,0,0,0,0,17.9616V89.0849a18.0165,18.0165,0,0,0,18.0384,17.9617H83.43l.6028.5589.0657.0548h.0658l11.452,9.9945L107.3973,128V17.9616A18.0165,18.0165,0,0,0,89.37,0Z"/>
-                            <path class="discord_path"
-                                  d="M66.6844,74.5864c1.841,2.3074,4.0476,4.9049,4.0476,4.9049,13.5422-.4287,18.75-9.2047,18.75-9.2047a80.308,80.308,0,0,0-8.8264-35.3057,30.5527,30.5527,0,0,0-17.2115-6.3046l-.8574.971C73.0016,32.8,77.8436,37.3389,77.8436,37.3389A50.437,50.437,0,0,0,59.4089,31.526a52.4689,52.4689,0,0,0-12.37.1261,6.1087,6.1087,0,0,0-1.0465.1261,46.4508,46.4508,0,0,0-13.87,3.7828c-2.32,1.0591-3.6441,1.7526-3.6441,1.7526s5.0437-4.7788,16.1145-7.9311l-.6178-.7314a30.5519,30.5519,0,0,0-17.2115,6.3046,80.3081,80.3081,0,0,0-8.8265,35.3057s5.1446,8.8264,18.6868,9.2047c0,0,2.27-2.7236,4.1106-5.0437-7.78-2.2948-10.7178-7.1368-10.7178-7.1368s.6179.4288,1.7149,1.034a.8457.8457,0,0,0,.24.1765c.1891.1261.3656.1766.5548.3026a36.1013,36.1013,0,0,0,4.4762,2.0553,51.8915,51.8915,0,0,0,9.003,2.5975,43.4376,43.4376,0,0,0,15.8623,0,40.6959,40.6959,0,0,0,8.8264-2.5975,35.2139,35.2139,0,0,0,7.0486-3.5684S74.7165,72.3545,66.6844,74.5864ZM43.9879,66.1508c-3.4045,0-6.2037-3.1144-6.2037-6.9224a6.2415,6.2415,0,1,1,12.3948,0,6.5693,6.5693,0,0,1-6.1841,6.9333l-.0322.0017Zm22.18,0c-3.4171.0126-6.1659-3.0514-6.1659-6.91a6.2415,6.2415,0,1,1,6.2037,6.9224Z"/>
+                        <svg class="disco-ico" aria-label="Discord logo"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                            <defs>
+                                <style>
+                                    .discord_path {
+                                        fill: var(--clr-primary);
+                                    }
+
+                                    .discord_path:hover {
+                                        fill: var(--clr-text);
+                                    }
+                                </style>
+                            </defs>
+                            <g class="discord_path">
+                                <path
+                                        d="M89.37,7.1233a10.8712,10.8712,0,0,1,10.9586,10.7831l0,.0552v94.3672l-11.4521-9.9946L82.4,96.4384l-6.7836-6.2576,2.8274,9.7315H18.0274A10.8711,10.8711,0,0,1,7.0688,89.1292l0-.0552V17.9616A10.8712,10.8712,0,0,1,17.9722,7.123l.0552,0H89.37M89.37,0H18.0274A18.0165,18.0165,0,0,0,0,17.9616V89.0849a18.0165,18.0165,0,0,0,18.0384,17.9617H83.43l.6028.5589.0657.0548h.0658l11.452,9.9945L107.3973,128V17.9616A18.0165,18.0165,0,0,0,89.37,0Z"/>
+                                <path
+                                        d="M66.6844,74.5864c1.841,2.3074,4.0476,4.9049,4.0476,4.9049,13.5422-.4287,18.75-9.2047,18.75-9.2047a80.308,80.308,0,0,0-8.8264-35.3057,30.5527,30.5527,0,0,0-17.2115-6.3046l-.8574.971C73.0016,32.8,77.8436,37.3389,77.8436,37.3389A50.437,50.437,0,0,0,59.4089,31.526a52.4689,52.4689,0,0,0-12.37.1261,6.1087,6.1087,0,0,0-1.0465.1261,46.4508,46.4508,0,0,0-13.87,3.7828c-2.32,1.0591-3.6441,1.7526-3.6441,1.7526s5.0437-4.7788,16.1145-7.9311l-.6178-.7314a30.5519,30.5519,0,0,0-17.2115,6.3046,80.3081,80.3081,0,0,0-8.8265,35.3057s5.1446,8.8264,18.6868,9.2047c0,0,2.27-2.7236,4.1106-5.0437-7.78-2.2948-10.7178-7.1368-10.7178-7.1368s.6179.4288,1.7149,1.034a.8457.8457,0,0,0,.24.1765c.1891.1261.3656.1766.5548.3026a36.1013,36.1013,0,0,0,4.4762,2.0553,51.8915,51.8915,0,0,0,9.003,2.5975,43.4376,43.4376,0,0,0,15.8623,0,40.6959,40.6959,0,0,0,8.8264-2.5975,35.2139,35.2139,0,0,0,7.0486-3.5684S74.7165,72.3545,66.6844,74.5864ZM43.9879,66.1508c-3.4045,0-6.2037-3.1144-6.2037-6.9224a6.2415,6.2415,0,1,1,12.3948,0,6.5693,6.5693,0,0,1-6.1841,6.9333l-.0322.0017Zm22.18,0c-3.4171.0126-6.1659-3.0514-6.1659-6.91a6.2415,6.2415,0,1,1,6.2037,6.9224Z"/>
+                            </g>
                         </svg>
                     </i>
                 </a>
@@ -399,7 +446,60 @@
         </div>
     </footer>
 </div>
+<div class="loader-wrapper">
+    <!--.separator, .letters-->
+    <svg
+            id="loader-logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 92.7026 22.1551">
+        <defs>
+            <style>
+
+                .line {
+                    stroke-width: 1.7px;
+                }
+
+                .line, .letter {
+                    stroke: white;
+                    stroke-miterlimit: 10;
+                }
+
+                .letter {
+                    fill: transparent;
+                    stroke-width: 0.5px;
+                }
+            </style>
+        </defs>
+        <g>
+            <g class="loader-element">
+                <path class="letter"
+                      d="M8.5576,11.2125a2.8144,2.8144,0,0,0,.2559-.2265,2.9746,2.9746,0,0,0,.8906-2.18,3.4191,3.4191,0,0,0-.959-2.5186,3.5257,3.5257,0,0,0-2.584-1.0244H.25V17.8278H6.0928a3.7928,3.7928,0,0,0,2.7881-.958,3.8954,3.8954,0,0,0,1.1611-2.8555,3.25,3.25,0,0,0-.959-2.3838A3.1809,3.1809,0,0,0,8.5576,11.2125ZM2.8057,12.4176H5.7549a1.6983,1.6983,0,0,1,1.2685.4619,1.5206,1.5206,0,0,1,.3955,1.1348,1.5287,1.5287,0,0,1-.4619,1.1338,1.6215,1.6215,0,0,1-1.2021.3945H2.8057ZM6.7529,9.8063a1.0564,1.0564,0,0,1-.7949.3262H2.8057V7.5485H6.0928a.8724.8724,0,0,1,.66.2588,1.2618,1.2618,0,0,1,.3955.9316A1.4288,1.4288,0,0,1,6.7529,9.8063Z"/>
+                <polygon class="letter"
+                         points="14.032 15.543 14.032 5.263 11.477 5.263 11.477 17.828 20.254 17.828 20.254 15.543 14.032 15.543"/>
+            </g>
+            <g class="loader-element">
+                <line class="line" x1="25.414" x2="25.414" y2="22.1551"/>
+            </g>
+            <g class="loader-element">
+                <path class="letter"
+                      d="M35.2914,4.5692h-4.99V17.5868h4.9717a6.5088,6.5088,0,0,0,.0185-13.0176ZM31.3783,5.6454H35.24a5.4322,5.4322,0,1,1,0,10.8643H31.3783Z"/>
+                <polygon class="letter"
+                         points="43.631 17.587 52.021 17.587 52.021 16.51 44.693 16.51 44.693 11.47 51.513 11.47 51.513 10.392 44.693 10.392 44.693 5.645 52.021 5.645 52.021 4.569 43.631 4.569 43.631 17.587"/>
+                <path class="letter"
+                      d="M56.9779,4.5692a3.5157,3.5157,0,0,0,0,7.0313,2.4629,2.4629,0,1,1-2.455,2.4541V13.68H53.4623v.375a3.5157,3.5157,0,1,0,3.5156-3.499A2.4551,2.4551,0,1,1,59.432,8.1005v.375h1.0616v-.375A3.5275,3.5275,0,0,0,56.9779,4.5692Z"/>
+                <rect class="letter" x="62.932" y="4.5692" width="1.0605" height="13.0176"/>
+                <path class="letter"
+                      d="M72.6645,11.3388h5.8164A5.5258,5.5258,0,0,1,73.04,16.5263,5.4483,5.4483,0,1,1,76.8656,7.19l.2549.251.78-.7236-.28-.2754a6.4944,6.4944,0,1,0,1.961,4.6357v-.833h-6.917Z"/>
+                <polygon class="letter"
+                         points="91.375 4.569 91.375 15.809 82.461 4.569 81.365 4.569 81.365 17.587 82.442 17.587 82.442 6.344 91.39 17.587 92.453 17.587 92.453 4.569 91.375 4.569"/>
+            </g>
+        </g>
+    </svg>
+
+    <!--<span class="loader"><span class="loader-inner"></span></span>-->
+</div>
 <script>
+
     function e() {
         const themeIcon = document.querySelector('.theme-icon');
         document.documentElement.classList.toggle('darkMode');
@@ -414,6 +514,11 @@
             themeIcon.classList.add('uil-moon');
         }
     }
+
+    /*sal({
+        threshold: 1,
+        once: false,
+    });*/
 </script>
 <script src="./index.js" defer></script>
 </body>

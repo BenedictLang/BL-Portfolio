@@ -1,6 +1,6 @@
 @use '../1-helpers/variables' as v;
 
-.NavButton--navButton--1l740 {
+.nav__hamButton {
   display: none;
   position: inherit;
   top: 50%;
@@ -21,7 +21,12 @@
   transition: opacity .4s
 }
 
-.NavButton--navButton--1l740:before {
+.nav__hamButton svg {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+/*.nav__hamButton:before {
   content: "";
   position: absolute;
   width: 200%;
@@ -30,26 +35,20 @@
   left: -50%
 }
 
-.NavButton--navButton--1l740 svg {
-  position: absolute;
-  top: 0;
-  left: 0
-}
-
-.NavButton--navButton__hamburger--Rnj6d {
+.navButton__hamburger {
   opacity: 1;
   transition: opacity 0s 0s
 }
 
-.NavButton--navButton--1l740.NavButton--navOpen--lwgqO .NavButton--navButton__hamburger--Rnj6d, .NavButton--navButton__close--phpQ- {
+.nav__hamButton.NavButton--navOpen--lwgqO .navButton__hamburger, .navButton--close {
   opacity: 0;
   transition: opacity 0s 1s
 }
 
-.NavButton--navButton--1l740.NavButton--navOpen--lwgqO .NavButton--navButton__close--phpQ- {
+.nav__hamButton.NavButton--navOpen--lwgqO .navButton--close {
   transition: opacity 0s 0s;
   opacity: 1
-}
+}*/
 
 @media screen and (min-width: v.$bp-tablet) {
   .header {
@@ -112,7 +111,7 @@
     flex-direction: row;
   }
 
-  .NavButton--navButton--1l740 {
+  .nav__hamButton {
     display: flex;
   }
 
@@ -124,7 +123,7 @@
     box-shadow: none;
   }
 
-  .NavButton--navButton--1l740 {
+  .nav__hamButton {
     display: none;
   }
 
