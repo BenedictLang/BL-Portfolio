@@ -4,16 +4,23 @@
 .loader-wrapper {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: v.$clr-background;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: v.$clr-bg;
   @include m.flex;
   z-index: v.$z-modal;
+
+  animation: clr 1.5s ease-in-out;
 }
 
-main{
-  animation: blur 1.3s ease-in-out;
+.wrap{
+  animation: blur 1.4s ease-in-out;
+}
+
+.blur{
+  filter: blur(10px);
 }
 
 #loader-logo {
@@ -42,6 +49,15 @@ main{
   }
   100%{
     filter: blur(0);
+  }
+}
+
+@keyframes clr {
+  0%{
+    background-color: v.$clr-bg;
+  }
+  100%{
+    background-color: transparent;
   }
 }
 

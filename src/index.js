@@ -4,9 +4,10 @@ import './styles/main.scss';
 
 /* ==== LOADER ====*/
 $(window).on("load", function (){
-   $(".loader-wrapper")
-       .fadeTo("slow", 0, "swing")
-       .fadeOut("slow", function() {
+   $(".loader-wrapper").fadeTo(350, 100)
+       .fadeTo(300, 0, "swing")
+       .fadeOut(300, function() {
           $(this).remove();
        });
+   $(".blur").delay("slow").removeClass();
 });

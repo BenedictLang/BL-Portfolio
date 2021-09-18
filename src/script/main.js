@@ -7,14 +7,14 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-mobile-toggle'),
     navClose = document.getElementById('nav-close');
 
-//Show Menu
+//Show mobile Menu
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show__menu');
         document.body;
     })
 }
-//Hide Menu
+//Hide mobile Menu
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show__menu');
@@ -26,6 +26,13 @@ function linkAction(){
     console.log("pressed");
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
+
+//Toggle hamburger menu
+$('#menu-toggle').click(function(){
+    $(this).toggleClass('open');
+})
+
+
 
 /* ==== 3D HEADER ====*/
 //TODO
@@ -39,11 +46,11 @@ $(document).ready(function($) {
         //ADD .TIGHT
         if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
             $('body').addClass('tight');
-            $('.arrow').hide();
+/*            $('.arrow').hide();*/
         } else {
             $('body').removeClass('tight');
             if ($(window).width() > 767) {
-                $('.arrow').show();
+                /*$('.arrow').show();*/
             }
         }
     });
@@ -55,10 +62,6 @@ $(document).ready(function($) {
         }, 500);
     });
 
-});
-
-$('.arrow').click(function(){
-    $("html").animate({ scrollTop: $('html').prop("scrollHeight")}, 1200);
 });
 
 //sets current year

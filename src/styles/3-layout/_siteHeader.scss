@@ -42,8 +42,9 @@
   }
 }
 
-button.accessibility-toggle,
+button#accessibility-toggle,
 button#dark-mode-toggle-header {
+  padding: 0 10vw;
   background: transparent;
   border: none;
   color: v.$clr-text;
@@ -55,6 +56,10 @@ button#dark-mode-toggle-header {
   }
 }
 
+button#accessibility-toggle:active {
+  color: v.$clr-primary;
+}
+
 .service__items {
   display: flex;
   align-items: center;
@@ -64,9 +69,11 @@ button#dark-mode-toggle-header {
 
 
 .nav__menu {
-  /* TODO*/
+  //TODO
+  /*backdrop-filter: contrast(65%) blur(50px);*/
+  max-height: 80vh;
   position: fixed;
-  bottom: -100%;
+  bottom: -250vh;
   left: 0;
   width: 100%;
   background: v.$clr-background;
@@ -79,30 +86,97 @@ button#dark-mode-toggle-header {
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .nav__link {
+  font-size: clamp(10px, .9em + .3vh, 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   &:hover {
     color: v.$clr-primary;
   }
-  /*display: none;*/
+}
+
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: grid !important;
+}
+
+.nav__title {
+  margin: 3vh 0;
+}
+
+//ACCESSIBILITY
+.accessibility__list {
+  gap: 2rem;
 }
 
 .accessibility__settings {
   //TODO
-  display: none;
+  border-bottom: red;
+  border-width: 2px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  &:last-child {
+    padding-bottom: 5rem;
+  }
 }
+
+#accessibility-settings {
+  max-height: 70%;
+  height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 .3rem 4rem 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.acc_icon {
+  margin-right: 1rem;
+}
+
+label.toggle {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+#cbx1.toggle {
+
+}
+
 
 .nav__icon {
   font-size: v.$icon-size;
 }
 
+.nav__bottom {
+  height: 4.5rem;
+  width: 100%;
+  backdrop-filter: blur(15px) ;
+  /*background: linear-gradient(110deg, rgba(63,87, 150, 0) 42%, rgba(20, 27, 43, 0.7) 84%, rgba(20, 27, 43, 1) 100%);*/
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-1.5rem);
+}
+
 .nav__close {
   position: absolute;
-  right: 1.6rem;
+  right: 1.5rem;
   bottom: 1.5rem;
   font-size: v.$icon-size;
   cursor: pointer;

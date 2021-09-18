@@ -1,6 +1,6 @@
 // Dark mode
 darkModeInit();
-const themeIcon = document.querySelector('.theme-icon').classList;
+/*const themeIcon = document.querySelector('.theme-icon').classList;*/
 function darkModeInit() {
     let darkMode = null;
     if (typeof(Storage) !== "undefined") {
@@ -22,7 +22,7 @@ function darkModeInit() {
         document.documentElement.classList.add('darkMode');
         document.querySelector('.theme-icon').classList.remove('uil-sun');
         document.querySelector('.theme-icon').classList.add('uil-moon');
-        console.log("darkMode active")
+        console.log("darkMode active");
     } else if (darkMode === false) {
         document.documentElement.classList.remove('darkMode');
         document.querySelector('.theme-icon').classList.remove('uil-moon');

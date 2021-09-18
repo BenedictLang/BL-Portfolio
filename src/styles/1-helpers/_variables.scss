@@ -19,6 +19,7 @@ red:        0
 :root {
   --clr-primary: hsl(19, 72%, 60%);
   --clr-secondary: rgba(20, 27, 43, 0.7);
+  --clr-third: rgba(20, 27, 43, 0.29);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, var(--clr-primary) 55%, rgba(63, 87, 150, 0.9) 100%);
   --clr-scene: var(--clr-text);
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
@@ -33,6 +34,7 @@ red:        0
 /* theme dark style */
 .darkMode {
   --clr-secondary: rgba(255, 255, 255, 0.2);
+  --clr-third: rgba(156, 170, 255, 0.14);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, rgba(226, 126, 80, 0.6) 35%, rgba(63, 87, 150, 0.2) 80%, rgba(38, 49, 80, 0) 95%);
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
@@ -45,6 +47,7 @@ $clr-text: var(--clr-text) !default;
 $clr-icon: var(--clr-icon) !default;
 $clr-primary: var(--clr-primary) !default;
 $clr-secondary: var(--clr-secondary) !default;
+$clr-third: var(--clr-third) !default;
 $clr-container: var(--clr-container) !default;
 $clr-scene: var(--clr-scene) !default;
 $clr-background: var(--clr-background) !default;

@@ -2,19 +2,16 @@
 
 /* Footer */
 footer {
-  position: relative;
-  height: 100%;
-  width: 95vw;
+  bottom: 0;
+  top: auto;
+  position: page;
+  width: 95%;
   transform: translateX(5vw);
   @media screen and (min-width: v.$bp-tablet){
     background: linear-gradient(
                     60deg,
                     #2C4A81,
-                    v.$clr-primary,
-                    #488fc7,
-                    v.$clr-primary,
-                    #22c0fa,
-                    #274377
+                    v.$clr-bg
     );
     border-top-left-radius: 70px;
     box-shadow: -10px -5px 12px rgba(10 10 10 /.5);
@@ -81,7 +78,6 @@ footer {
   border-width: 0;
   background: transparent;
   font-size: 1.4rem;
-  transition: background-color, color 1s ease-in-out;
   cursor: pointer;
 }
 

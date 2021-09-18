@@ -2,14 +2,14 @@
 @use '../1-helpers/mixins' as m;
 
 html {
+  max-height:100%;
+  position:relative;
   transition-property: background-color, color;
 }
 
 body {
-  &>*{
-    transition: 500ms;
-  }
-
+  //TODO
+  /*margin: 10vw;*/
   &:before {
     position: fixed;
     z-index: -1;
@@ -27,9 +27,7 @@ body {
 }
 
 #main-grid {
-  padding: 5em;
-  margin: 0 2em;
-  max-width: 60rem;
+  max-height:100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -60,6 +58,7 @@ section.subtitle {
 section.page-section {
   padding: 10vh v.$pdd-side;
   min-height: 70vh;
+  max-height:100%;
 }
 
 section:nth-of-type(2) {
