@@ -1,4 +1,14 @@
 /*General*/
+/* ==== LOADER ====*/
+$(window).on("load", function (){
+    $(".loader-wrapper").fadeTo(350, 100)
+        .fadeTo(300, 0, "swing")
+        .fadeOut(300, function() {
+            $(this).remove();
+        });
+    $(".blur").delay("slow").removeClass();
+});
+
 /*import sal from "sal.js";
 data-sal-duration="1200" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce"*/
 
@@ -61,8 +71,23 @@ $(document).ready(function($) {
             scrollTop: $('.wrapper').outerHeight() - $(window).height()
         }, 500);
     });
-
 });
+
+//ACCESSIBILITY SETTINGS
+export function accSettings() {
+    const navMobile = document.getElementById('nav-grid');
+    const accSettings = document.getElementById('accessibility');
+    const navBtm = document.getElementById('nav-bottom');
+    if (accSettings.classList.contains('hidden')) {
+        accSettings.classList.remove('hidden');
+        navMobile.classList.add('hidden');
+        /*navBtm.classList.add('nav__bottom');*/
+    } else {
+        navMobile.classList.remove('hidden');
+        accSettings.classList.add('hidden');
+        /*navBtm.classList.remove('nav__bottom');*/
+    }
+}
 
 //sets current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();

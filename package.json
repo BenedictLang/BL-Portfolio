@@ -4,20 +4,21 @@
   "author": "Benedict Lang",
   "description": "",
   "license": "GNU AGPLv3",
-  "main": "",
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html",
-    "prod": "parcel build src/index.html"
+    "start": "parcel",
+    "prod": "parcel build"
   },
   "dependencies": {
     "npm": "^7.23.0",
-    "sal.js": "^0.8.5",
     "script": "^0.1.4",
     "src": "^1.1.2"
   },
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
     "jquery": "^1.11.1",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.0.0-rc.0",
     "sass": "^1.38.1"
   }
 }

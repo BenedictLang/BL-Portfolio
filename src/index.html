@@ -18,9 +18,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="canonical" href="https://benedict.lang-familie.de/" data-baseprotocol="https:"
           data-basehost="www.benedict.lang-familie.de">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-
 <body id="scrollable">
 <div id="main-grid">
     <div id="wrapper" class="wrapper blur">
@@ -82,11 +81,11 @@
                         <div class="service__items">
                             <button id="accessibility-toggle" class="accessibility-toggle"
                                     aria-label="show accessibility settings"
-                                    onclick="d()">
+                                    onclick="accSettings()">
                                 <i class="uil uil-accessible-icon-alt"></i>
                             </button>
                             <button id="dark-mode-toggle-header" class="dark-mode-toggle" aria-label="dark mode toggle"
-                                    onclick="e()">
+                                    onclick="darkModeToggle()">
                                 <!--🌓-->
                                 <i class="theme-icon uil"></i>
                             </button>
@@ -466,7 +465,7 @@
                     </svg>
                 </a>
                 <button id="dark-mode-toggle-footer" class="dark-mode-toggle" aria-label="dark mode toggle"
-                        onclick="e()">
+                        onclick="darkModeToggle()">
                     🌓
                     <i class="theme-icon uil"></i>
                 </button>
@@ -578,8 +577,9 @@
         </g>
     </svg>
 </div>
-<script>
-    function d() {
+<script  type="module">
+    /*window.functionname= function()*/
+    window.accSettings = function accSettings() {
         const navMobile = document.getElementById('nav-grid');
         const accSettings = document.getElementById('accessibility');
         const navBtm = document.getElementById('nav-bottom');
@@ -593,8 +593,7 @@
             /*navBtm.classList.remove('nav__bottom');*/
         }
     }
-
-    function e() {
+/*    window.darkModeToggle = function darkModeToggle() {
         const themeIcon = document.querySelector('.theme-icon');
         document.documentElement.classList.toggle('darkMode');
         if (typeof (Storage) !== "undefined") {
@@ -607,13 +606,13 @@
             themeIcon.classList.remove('uil-sun');
             themeIcon.classList.add('uil-moon');
         }
-    }
+    }*/
 
     /*sal({
         threshold: 1,
         once: false,
     });*/
 </script>
-<script src="./index.js" defer></script>
+<script type="module" src="./index.js" defer></script>
 </body>
 </html>
