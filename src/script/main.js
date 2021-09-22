@@ -1,12 +1,13 @@
 /*General*/
 /* ==== LOADER ====*/
 $(window).on("load", function (){
-    $(".loader-wrapper").fadeTo(350, 100)
-        .fadeTo(300, 0, "swing")
-        .fadeOut(300, function() {
+    $(".loader-wrapper").fadeTo(1000, 0, "swing")
+        .fadeOut("slow", function() {
             $(this).remove();
         });
-    $(".blur").delay("slow").removeClass();
+    setTimeout(function() {
+        $(".blur").removeClass();
+    }, 300);
 });
 
 /*import sal from "sal.js";

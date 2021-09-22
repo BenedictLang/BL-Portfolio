@@ -21,7 +21,7 @@
 }
 
 @mixin stroke-anim{
-  stroke-dasharray: 80;
+  stroke-dasharray: 90;
   stroke-dashoffset: 80;
   animation: line-anim 5s infinite ease-in-out;
 }

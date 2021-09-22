@@ -1,25 +1,21 @@
 @use '../1-helpers/variables' as v;
 @use '../1-helpers/mixins' as m;
 
+
 .loader-wrapper {
+  background: linear-gradient(75deg, rgba(20, 27, 43, 0.9), rgba(36, 51, 82, 1));
   width: 100%;
   height: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: v.$clr-bg;
   @include m.flex;
   z-index: v.$z-modal;
-  animation: clr 1.5s ease-in-out;
 }
 
-.wrap{
-  animation: blur 1.4s ease-in-out;
-}
-
-.blur{
-  filter: blur(10px);
+  .blur {
+    filter: blur(9px);
 }
 
 #loader-logo {
@@ -42,27 +38,9 @@
   @include m.stroke-anim;
 }
 
-@keyframes blur {
-  0%{
-      filter: blur(10px);
-  }
-  100%{
-    filter: blur(0);
-  }
-}
-
-@keyframes clr {
-  0%{
-    background-color: v.$clr-bg;
-  }
-  100%{
-    background-color: transparent;
-  }
-}
-
 @keyframes line-anim {
   0%{
-    stroke-dashoffset: 80;
+    stroke-dashoffset: 90;
   }
   45% {
     stroke-dashoffset: 0;
@@ -74,6 +52,6 @@
     stroke-dashoffset: 0;
   }
   100%{
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 90;
   }
 }
