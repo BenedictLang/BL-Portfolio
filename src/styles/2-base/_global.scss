@@ -64,10 +64,18 @@ div.scroll {
   /*padding: 20px;*/
 }
 
-img {
+img, image, svg {
   display: block;
   max-width: 100%;
   background-repeat: no-repeat;
+  /*&:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url(data:../media/icons/Img-broken-icon.svg);
+  }*/
 }
 
 .icon svg {
