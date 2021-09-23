@@ -113,7 +113,15 @@ button#accessibility-toggle:active {
 }
 
 .nav__title {
-  margin: 3vh 0;
+  margin: 3vh 0 1.5vh 0;
+}
+
+.nav__subtitle {
+  margin-bottom: 9rem;
+}
+
+.nav__sub {
+  padding-bottom: 9rem;
 }
 
 //ACCESSIBILITY
@@ -139,10 +147,10 @@ button#accessibility-toggle:active {
   height: 70vh;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 0 .3rem 4rem 0;
-  &::-webkit-scrollbar {
+  padding: 0 .5rem 4rem 0;
+  /*&::-webkit-scrollbar {
     display: none;
-  }
+  }*/
 }
 
 .acc_icon {

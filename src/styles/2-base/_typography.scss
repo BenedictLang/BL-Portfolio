@@ -78,6 +78,11 @@ span {
   color: v.$clr-text;
 }
 
+.short {
+  /*line-height: 2em;*/
+  //TODO
+}
+
 button {
   font-size: clamp(0.125rem, 1rem + 1vw, 1rem);
 }
