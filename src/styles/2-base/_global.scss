@@ -142,18 +142,29 @@ abbr {
   visibility: visible;
 }
 
-
-.link {
-  color: v.$clr-text;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom ease-in-out .3s;
-
+a {
+  transition: color .3s;
   &:hover {
-    border-color: v.$clr-text;
+    color: v.$clr-text;
   }
 }
 
+
+.link__contrast {
+  color: v.$clr-bg;
+  text-decoration: none;
+  font-size: small;
+  background-image: linear-gradient(
+                  45deg,v.$clr-text 10%,v.$clr-primary);
+  background-position: 0 120%;
+  background-repeat: no-repeat;
+  background-size: 0 5px;
+  transition: background-size .3s;
+  &:hover {
+    color: v.$clr-bg;
+    background-size: 100% 7px;
+  }
+}
 
 //buttons
 .button__icon {
@@ -419,7 +430,6 @@ button {
 
 .gradient-border {
   --border-width: 3.5px;
-
   position: relative;
   display: flex;
   justify-content: center;

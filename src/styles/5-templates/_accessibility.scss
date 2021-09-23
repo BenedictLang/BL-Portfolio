@@ -1,17 +1,21 @@
+/*
+@use '../1-helpers/variables' as v;
 //transitions
 //verläufe
 //
 
-/*
 :root, p{
   font-family: Arial, serif !important;
-  font-size: 50px !important;
+  font-size: 40px !important;
   font-style: normal !important;
   --clr-primary: #fff;
   --clr-text: #fff;
   --clr-bg: #141B2B;
   --clr-background: #141B2B;
+}
 
+*:focus {
+  outline: 5px solid deeppink !important;
 }
 
 section {
@@ -19,7 +23,7 @@ section {
 }
 
 span{
-  font-size: 50px !important;
+  font-size: 40px !important;
   font-style: normal !important;
 }
 
@@ -27,15 +31,22 @@ a {
   color: #fff !important;
   font-family: Arial, serif !important;
   font-weight: normal !important;
-  text-decoration: underline !important;
-  text-decoration-color: blue !important;
+  outline: 2px solid darkorange;
 }
 
-button, footer, p, a, header, section, ul, ol, li{
+footer, p, header, section, ul, ol, li{
+  transition: none !important;
   border-width: 3px !important;
   border-radius: 4px !important;
   border-color: red !important;
-  outline: 1px solid red;
+  outline: 2px solid red;
+}
+
+button {
+  transition: none !important;
+  border-width: 3px !important;
+  border-radius: 4px !important;
+  outline: 2px solid aqua;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,6 +57,52 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-weight: bolder !important;
+}
+
+.accessibility__settings{
+  display: flex;
+  flex-direction: column;
+}
+.scroll-down {
+  display: none;
+}
+.cbx {
+  outline: 2px solid aqua;
+  margin: 4px;
+}
+.cbx:checked + .toggle{
+  span{
+    path {
+      stroke: v.$clr-bg;
+      stroke-dasharray: 25;
+      stroke-dashoffset: 25;
+    }
+  }
+  outline: 2px solid green;
+}
+
+.nav__bottom {
+  height: 7vh;
+}
+
+.scrollbar__mini {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+.glow-on-hover, .glow-on-hover::before, .glow-on-hover:active,
+.glow-on-hover::after {
+  transition: none !important;
+  background: transparent;
+  &:hover{
+  }
+}
+
+.btn {
+  &:hover {
+    background-color: var(--clr-bg);
+  }
 }
 
 .scroll-to-top{

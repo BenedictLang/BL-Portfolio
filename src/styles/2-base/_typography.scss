@@ -83,6 +83,14 @@ span {
   //TODO
 }
 
+code {
+  font-family: monospace;
+  color: v.$clr-bg;
+  background-color: v.$clr-text;
+  padding: .2rem .3rem;
+  border-radius: 6px;
+}
+
 button {
   font-size: clamp(0.125rem, 1rem + 1vw, 1rem);
 }
