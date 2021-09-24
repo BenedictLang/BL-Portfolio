@@ -77,6 +77,7 @@
                             <span class="nav__hamLine"></span>
                         </div>
                     </div>
+                    <!--<div id="nav-list">-->
                     <div id="nav-menu" class="nav__menu">
                         <div class="service__items">
                             <button id="accessibility-toggle" class="accessibility-toggle"
@@ -130,14 +131,24 @@
                                 </a>
                             </li>
                         </ul>
+                        <!--<hr class="nav__separator">
+                        <div class="nav__additions nav__list">
+                            <form role="search" class="search-form" action="https://benedict.lang-familie.de/"
+                                  method="get">
+                                <label for="search-form" class="search-form__label"></label>
+                                <input id="search-form" type="search" class="search-form__input">
+                            </form>
+                        </div>-->
                         <div id="accessibility" class="popup overlay hidden">
-                            <h3 class="nav__title accessibility__list">
-                                Barrierefreiheit & Usability Tools
-                            </h3>
+                            <div class="nav__title accessibility__list">
+                                <h3 class="nav__title">
+                                    Barrierefreiheit & Usability Tools
+                                </h3>
+                                <a class="nav__subtitle" tabindex="3" href="#main"
+                                   onclick="document.getElementById('nav-menu').classList.remove('show__menu');">Skip to
+                                    main content</a>
+                            </div>
                             <!--TODO onkeydown events-->
-                            <a class="nav__subtitle accessibility__list" tabindex="3" href="#main"
-                               onclick="document.getElementById('nav-menu').classList.remove('show__menu');">Skip to
-                                main content</a>
                             <div id="accessibility-settings" class="scrollbar__mini">
                                 <ul class="accessibility__list grid">
                                     <li class="accessibility__settings">
@@ -249,21 +260,27 @@
                                         maxime nesciunt nostrum perferendis quidem rem sapiente,
                                         sunt tempore. Consequatur distinctio eos placeat!
                                     </li>
+                                    <li class="accessibility__settings" tabindex="15">
+                                        <a class="nav__sub accessibility__list"
+                                           aria-label="link to contact form (same tab)" tabindex="15" href="#contact"
+                                           onclick="document.getElementById('nav-menu').classList.remove('show__menu');">
+                                            Help or Feedback?</a>
+                                    </li>
                                 </ul>
-                                <a class="nav__sub accessibility__list" aria-label="link to contact form (same tab)" tabindex="15" href="#contact"
-                                   onclick="document.getElementById('nav-menu').classList.remove('show__menu');">
-                                    Help or Feedback?</a>
                             </div>
                         </div>
-                        <hr class="nav__separator">
+
+                        <!--<hr class="nav__separator">-->
                         <div id="nav-bottom" class="nav__bottom" title="Close Menu">
                             <i id="nav-close" class="uil uil-multiply nav__close" aria-label="Close menu"
                                tabindex=""></i>
                         </div>
                     </div>
+                    <!--</div>-->
 
                     <div class="nav__btn">
-                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="button" onkeydown=""
+                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="button"
+                             onkeydown=""
                              aria-label="Open menu and accessibility settings" tabindex="1">
                             <i class="uil uil-apps"></i>
                         </div>
@@ -289,7 +306,7 @@
                                 <a href="https://discord.gg/QMjhZnBxgV"
                                    aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
                                    class="home__social-icon" target="_blank">
-                                    <i class="uim uil-discord social-img" aria-label="Discord logo"></i>
+                                    <i class="uil uil-discord" aria-label="Discord logo"></i>
                                     <!--<i class="icon" aria-label="Discord logo">
                                         <svg class="disco-ico" aria-label="Discord logo"
                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 120">
@@ -368,7 +385,8 @@
                         <a type="application" href="https://www.apps.benedict.lang-familie.de" target="_blank"
                            aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
                         <a type="application" href="https://www.apps.benedict.lang-familie.de" target="_blank"
-                           aria-label="My portfolio site (new tab)" class="portfolio__button-more link__contrast draw">- Mehr
+                           aria-label="My portfolio site (new tab)" class="portfolio__button-more link__contrast draw">-
+                            Mehr
                             entdecken!</a>
                     </div>
 
@@ -476,9 +494,10 @@
                         Ich bin Student an der Hochschule der Medien <abbr title="Hochschule der Medien">HdM</abbr>
                         Stuttgart im Bereich
                         Informatik und Medienanwendungen (Mobile Medien). Nach vielen Jahren Erfahrung in Grafikdesign
-                        entwickle ich meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>, <abbr
-                            title="User Interface">UI</abbr>
-                        Design und <code>Software Entwicklung</code>. <br>
+                        entwickle ich meine Fähigkeiten weiter in Richtung <abbr title="User Experience">UX</abbr>,
+                        <abbr
+                                title="User Interface">UI</abbr>
+                        Design und Software Entwicklung. <br>
                         Meine Leidenschaft ist das Entwickeln von Software mit herausragendem und klaren Design welches
                         zu einer
                         hervorragenden barrierefreien <span lang="en">User Experience</span>
@@ -548,7 +567,8 @@
             </span>
                 </div>
                 <div class="social__links">
-                    <a href="https://github.com/BenedictLang" class="social-link" title="GitHub" aria-label="GitHub Profil (new tab)"
+                    <a href="https://github.com/BenedictLang" class="social-link" title="GitHub"
+                       aria-label="GitHub Profil (new tab)"
                        target="_blank">
                         <i class="uil uil-github-alt social-img" aria-label="GitHub logo"></i>
                     </a>
@@ -657,11 +677,11 @@
         if (accSettings.classList.contains('hidden')) {
             accSettings.classList.remove('hidden');
             navMobile.classList.add('hidden');
-            /*navBtm.classList.add('nav__bottom');*/
+            /*document.getElementById('nav-menu').style.maxHeight = "80vh";*/
         } else {
             navMobile.classList.remove('hidden');
             accSettings.classList.add('hidden');
-            /*navBtm.classList.remove('nav__bottom');*/
+            /*document.getElementById('nav-menu').style.maxHeight = "70vh";*/
         }
     }
     window.darkModeToggle = function darkModeToggle() {

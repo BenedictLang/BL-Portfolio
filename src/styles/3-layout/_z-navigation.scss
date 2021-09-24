@@ -150,6 +150,10 @@
     flex-direction: column;
   }
 
+  .nav__bottom {
+    display: none;
+  }
+
   #menu-toggle {
     @include m.flex;
   }
@@ -157,6 +161,8 @@
 
 @media screen and (min-width: v.$bp-desktop) {
   .header {
+    position: sticky;
+    top: 0;
     background: transparent;
     box-shadow: none;
   }
