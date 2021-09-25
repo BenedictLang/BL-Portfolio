@@ -25,29 +25,31 @@ a {
 h1, h2, h4, h5, h6 {
   color: v.$clr-text;
   font-weight: normal;
-  font-family: v.$ft-title;
 }
 
 h1 {
-  color: v.$clr-text;
-  font-size: clamp(.9em, 1em + 10vw, 4em);
+
+  font-size: clamp(.9em, 1.5em + 10vw, 4.2em);
   line-height: 1.1;
+  font-family: v.$ft-title;
 }
 
 h2 {
-  font-size: clamp(.8em, 1em + 6vw, 3.3em);
-  line-height: 1.1;
-
-}
-
-a h2 {
-  font-style: normal;
-}
-
-h3 {
   font-size: clamp(.4em, .5em + 7vw, 1.5em);
   font-family: v.$ft-subtitle;
   font-weight: bolder;
+}
+
+h3 a {
+  font-style: normal;
+  color: v.$clr-text;
+}
+
+h3 {
+  font-size: clamp(.8em, .9em + 6vw, 3.2em);
+  line-height: 1.1;
+  font-family: v.$ft-title;
+  font-weight: normal;
 }
 
 h4 {

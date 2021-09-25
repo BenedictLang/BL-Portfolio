@@ -167,6 +167,9 @@ a {
 }
 
 //buttons
+input {
+  cursor: pointer;
+}
 .button__icon {
   font-size: 1.4em;
   margin-left: v.$mb-05;
@@ -196,7 +199,7 @@ button {
   border: 0.15em solid v.$clr-text;
   color: v.$clr-text;
   box-shadow: v.$fx-dropShadow;
-  /*background-color: v.$clr-secondary;*/
+  background-color: v.$clr-bg;
   &:active {
     color: v.$clr-bg;
     transform: translateY(4px);
@@ -273,14 +276,20 @@ button {
       }
     }
   }
+  &:focus{
+
+  }
 }
 
 .cbx__label-wrapper {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+}
+
+.cbx-icon:checked + label{
+  color: v.$clr-primary;
 }
 
 .cbx:checked + .toggle {

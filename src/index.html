@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#E27E50">
     <meta name="msapplication-TileColor" content="#E27E50">
     <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, viewport-fit=cover">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -43,7 +43,7 @@
                                     }
                                     </style>
                                 </defs>
-                                <a xlink:href="https://www.benedict.lang-familie.de" aria-label="back to main page">
+                                <a xlink:href="https://www.benedict.lang-familie.de" >
                                     <g class="logo-group">
                                         <rect class="a" x="23.626" width="1.75" height="22.4229"/>
                                         <path class="a"
@@ -66,7 +66,7 @@
                             </svg>
                         </a>
                     </object>
-                    <div id="menu-toggle" aria-controls="main-menu" aria-label="toggle menu" tabindex="1">
+                    <div id="menu-toggle" role="button" aria-label="toggle menu">
                         <div id="hamburger">
                             <span class="nav__hamLine"></span>
                             <span class="nav__hamLine"></span>
@@ -77,211 +77,217 @@
                             <span class="nav__hamLine"></span>
                         </div>
                     </div>
-                    <!--<div id="nav-list">-->
-                    <div id="nav-menu" class="nav__menu">
-                        <div class="service__items">
-                            <button id="accessibility-toggle" class="accessibility-toggle"
-                                    aria-label="show accessibility settings" tabindex="2"
-                                    aria-pressed="false" onclick="accSettings()">
-                                <i class="uil uil-accessible-icon-alt"></i>
-                            </button>
-                            <button id="dark-mode-toggle-header" class="dark-mode-toggle"
-                                    aria-label="Change to high-contrast-mode"
-                                    aria-pressed="true" onclick="darkModeToggle()">
-                                <!--🌓-->
-                                <i class="theme-icon uil"></i>
-                            </button>
-                        </div>
-                        <hr class="nav__separator">
-                        <ul id="nav-grid" class="nav__list grid">
-                            <li class="nav__item">
-                                <a href="#home" class="nav__link">
-                                    <i class="nav__icon uil uil-estate"></i>
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#portfolio" class="nav__link">
-                                    <i class="nav__icon uil uil-presentation-play"></i>
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#about" class="nav__link">
-                                    <i class="nav__icon uil uil-user"></i>
-                                    Über mich
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#skills" class="nav__link">
-                                    <i class="nav__icon uil uil-book-alt"></i>
-                                    Skills
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#services" class="nav__link">
-                                    <i class="nav__icon uil uil-suitcase"></i>
-                                    Leistungen
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#contact" class="nav__link">
-                                    <i class="nav__icon uil uil-message"></i>
-                                    Kontaktieren
-                                </a>
-                            </li>
-                        </ul>
-                        <!--<hr class="nav__separator">
-                        <div class="nav__additions nav__list">
-                            <form role="search" class="search-form" action="https://benedict.lang-familie.de/"
-                                  method="get">
-                                <label for="search-form" class="search-form__label"></label>
-                                <input id="search-form" type="search" class="search-form__input">
-                            </form>
-                        </div>-->
-                        <div id="accessibility" class="popup overlay hidden">
-                            <div class="nav__title accessibility__list">
-                                <h3 class="nav__title">
-                                    Barrierefreiheit & Usability Tools
-                                </h3>
-                                <a class="nav__subtitle" tabindex="3" href="#main"
-                                   onclick="document.getElementById('nav-menu').classList.remove('show__menu');">Skip to
-                                    main content</a>
+                    <div id="nav-list">
+                        <div id="nav-menu" class="nav__menu">
+                            <div class="service__items">
+                                <input id="accessibility-cbx" class="cbx-icon" aria-label="show accessibility settings"
+                                       aria-checked="false" type="checkbox"
+                                       style="display:none" onclick="accSettings()"/>
+                                <label id="accessibility-toggle" for="accessibility-cbx" class="cbx-icon accessibility__toggle"
+                                       title="Accessibility Settings" tabindex="0">
+                                    <i class="uil uil-accessible-icon-alt accessibility__icon"></i>
+                                </label>
+                                <button id="dark-mode-toggle-header" class="dark-mode-toggle"
+                                        title="Color Theme" aria-label="Change to high-contrast-mode"
+                                        aria-pressed="true" onclick="darkModeToggle()">
+                                    <i class="theme-icon uil"></i>
+                                </button>
                             </div>
-                            <!--TODO onkeydown events-->
-                            <div id="accessibility-settings" class="scrollbar__mini">
-                                <ul class="accessibility__list grid">
-                                    <li class="accessibility__settings">
-                                        <div class="cbx__label-wrapper">
-                                            <i class="nav__icon acc_icon uil uil-arrow"></i>
-                                            <label id="cog-disability" for="cbx1" tabindex="4">
-                                                <strong class="short">Cognitive Disability Profile</strong>
-                                                <br>
-                                                <span>
+                            <hr class="nav__separator">
+                            <div id="menu-list">
+                                <ul id="nav-grid" class="nav__list grid">
+                                    <li class="nav__item">
+                                        <a href="#home" class="nav__link">
+                                            <i class="nav__icon uil uil-estate"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#portfolio" class="nav__link">
+                                            <i class="nav__icon uil uil-presentation-play"></i>
+                                            Portfolio
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#about" class="nav__link">
+                                            <i class="nav__icon uil uil-user"></i>
+                                            Über mich
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#skills" class="nav__link">
+                                            <i class="nav__icon uil uil-book-alt"></i>
+                                            Skills
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#services" class="nav__link">
+                                            <i class="nav__icon uil uil-suitcase"></i>
+                                            Leistungen
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#contact" class="nav__link">
+                                            <i class="nav__icon uil uil-message"></i>
+                                            Kontaktieren
+                                        </a>
+                                    </li>
+                                </ul>
+                                <hr class="nav__separator">
+                                <div class="nav__additions nav__list">
+                                    <form role="search" class="search-form" action="https://benedict.lang-familie.de/"
+                                          method="get">
+                                        <label for="search-form" class="search-form__label"></label>
+                                        <input id="search-form" type="search" class="search-form__input">
+                                        <i class="uil uil-search"></i>
+                                    </form>
+                                    <a href="https://lang-familie.de/impressum/"><i class="uil uil-cloud-info nav__icon"></i> Impressum</a>
+                                    <a href="https://lang-familie.de/datenschutzerklaerung/"><i class="uil uil-cloud-shield nav__icon"></i> Datenschutz</a>
+                                </div>
+                            </div>
+                            <div id="accessibility" class="popup overlay hidden">
+                                <div class="nav__title accessibility__list">
+                                    <h4 class="nav__title">
+                                        Barrierefreiheit & Usability Tools
+                                    </h4>
+                                    <a class="nav__subtitle" href="#main"
+                                       onclick="document.getElementById('nav-menu').classList.remove('show__menu');">Skip
+                                        to
+                                        main content</a>
+                                </div>
+                                <!--TODO onkeydown events-->
+                                <div id="accessibility-settings" class="scrollbar__mini">
+                                    <ul class="accessibility__list grid">
+                                        <li class="accessibility__settings">
+                                            <div class="cbx__label-wrapper">
+                                                <i class="nav__icon acc_icon uil uil-arrow"></i>
+                                                <label id="cog-disability" for="cbx1" tabindex="0">
+                                                    <strong class="short">Cognitive Disability Profile</strong>
+                                                    <br>
+                                                    <span>
                                                 Assistive feature for reading and focussing. Helps users with disabilities
                                                 such as CVA, Autism and others.
                                             </span>
-                                            </label>
-                                        </div>
-                                        <input id="cbx1" aria-label="Toggle accessibility mode"
-                                               aria-describedby="cog-disability" tabindex="5" type="checkbox"
-                                               class="cbx"
-                                               style="display:none"/>
-                                        <label for="cbx1" class="toggle">
+                                                </label>
+                                            </div>
+                                            <input id="cbx1" aria-label="Toggle accessibility mode"
+                                                   aria-describedby="cog-disability" type="checkbox"
+                                                   class="cbx" onclick="handleAccProfile()"
+                                                   style="display:none"/>
+                                            <label for="cbx1" class="toggle">
                                             <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
                                             <path d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z"></path>
                                           </svg>
                                         </span>
-                                        </label>
-                                    </li>
-                                    <li class="accessibility__settings">
-                                        <div class="cbx__label-wrapper">
-                                            <i class="nav__icon acc_icon uil uil-arrow"></i>
-                                            <label id="2" for="cbx2" tabindex="6">
-                                                <strong class="short">Vision Impaired Profile</strong>
-                                                <br>
-                                                <span>
+                                            </label>
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            <div class="cbx__label-wrapper">
+                                                <i class="nav__icon acc_icon uil uil-arrow"></i>
+                                                <label id="2" for="cbx2" tabindex="0">
+                                                    <strong class="short">Vision Impaired Profile</strong>
+                                                    <br>
+                                                    <span>
                                                 Enhanced visuals by high contrast mode, a greater scale factor
                                                     and improved readability.
                                             </span>
-                                            </label>
-                                        </div>
-                                        <input id="cbx2" aria-label="Toggle accessibility mode"
-                                               aria-describedby="labelId" tabindex="7" type="checkbox" class="cbx"
-                                               style="display:none"/>
-                                        <label for="cbx2" class="toggle">
+                                                </label>
+                                            </div>
+                                            <input id="cbx2" aria-label="Toggle accessibility mode"
+                                                   aria-describedby="labelId" type="checkbox" class="cbx"
+                                                   style="display:none " onclick="handleAccProfile()"/>
+                                            <label for="cbx2" class="toggle">
                                             <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
                                             <path d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z"></path>
                                           </svg>
                                         </span>
-                                        </label>
-                                    </li>
-                                    <li class="accessibility__settings">
-                                        <div class="cbx__label-wrapper">
-                                            <i class="nav__icon acc_icon uil uil-arrow"></i>
-                                            <label id="3" for="cbx3" tabindex="8">
-                                                <strong class="short">ADHD/ADHS Friendly Profile</strong>
-                                                <br>
-                                                <span>
+                                            </label>
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            <div class="cbx__label-wrapper">
+                                                <i class="nav__icon acc_icon uil uil-arrow"></i>
+                                                <label id="3" for="cbx3" tabindex="0">
+                                                    <strong class="short">ADHD/ADHS Friendly Profile</strong>
+                                                    <br>
+                                                    <span>
                                                 Reduces distractions and improves focus on the essential elements of the site,
                                                     to help people with ADHD and Neurodevelopmental disorders.
                                             </span>
-                                            </label>
-                                        </div>
-                                        <input id="cbx3" aria-label="Toggle accessibility mode"
-                                               aria-describedby="labelId" tabindex="9" type="checkbox" class="cbx"
-                                               style="display:none"/>
-                                        <label for="cbx3" class="toggle">
+                                                </label>
+                                            </div>
+                                            <input id="cbx3" aria-label="Toggle accessibility mode"
+                                                   aria-describedby="labelId" type="checkbox" class="cbx"
+                                                   style="display:none" onclick="handleAccProfile()"/>
+                                            <label for="cbx3" class="toggle">
                                         <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
                                             <path d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z"></path>
                                           </svg>
                                         </span>
-                                        </label>
-                                    </li>
-                                    <li class="accessibility__settings">
-                                        <div class="cbx__label-wrapper">
-                                            <i class="nav__icon acc_icon uil uil-arrow"></i>
-                                            <label id="4" for="cbx3" tabindex="10">
-                                                <strong class="short">Keyboard Navigation</strong>
-                                                <br>
-                                                <span>
+                                            </label>
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            <div class="cbx__label-wrapper">
+                                                <i class="nav__icon acc_icon uil uil-arrow"></i>
+                                                <label id="4" for="cbx3">
+                                                    <strong class="short">Keyboard Navigation</strong>
+                                                    <br>
+                                                    <span>
                                                     Interaction and operation of the website using the keyboard is supported by default.
                                                     Tab, Shift+Tab and the Enter keys work as usual.
                                                     Users can also use shortcuts such as “M” (menus), “H” (headings),
                                                     “F” (forms), “B” (buttons), and “G” (graphics) to jump to specific elements.
                                             </span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <hr class="nav__separator">
-                                <h3 class="nav__title accessibility__list" tabindex="11">
-                                    Inhalte anpassen
-                                </h3>
-                                <ul id="accessibility-adjustments" class="accessibility__list grid">
-                                    <li class="accessibility__settings" tabindex="12">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aliquam corporis cumque distinctio, eaque in iste iure labore
-                                        maxime nesciunt nostrum perferendis quidem rem sapiente,
-                                        sunt tempore. Consequatur distinctio eos placeat!
-                                    </li>
-                                    <li class="accessibility__settings" tabindex="13">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aliquam corporis cumque distinctio, eaque in iste iure labore
-                                        maxime nesciunt nostrum perferendis quidem rem sapiente,
-                                        sunt tempore. Consequatur distinctio eos placeat!
-                                    </li>
-                                    <li class="accessibility__settings" tabindex="14">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aliquam corporis cumque distinctio, eaque in iste iure labore
-                                        maxime nesciunt nostrum perferendis quidem rem sapiente,
-                                        sunt tempore. Consequatur distinctio eos placeat!
-                                    </li>
-                                    <li class="accessibility__settings" tabindex="15">
-                                        <a class="nav__sub accessibility__list"
-                                           aria-label="link to contact form (same tab)" tabindex="15" href="#contact"
-                                           onclick="document.getElementById('nav-menu').classList.remove('show__menu');">
-                                            Help or Feedback?</a>
-                                    </li>
-                                </ul>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr class="nav__separator">
+                                    <h4 class="nav__title accessibility__list">
+                                        Inhalte anpassen
+                                    </h4>
+                                    <ul id="accessibility-adjustments" class="accessibility__list grid">
+                                        <li class="accessibility__settings">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Aliquam corporis cumque distinctio, eaque in iste iure labore
+                                            maxime nesciunt nostrum perferendis quidem rem sapiente,
+                                            sunt tempore. Consequatur distinctio eos placeat!
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Aliquam corporis cumque distinctio, eaque in iste iure labore
+                                            maxime nesciunt nostrum perferendis quidem rem sapiente,
+                                            sunt tempore. Consequatur distinctio eos placeat!
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Aliquam corporis cumque distinctio, eaque in iste iure labore
+                                            maxime nesciunt nostrum perferendis quidem rem sapiente,
+                                            sunt tempore. Consequatur distinctio eos placeat!
+                                        </li>
+                                        <li class="accessibility__settings">
+                                            <a class="nav__sub accessibility__list"
+                                               aria-label="link to contact form (same tab)"
+                                               href="#contact"
+                                               onclick="document.getElementById('nav-menu').classList.remove('show__menu');">
+                                                Help or Feedback?</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-bottom" class="nav__bottom" title="Close Menu">
+                                <i id="nav-close" class="uil uil-multiply nav__close" tabindex="0" role="menu" aria-label="Close menu">
+                                </i>
                             </div>
                         </div>
-
-                        <!--<hr class="nav__separator">-->
-                        <div id="nav-bottom" class="nav__bottom" title="Close Menu">
-                            <i id="nav-close" class="uil uil-multiply nav__close" aria-label="Close menu"
-                               tabindex=""></i>
-                        </div>
                     </div>
-                    <!--</div>-->
 
                     <div class="nav__btn">
-                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="button"
+                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="menu"
                              onkeydown=""
-                             aria-label="Open menu and accessibility settings" tabindex="1">
+                             aria-label="Open menu and accessibility settings" tabindex="0">
                             <i class="uil uil-apps"></i>
                         </div>
                     </div>
@@ -289,7 +295,7 @@
                 </nav>
             </header>
 
-            <main id="main" tabindex="-1" class="main page-content">
+            <main id="main" class="main page-content">
                 <section id="home" aria-label="slider" class="home section slider">
                     <div class="home__container container grid">
                         <div class="home__content grid">
@@ -297,16 +303,16 @@
                                 <a href="https://github.com/BenedictLang" class="home__social-icon"
                                    aria-label="GitHub Profil (new tab)"
                                    target="_blank">
-                                    <i class="uil uil-github-alt" aria-label="GitHub logo"></i>
+                                    <i class="uil uil-github-alt"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/benedict-lang-72b78721a" class="home__social-icon"
                                    aria-label="linkedIn Profil (new tab)" target="_blank">
-                                    <i class="uil uil-linkedin-alt" aria-label="linkedIn logo"></i>
+                                    <i class="uil uil-linkedin-alt"></i>
                                 </a>
                                 <a href="https://discord.gg/QMjhZnBxgV"
                                    aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
                                    class="home__social-icon" target="_blank">
-                                    <i class="uil uil-discord" aria-label="Discord logo"></i>
+                                    <i class="uil uil-discord"></i>
                                     <!--<i class="icon" aria-label="Discord logo">
                                         <svg class="disco-ico" aria-label="Discord logo"
                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 120">
@@ -333,7 +339,7 @@
                                 <a href="https://www.instagram.com/bl_design.de/" class="home__social-icon"
                                    aria-label="Instagram Profile (new tab)"
                                    target="_blank">
-                                    <i class="uil uil-instagram " aria-label="Instagram logo"></i>
+                                    <i class="uil uil-instagram "></i>
                                 </a>
                             </div>
                             <div class="home__image">
@@ -360,7 +366,7 @@
                                 <!--<img class="profile-picture" src="" alt="Profilbild Benedict Lang">-->
                                 <h1 class="title">Hi, ich bin Benny</h1>
                                 <br>
-                                <h3 id="jobs">Fullstack Developer</h3>
+                                <h2 id="jobs">Fullstack Developer</h2>
                                 <p class="benefits" style="display: none;">
                                     Ich schaffe <strong>Struktur</strong>, <strong>Ästhetik</strong> und
                                     ein durchdachtes <strong>Nutzererlebnis</strong>.
@@ -382,8 +388,12 @@
                 </section>
                 <section id="portfolio" class="page-section">
                     <div class="portfolio__head">
-                        <a type="application" href="https://www.apps.benedict.lang-familie.de" target="_blank"
-                           aria-label="My portfolio site (new tab)" id="portfolio-site"><h2>Mein Portfolio</h2></a>
+                        <h3 id="portfolio-site">
+                            <a type="application" href="https://www.apps.benedict.lang-familie.de"
+                               target="_blank" aria-label="My portfolio site (new tab)" >
+                                Mein Portfolio
+                            </a>
+                        </h3>
                         <a type="application" href="https://www.apps.benedict.lang-familie.de" target="_blank"
                            aria-label="My portfolio site (new tab)" class="portfolio__button-more link__contrast draw">-
                             Mehr
@@ -449,7 +459,7 @@
                         Eum fugiat nemo perspiciatis sed. Assumenda aut cum eveniet explicabo ipsa magnam quae, tempora
                         veritatis voluptatum?
                     </p>
-                    <button class="btn btn__contrast" aria-label="Contact information"
+                    <button class="btn" aria-label="Contact information"
                             onclick="window.open('https://www.apps.benedict.lang-familie.de', '_blank');">Gesamtes
                         Portfolio<i
                                 class="uil uil-archive icon button__icon"></i>
@@ -489,7 +499,7 @@
                     </button>
                 </section>
                 <section id="about" class="page-section">
-                    <h2>Über mich</h2>
+                    <h3>Über mich</h3>
                     <p>
                         Ich bin Student an der Hochschule der Medien <abbr title="Hochschule der Medien">HdM</abbr>
                         Stuttgart im Bereich
@@ -503,12 +513,17 @@
                         hervorragenden barrierefreien <span lang="en">User Experience</span>
                         beiträgt.
                     </p>
-                    <div class="about__button link__button">
+                    <!--<div class="about__button link__button">
                         <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
                            class="btn button__flex">
                             CV herunterladen<i class="uil uil-download-alt button__icon"></i>
                         </a>
-                    </div>
+                    </div>-->
+                    <button class="btn" title="Download Curriculum Vitae" aria-label="Download Curriculum Vitae"
+                            onclick="window.open('media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf', '_blank');">
+                        CV herunterladen
+                        <i class="uil uil-download-alt button__icon"></i>
+                    </button>
                 </section>
             </main>
         </div>
@@ -570,17 +585,17 @@
                     <a href="https://github.com/BenedictLang" class="social-link" title="GitHub"
                        aria-label="GitHub Profil (new tab)"
                        target="_blank">
-                        <i class="uil uil-github-alt social-img" aria-label="GitHub logo"></i>
+                        <i class="uil uil-github-alt social-img"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/benedict-lang-72b78721a" class="social-link"
                        title="LinkedIn" aria-label="linkedIn Profil (new tab)" target="_blank">
-                        <i class="uil uil-linkedin-alt social-img" aria-label="linkedIn logo"></i>
+                        <i class="uil uil-linkedin-alt social-img"></i>
                     </a>
                     <a href="https://discord.gg/QMjhZnBxgV" title="Discord"
                        aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
                        class="social-link" target="_blank">
-                        <i class="uim uil-discord social-img" aria-label="Discord logo"></i>
-                        <!--<i class="social-img icon disco-ico" aria-label="Discord logo">
+                        <i class="uil uil-discord social-img"></i>
+                        <!--<i class="social-img icon disco-ico">
 
                         </i>-->
                         <!--<svg class="social-img icon disco-ico" aria-label="Discord logo"
@@ -607,20 +622,20 @@
                     <a href="https://www.instagram.com/bl_design.de/" class="social-link"
                        aria-label="Instagram Profile (new tab)" title="Instagram"
                        target="_blank">
-                        <i class="uil uil-instagram social-img" aria-label="Instagram logo"></i>
+                        <i class="uil uil-instagram social-img"></i>
                     </a>
                 </div>
             </div>
         </footer>
         <!-- Scroll to top btn-->
-        <div class="scroll-to-top-wrapper" role="button" aria-label="scrolls to top of the page">
-            <a href="#header" class="scroll-to-top" aria-label="Scroll to Top">
+        <div class="scroll-to-top-wrapper">
+            <a href="#header" class="scroll-to-top" aria-label="scrolls to top">
                 <i class="uil uil-angle-up scroll__arrow"></i>
             </a>
         </div>
     </div>
 </div>
-<div class="loader-wrapper" aria-label="Loading page animation">
+<div class="loader-wrapper" aria-hidden="true">
     <svg
             id="loader-logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -669,23 +684,26 @@
         </g>
     </svg>
 </div>
+
+<script type="module" src="./index.js" defer></script>
 <script type="module">
+    //ACCESSIBILITY SETTINGS
     window.accSettings = function accSettings() {
-        const navMobile = document.getElementById('nav-grid');
+        const navMobile = $('#menu-list');
         const accSettings = document.getElementById('accessibility');
-        const navBtm = document.getElementById('nav-bottom');
         if (accSettings.classList.contains('hidden')) {
             accSettings.classList.remove('hidden');
-            navMobile.classList.add('hidden');
-            /*document.getElementById('nav-menu').style.maxHeight = "80vh";*/
+            document.getElementById('nav-menu').style.maxHeight = "90vh";
+            navMobile.addClass('hidden');
         } else {
-            navMobile.classList.remove('hidden');
             accSettings.classList.add('hidden');
-            /*document.getElementById('nav-menu').style.maxHeight = "70vh";*/
+            navMobile.removeClass('hidden');
+            document.getElementById('nav-menu').style.maxHeight = "70vh";
         }
     }
+    //THEME SETTINGS
     window.darkModeToggle = function darkModeToggle() {
-        const themeIcon = document.querySelector('.theme-icon');
+        const themeIcon = document.querySelectorAll('.theme-icon');
         document.documentElement.classList.toggle('darkMode');
         if (typeof (Storage) !== "undefined") {
             localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode').toString());
@@ -699,6 +717,5 @@
         }
     }
 </script>
-<script type="module" src="./index.js" defer></script>
 </body>
 </html>
