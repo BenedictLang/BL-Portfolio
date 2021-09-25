@@ -79,7 +79,6 @@
 
 
 .nav__menu {
-  //TODO
   /*backdrop-filter: contrast(65%) blur(50px);*/
   max-height: 70vh;
   position: fixed;
@@ -141,6 +140,7 @@
 }
 
 .accessibility__settings {
+  max-width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

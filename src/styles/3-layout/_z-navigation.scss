@@ -95,7 +95,8 @@
 }
 
 
-@media screen and (min-width: v.$bp-tablet) {
+@media screen and (min-width: v.$bp-tablet),
+screen and (max-height: 500px) and (min-width: v.$bp-mobile){
   .header {
     //TODO
     position: absolute;
