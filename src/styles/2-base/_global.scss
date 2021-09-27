@@ -190,6 +190,49 @@ button {
     transform: translateY(4px);
   }
 }
+.search-form{
+  margin-top: 1.5rem;
+  max-width: 500px;
+  width: 70%;
+  min-width: 240px;
+  display: inline-flex;
+  align-items: start;
+
+}
+#search-form{
+  outline: 0;
+  margin: 0;
+  cursor: text;
+  color: v.$clr-bg;
+  background-color: v.$clr-text;
+  width: 100%;
+  max-height: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: v.$radius 0 0 v.$radius;
+  padding: .8rem 1rem;
+}
+
+.search-button{
+  color: v.$clr-text;
+  cursor: pointer;
+  background-color: v.$clr-primary;
+  float: right;
+  width: 3rem;
+  height: 3rem;
+  border-width: 0;
+  border-radius: 0 v.$radius v.$radius 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: inherit;
+  transition: all .3s;
+  box-shadow: v.$fx-dropShadow;
+  &:hover, &:focus{
+    background-color: v.$clr-third;
+    box-shadow: none;
+  }
+}
 
 .btn {
   font-weight: bolder;
@@ -307,7 +350,6 @@ button {
 }
 
 .scroll-to-top-wrapper {
-  // uncomment to visualize "track"
   box-sizing: border-box;
   position: absolute;
   top: 110vh;

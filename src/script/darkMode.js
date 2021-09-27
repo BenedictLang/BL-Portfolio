@@ -22,12 +22,10 @@ function darkModeInit() {
         document.documentElement.classList.add('darkMode');
         document.querySelector('.theme-icon').classList.remove('uil-sun');
         document.querySelector('.theme-icon').classList.add('uil-moon');
-        console.log("darkMode active");
     } else if (darkMode === false) {
         document.documentElement.classList.remove('darkMode');
         document.querySelector('.theme-icon').classList.remove('uil-moon');
         document.querySelector('.theme-icon').classList.add('uil-sun');
-        console.log("lightMode active");
     }
 }
 

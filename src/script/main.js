@@ -58,11 +58,9 @@ $(document).ready(function($) {
         //ADD .TIGHT
         if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
             $('body').addClass('tight');
-/*            $('.arrow').hide();*/
         } else {
             $('body').removeClass('tight');
             if ($(window).width() > 767) {
-                /*$('.arrow').show();*/
             }
         }
     });
@@ -76,9 +74,55 @@ $(document).ready(function($) {
     });
 });
 
+//
 //ACCESSIBILITY SETTINGS
+//
+/*window.enter2click = function enter2click(event){
+    if(event.keyCode === 13){
+        document.getElementById('nav-mobile-toggle').preventDefault();
+        document.getElementById('nav-mobile-toggle').click();
+    }
+}*/
+/*window.addEventListener("keypress", function searchKeyPress(e){
+    e = e || window.event;
+    if(e.key === 13){
+        document.getElementById('nav-mobile-toggle').preventDefault();
+        document.getElementById('nav-mobile-toggle').click();
+    }
+});*/
+document.getElementById('nav-mobile-toggle').addEventListener("onkeydown", console.log(""))
+/*window.searchKeyPress = function searchKeyPress(e){
+    e = e || window.event;
+    if(e.keyCode === 13){
+        document.getElementById('nav-mobile-toggle').preventDefault();
+        document.getElementById('nav-mobile-toggle').click();
+        return false;
+    }
+    return true;
+}*/
 
-//cognitive profile
+/**
+ * default settings
+ */
+const defaultProfile = document.createElement('style');
+document.head.appendChild(defaultProfile);
+defaultProfile.sheet.insertRule(":root,p{font-family:Arial,serif!important;font-style:normal!important;--clr-primary:#fff;--clr-text:#fff;--clr-bg:#141B2B;--clr-background:#141B2B}",
+    0);
+defaultProfile.sheet.insertRule(":focus{outline:5px solid #ff1493!important}",
+    1);
+defaultProfile.sheet.insertRule("header,section{background-color:var(--clr-bg)!important; color:white!important}",
+    2);
+defaultProfile.sheet.insertRule(".btn:hover, .btn__contrast {{background-color:var(--clr-bg)}",
+    3);
+defaultProfile.sheet.insertRule(".glow-on-hover,.glow-on-hover::after,.glow-on-hover::before,.glow-on-hover:active{transition:none!important;background:0 0}",
+    4);
+defaultProfile.sheet.insertRule(".dark-mode-toggle,.scroll-down,.scroll-to-top{display:none}",
+    5);
+defaultProfile.disabled = true;
+
+/**
+ * cognitive profile
+ */
 const cognitiveProfile = document.createElement('style');
 document.head.appendChild(cognitiveProfile);
 cognitiveProfile.sheet.insertRule(".link__contrast,a{var(--clr-primary)!important;font-family:Arial,serif!important;outline:2px solid red}",
@@ -97,7 +141,9 @@ cognitiveProfile.sheet.insertRule('[type="checkbox"]:checked + .toggle span path
     6);
 cognitiveProfile.disabled = true;
 
-//vision profile
+/**
+ * vision profile
+ */
 const visionProfile = document.createElement('style');
 document.head.appendChild(visionProfile);
 visionProfile.sheet.insertRule("a, button, i.uil{font-size:1.7em!important;letter-spacing:.15em!important}",
@@ -118,10 +164,12 @@ visionProfile.sheet.insertRule(".scrollbar__mini::-webkit-scrollbar{width:10px}"
     7);
 visionProfile.disabled = true;
 
-//adhd profile
+/**
+ * adhd profile
+ */
 const adhdProfile = document.createElement('style');
 document.head.appendChild(adhdProfile);
-adhdProfile.sheet.insertRule("#mask-bottom,#mask-top{position:fixed;background:rgba(0,0,0,.6);filter:blur(3px);width:100%;pointer-events:none;z-index:100000}",
+adhdProfile.sheet.insertRule("#mask-bottom,#mask-top{position:fixed;background:rgba(0,0,0,.7);filter:blur(3px);width:100%;pointer-events:none;z-index:100000}",
     0);
 adhdProfile.sheet.insertRule("#mask-top{top:0;bottom:auto}",
     1);
@@ -130,17 +178,24 @@ adhdProfile.sheet.insertRule("#mask-bottom{top:auto;bottom:0}",
 adhdProfile.disabled = true;
 
 
-//checkbox handler
+/**
+ * checkbox handler
+ */
 window.handleAccProfile = function handleAccProfile() {
-    cognitiveProfile.disabled = !document.getElementById('cbx1').checked;
-    if(document.getElementById('cbx2').checked){
+    const accCbx = [
+        document.getElementById('cbx1'),
+        document.getElementById('cbx2'),
+        document.getElementById('cbx3')
+    ];
+    cognitiveProfile.disabled = !accCbx[0].checked;
+    if(accCbx[1].checked){
         visionProfile.disabled = false;
         document.getElementById('nav-grid').classList.remove('grid');
     } else {
         visionProfile.disabled = true;
         document.getElementById('nav-grid').classList.add('grid');
     }
-    if(document.getElementById('cbx3').checked){
+    if(accCbx[2].checked){
         adhdProfile.disabled = false;
         const mask = document.createElement('div');
         mask.id = 'acc-mask';
@@ -155,7 +210,17 @@ window.handleAccProfile = function handleAccProfile() {
     } else {
         adhdProfile.disabled = true;
         const mask = document.getElementById('acc-mask');
-        mask.parentNode.removeChild(mask);
+        if(mask != null){
+            mask.parentNode.removeChild(mask);
+        }
+    }
+    for(let e of accCbx) {
+        if (e.checked) {
+            defaultProfile.disabled = false;
+            break;
+        } else {
+            defaultProfile.disabled = true;
+        }
     }
 }
 

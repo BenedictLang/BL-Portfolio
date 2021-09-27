@@ -117,30 +117,18 @@ section {
 }
 
 
-
-
-.btn {
-  &:hover {
+.btn:hover {
     background-color: var(--clr-bg);
-  }
 }
 .glow-on-hover, .glow-on-hover::before, .glow-on-hover:active,
 .glow-on-hover::after {
   transition: none !important;
   background: transparent;
-  &:hover{
-  }
 }
 
-.scroll-down {
-  display: none;
-}
-
-.scroll-to-top{
-  display: none;
-}
-
-.dark-mode-toggle{
+.scroll-down,
+ .scroll-to-top,
+ .dark-mode-toggle{
   display: none;
 }
 

@@ -20,7 +20,7 @@
           data-basehost="www.benedict.lang-familie.de">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-<body id="top">
+<body id="start">
 <div id="main-grid">
     <div id="wrapper" class="wrapper blur">
         <div class="wrap">
@@ -66,7 +66,7 @@
                             </svg>
                         </a>
                     </object>
-                    <div id="menu-toggle" role="button" aria-label="toggle menu">
+                    <div id="menu-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
                         <div id="hamburger">
                             <span class="nav__hamLine"></span>
                             <span class="nav__hamLine"></span>
@@ -135,14 +135,18 @@
                                 </ul>
                                 <hr class="nav__separator">
                                 <div class="nav__additions nav__list">
-                                    <form role="search" class="search-form" action="https://benedict.lang-familie.de/"
+                                    <form role="search" class="search-form" onsubmit="search();" action="https://benedict.lang-familie.de/"
                                           method="get">
                                         <label for="search-form" class="search-form__label"></label>
-                                        <input id="search-form" type="search" class="search-form__input">
-                                        <i class="uil uil-search"></i>
+                                        <input id="search-form" type="search" title="Suchbegriff eingeben" class="search-form__input" placeholder="Suchen..">
+                                        <button type="submit" onclick="search();" aria-label="submit search" class="search-button">
+                                            <i class="uil uil-search"></i>
+                                        </button>
                                     </form>
-                                    <a href="https://lang-familie.de/impressum/"><i class="uil uil-cloud-info nav__icon"></i> Impressum</a>
-                                    <a href="https://lang-familie.de/datenschutzerklaerung/"><i class="uil uil-cloud-shield nav__icon"></i> Datenschutz</a>
+                                    <div class="legals">
+                                        <a href="https://lang-familie.de/impressum/"><i class="uil uil-cloud-info nav__icon"></i> Impressum</a>
+                                        <a href="https://lang-familie.de/datenschutzerklaerung/"><i class="uil uil-cloud-shield nav__icon"></i> Datenschutz</a>
+                                    </div>
                                 </div>
                             </div>
                             <div id="accessibility" class="popup overlay hidden">
@@ -172,7 +176,7 @@
                                             </div>
                                             <input id="cbx1" aria-label="Toggle accessibility mode"
                                                    aria-describedby="cog-disability" type="checkbox"
-                                                   class="cbx" onclick="handleAccProfile()"
+                                                   class="cbx" onclick="handleAccProfile()" onkeydown="enter2click(this)"
                                                    style="display:none"/>
                                             <label for="cbx1" class="toggle">
                                             <span>
@@ -196,7 +200,7 @@
                                             </div>
                                             <input id="cbx2" aria-label="Toggle accessibility mode"
                                                    aria-describedby="labelId" type="checkbox" class="cbx"
-                                                   style="display:none " onclick="handleAccProfile()"/>
+                                                   style="display:none " onclick="handleAccProfile()" onkeydown="enter2click(this)"/>
                                             <label for="cbx2" class="toggle">
                                             <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
@@ -219,7 +223,7 @@
                                             </div>
                                             <input id="cbx3" aria-label="Toggle accessibility mode"
                                                    aria-describedby="labelId" type="checkbox" class="cbx"
-                                                   style="display:none" onclick="handleAccProfile()"/>
+                                                   style="display:none" onclick="handleAccProfile()" onkeydown="enter2click(this)"/>
                                             <label for="cbx3" class="toggle">
                                         <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
@@ -278,20 +282,18 @@
                                 </div>
                             </div>
                             <div id="nav-bottom" class="nav__bottom" title="Close Menu">
-                                <i id="nav-close" class="uil uil-multiply nav__close" tabindex="0" role="menu" aria-label="Close menu">
+                                <i id="nav-close" class="uil uil-multiply nav__close" tabindex="0" role="menu" aria-label="Close menu" onkeydown="enter2click()">
                                 </i>
                             </div>
                         </div>
                     </div>
-
                     <div class="nav__btn">
                         <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="menu"
-                             onkeydown=""
-                             aria-label="Open menu and accessibility settings" tabindex="0">
+                             onkeydown="return searchKeyPress(event);"
+                             aria-label="Open menu and accessibility settings" tabindex="0" >
                             <i class="uil uil-apps"></i>
                         </div>
                     </div>
-
                 </nav>
             </header>
 
@@ -629,7 +631,7 @@
         </footer>
         <!-- Scroll to top btn-->
         <div class="scroll-to-top-wrapper">
-            <a href="#top" class="scroll-to-top" aria-label="scrolls to top">
+            <a href="#start" class="scroll-to-top" aria-label="scrolls to top">
                 <i class="uil uil-angle-up scroll__arrow"></i>
             </a>
         </div>
