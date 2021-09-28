@@ -1,6 +1,8 @@
 /*General*/
+import styles from '../styles/1-helpers/_export.scss';
+
 /* ==== LOADER ====*/
-$(window).on("load", function (){
+$(window).on("load", () => {
     $(".loader-wrapper").fadeTo(1000, 0, "swing")
         .fadeOut("slow", function() {
             $(this).remove();
@@ -14,22 +16,34 @@ $(window).on("load", function (){
 data-sal-duration="1200" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce"*/
 
 /* ==== NAV MENU HEADER ====*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-mobile-toggle'),
-    navClose = document.getElementById('nav-close');
+const   navMenu = document.getElementById('nav-menu'),
+        navMobileToggle = document.getElementById('nav-mobile-toggle'),
+        navDesktopToggle = document.getElementById('nav-desktop-toggle'),
+        navClose = document.getElementById('nav-close'),
+        main = document.getElementById('main'),
+        header = document.getElementById('header'),
+        bpTablet = window.matchMedia("(min-width: 850px)"),
+        scrollToTop = document.getElementById('scroll-to-top');
 
 //Show mobile Menu
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show__menu');
-        document.body;
-    })
+if(navMobileToggle || navDesktopToggle){
+    navMobileToggle.addEventListener('click', showNav);
+    navDesktopToggle.addEventListener('click', showNav);
+}
+function showNav(){
+    navMenu.classList.add('show__menu');
+    scrollToTop.classList.add('hidden');
+    disableScroll(document.body);
 }
 //Hide mobile Menu
-if(navClose){
-    navClose.addEventListener('click', () =>{
+if(navClose) {
+    function closeMenu() {
         navMenu.classList.remove('show__menu');
-    })
+        scrollToTop.classList.remove('hidden');
+        enableScroll(document.body);
+    }
+    navClose.addEventListener('click', closeMenu);
+    main.addEventListener('click', closeMenu);
 }
 const navLink = document.querySelectorAll('.nav__link');
 function linkAction(){
@@ -37,10 +51,28 @@ function linkAction(){
     console.log("pressed");
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
+//toggle desktop navbar
+let prevScrollPos = window.pageYOffset;
+window.addEventListener("scroll", () => {
+    if(bpTablet.matches){
+        const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        if(currentScrollPos > prevScrollPos){
+            header.classList.add('headerHidden');
+        } else {
+            header.classList.remove('headerHidden');
+        }
+        prevScrollPos = currentScrollPos;
+        if (window.pageYOffset <= 50) {
+            header.classList.add('headerSticky');
+        } else {
+            header.classList.remove('headerSticky');
+        }
+    }
+});
 
 
 //Toggle hamburger menu
-$('#menu-toggle').click(function(){
+$('#nav-desktop-toggle').click(function(){
     $(this).toggleClass('open');
 })
 
@@ -222,6 +254,17 @@ window.handleAccProfile = function handleAccProfile() {
             defaultProfile.disabled = true;
         }
     }
+}
+
+/**
+ * Toggle y-scroll
+ */
+function disableScroll(element) {
+    element.classList.add("stop-scroll");
+}
+
+function enableScroll(element) {
+    element.classList.remove("stop-scroll");
 }
 
 //sets current year

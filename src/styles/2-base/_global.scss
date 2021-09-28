@@ -55,13 +55,13 @@ footer {
   padding: 0;
 }
 
-div.scroll {
-/*  width: 600px;
-  height: 150px;*/
+.scroll {
   overflow-x: hidden;
   overflow-y: auto;
-  /*text-align: center;*/
-  /*padding: 20px;*/
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 img, image, svg {
@@ -74,7 +74,7 @@ img, image, svg {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url(data:../media/icons/Img-broken-icon.svg);
+    background-image: url(../media/icons/Img-broken-icon.svg);
   }*/
 }
 
@@ -387,11 +387,11 @@ button {
     box-shadow: none;
   }
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: v.$bpTablet) {
     display: none;
   }
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: v.$bpTablet) {
     bottom: 5vh;
     padding: 20px;
     display: flex;

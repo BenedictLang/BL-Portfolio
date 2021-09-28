@@ -28,14 +28,13 @@ h1, h2, h4, h5, h6 {
 }
 
 h1 {
-
-  font-size: clamp(.9em, 1.5em + 10vw, 4.2em);
+  font-size: clamp(.9em, 1.5em + 10vw, 4.4em);
   line-height: 1.1;
   font-family: v.$ft-title;
 }
 
 h2 {
-  font-size: clamp(.4em, .5em + 7vw, 1.5em);
+  font-size: clamp(.4em, .5em + 7vw, 1.8em);
   font-family: v.$ft-subtitle;
   font-weight: bolder;
 }
@@ -46,14 +45,14 @@ h3 a {
 }
 
 h3 {
-  font-size: clamp(.8em, .9em + 6vw, 3.2em);
+  font-size: clamp(.8em, .9em + 7vw, 3.2em);
   line-height: 1.1;
   font-family: v.$ft-title;
   font-weight: normal;
 }
 
 h4 {
-  font-size: clamp(.35em, .5em + 5vw, 1.4em);
+  font-size: clamp(.35em, .5em + 5vw, 1.6em);
   font-family: v.$ft-subtitle;
   font-weight: bold;
 }
@@ -66,7 +65,7 @@ p,
 li,
 input,
 .nav__link {
-  font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.25rem);
+  font-size: clamp(0.7rem, calc(0.8798rem + 0.5115vw), 1.5rem);
   line-height: clamp(0.5rem, calc(1.5rem + 1vw), 3rem);
   font-weight: normal;
   display: block;

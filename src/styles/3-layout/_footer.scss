@@ -7,7 +7,7 @@ footer {
   position: page;
   width: 95%;
   transform: translateX(5vw);
-  @media screen and (min-width: v.$bp-tablet){
+  @media screen and (min-width: v.$bpTablet){
     background: linear-gradient(
                     60deg,
                     #2C4A81,
@@ -36,7 +36,7 @@ footer {
 
 .sub-footer {
   display: none;
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: v.$bpTablet) {
     max-width: 100%;
     padding: 2.5em v.$pdd-side;
     display: flex;
@@ -49,7 +49,7 @@ footer {
   transform: translateX(-5vw);
   max-width: 95%;
   padding: 1.5rem v.$pdd-side v.$header-h v.$pdd-side;
-  @media screen and (min-width: v.$bp-tablet){
+  @media screen and (min-width: v.$bpTablet){
     padding: 1.5rem v.$pdd-side;
     box-shadow: 3px -5px 12px rgba(0 0 0 /.6);
   }
@@ -59,7 +59,7 @@ footer {
   background: v.$clr-scene;
   border-top-right-radius: 70px;
   box-shadow: 0 -3px 16px rgba(10 10 10 /.8);
-  @media screen and (max-width: v.$bp-mobile){
+  @media screen and (max-width: v.$bpMobile){
     flex-direction: column-reverse;
     .social__links {
       margin: 0 5vw;

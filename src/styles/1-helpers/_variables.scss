@@ -17,13 +17,13 @@ red:        0
 
 /* default style */
 :root {
-  --clr-primary: hsl(19, 72%, 60%);
+  --clr-primary: hsl(19, 70%, 60%);
   --clr-secondary: rgba(20, 27, 43, 0.7);
   --clr-third: rgba(20, 27, 43, 0.29);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, var(--clr-primary) 55%, rgba(63, 87, 150, 0.9) 100%);
   --clr-scene: var(--clr-text);
   --clr-background: linear-gradient(70deg, #ffffff, #f1f9ff);
-  --clr-bg: #ffffff;
+  --clr-bg: rgb(255, 255, 255);
   --clr-text: rgb(20, 27, 43);
   --clr-icon: #141B2B;
   --alpha: 0.8;
@@ -38,7 +38,7 @@ red:        0
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, rgba(226, 126, 80, 0.6) 35%, rgba(63, 87, 150, 0.2) 80%, rgba(38, 49, 80, 0) 95%);
   --clr-scene: #0c101a;
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
-  --clr-bg: #243352;
+  --clr-bg: rgb(36, 51, 82);
   --clr-text: rgb(255, 255, 255);
   --clr-icon: #383838;
 }
@@ -60,20 +60,20 @@ $clr-gamma: var(--gamma) !default;
 // BREAKPOINTS
 //**************
 /* Small devices (phones) */
-$bp-mobile: 400px;
+$bpMobile: 400px;
 
 /* Medium devices (tablets) */
 /*$bp-tablet: 768px;*/
-$bp-tablet: 850px;
+$bpTablet: 850px;
 
 /* Large devices (desktops) */
-$bp-laptop: 968px;
+$bpLaptop: 968px;
 
 /* Extra large devices (large desktops) */
-$bp-desktop: 1200px;
+$bpDesktop: 1200px;
 
 /* Widescreen devices (wide desktops) */
-$bp-wideS: 1440px;
+$bpWideS: 1440px;
 
 // *******
 // FONTS
@@ -100,7 +100,7 @@ Raleway
   $scale-font: 1;
 }
 
-@media (min-width: $bp-laptop){
+@media (min-width: $bpLaptop){
   :root {
     $scale-element: 0.925;
     $scale-font: 0.925;

@@ -66,7 +66,7 @@
                             </svg>
                         </a>
                     </object>
-                    <div id="menu-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
+                    <div id="nav-desktop-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
                         <div id="hamburger">
                             <span class="nav__hamLine"></span>
                             <span class="nav__hamLine"></span>
@@ -630,7 +630,7 @@
             </div>
         </footer>
         <!-- Scroll to top btn-->
-        <div class="scroll-to-top-wrapper">
+        <div id="scroll-to-top" class="scroll-to-top-wrapper">
             <a href="#start" class="scroll-to-top" aria-label="scrolls to top">
                 <i class="uil uil-angle-up scroll__arrow"></i>
             </a>
@@ -689,6 +689,7 @@
 
 <script type="module" src="./index.js" defer></script>
 <script type="module">
+
     //ACCESSIBILITY SETTINGS
     window.accSettings = function accSettings() {
         const navMobile = $('#menu-list');
