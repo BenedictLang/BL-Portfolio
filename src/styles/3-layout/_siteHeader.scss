@@ -24,29 +24,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.3vh 4vw;
 }
 
-.nav-mobile__toggle {
-  font-weight: normal;
-  font-size: v.$icon-size * 1.1;
-  cursor: pointer;
-  &:hover{
-    color: v.$clr-primary;
-  }
+.nav-bar {
+  position: relative;
+  max-height: 100%;
+  padding: 4vh 4vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-desktop-toggle,
+#nav-desktop-label {
+  display: none;
 }
 
 .nav__logo {
   cursor: pointer;
-  max-width: 19vw;
+  max-width: 140px;
+  width: 22vw;
   #logo-header {
-    max-width: 10rem;
-    min-width: 90px;
+    min-width: 100px;
     width: 100%;
+    max-width: 190px;
     height: 100%;
   }
 }
-
 
 #menu-list {
   max-height: 35vh;
@@ -85,6 +90,7 @@
 
 .nav__menu {
   /*backdrop-filter: contrast(65%) blur(50px);*/
+  will-change: transform;
   max-height: 70vh;
   position: fixed;
   bottom: -250vh;

@@ -57,7 +57,7 @@ footer {
 
 .scroll {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .stop-scroll {
@@ -234,8 +234,12 @@ button {
   }
 }
 
+a.btn{
+}
+
 .btn {
   font-weight: bolder;
+  margin-top: 3vh;
   padding: 12px 28px;
   border-radius: v.$radius;
   transition-duration: .4s;
@@ -357,6 +361,7 @@ button {
   bottom: 0;
   width: auto;
   pointer-events: none;
+  transition: all .3s ease-in-out;
 }
 
 .scroll-to-top {

@@ -26,7 +26,8 @@
         <div class="wrap">
             <!--    headerHidden headerSticky-->
             <header id="header" class="header header_container">
-                <nav class="nav container">
+
+                <div class="nav-bar">
                     <!--    <object id="logo" data="media/Wappen_modern_SW_minimalistisch.svg" type="image/svg+xml"></object>-->
                     <!--    <use xlink:href=""></use>-->
                     <!--    <div id="logo"></div>-->
@@ -43,7 +44,7 @@
                                     }
                                     </style>
                                 </defs>
-                                <a xlink:href="https://www.benedict.lang-familie.de" >
+                                <a xlink:href="https://www.benedict.lang-familie.de">
                                     <g class="logo-group">
                                         <rect class="a" x="23.626" width="1.75" height="22.4229"/>
                                         <path class="a"
@@ -66,7 +67,14 @@
                             </svg>
                         </a>
                     </object>
-                    <div id="nav-desktop-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
+                    <div class="nav__btn">
+                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="menu"
+                             onkeydown="return searchKeyPress(event);"
+                             aria-label="Open menu and accessibility settings" tabindex="0">
+                            <i class="uil uil-apps"></i>
+                        </div>
+                    </div>
+                    <!--<div id="nav-desktop-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
                         <div id="hamburger">
                             <span class="nav__hamLine"></span>
                             <span class="nav__hamLine"></span>
@@ -76,14 +84,30 @@
                             <span class="nav__hamLine"></span>
                             <span class="nav__hamLine"></span>
                         </div>
-                    </div>
+                    </div>-->
+                    <input type="checkbox" id="nav-desktop-toggle" role="checkbox" aria-checked="false"
+                           style="display:none" title="menu" aria-label="toggle menu" onkeydown="enter2click(event)">
+                    <label id="nav-desktop-label" for="nav-desktop-toggle" aria-hidden="true" title="menu">
+                        <span id="hamburger" aria-hidden="true">
+                            <span class="nav__hamLine"></span>
+                            <span class="nav__hamLine"></span>
+                            <span class="nav__hamLine"></span>
+                        </span>
+                        <span id="cross" aria-hidden="true">
+                            <span class="nav__hamLine"></span>
+                            <span class="nav__hamLine"></span>
+                        </span>
+                    </label>
+                </div>
+                <nav class="nav">
                     <div id="nav-list">
                         <div id="nav-menu" class="nav__menu">
                             <div class="service__items">
                                 <input id="accessibility-cbx" class="cbx-icon" aria-label="show accessibility settings"
                                        aria-checked="false" type="checkbox"
                                        style="display:none" onclick="accSettings()"/>
-                                <label id="accessibility-toggle" for="accessibility-cbx" class="cbx-icon accessibility__toggle"
+                                <label id="accessibility-toggle" for="accessibility-cbx"
+                                       class="cbx-icon accessibility__toggle"
                                        title="Accessibility Settings" tabindex="0">
                                     <i class="uil uil-accessible-icon-alt accessibility__icon"></i>
                                 </label>
@@ -135,17 +159,22 @@
                                 </ul>
                                 <hr class="nav__separator">
                                 <div class="nav__additions nav__list">
-                                    <form role="search" class="search-form" onsubmit="search();" action="https://benedict.lang-familie.de/"
+                                    <form role="search" class="search-form" onsubmit="search();"
+                                          action="https://benedict.lang-familie.de/"
                                           method="get">
                                         <label for="search-form" class="search-form__label"></label>
-                                        <input id="search-form" type="search" title="Suchbegriff eingeben" class="search-form__input" placeholder="Suchen..">
-                                        <button type="submit" onclick="search();" aria-label="submit search" class="search-button">
+                                        <input id="search-form" type="search" title="Suchbegriff eingeben"
+                                               class="search-form__input" placeholder="Suchen..">
+                                        <button type="submit" onclick="search();" aria-label="submit search"
+                                                class="search-button">
                                             <i class="uil uil-search"></i>
                                         </button>
                                     </form>
                                     <div class="legals">
-                                        <a href="https://lang-familie.de/impressum/"><i class="uil uil-cloud-info nav__icon"></i> Impressum</a>
-                                        <a href="https://lang-familie.de/datenschutzerklaerung/"><i class="uil uil-cloud-shield nav__icon"></i> Datenschutz</a>
+                                        <a href="https://lang-familie.de/impressum/"><i
+                                                class="uil uil-cloud-info nav__icon"></i> Impressum</a>
+                                        <a href="https://lang-familie.de/datenschutzerklaerung/"><i
+                                                class="uil uil-cloud-shield nav__icon"></i> Datenschutz</a>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +205,8 @@
                                             </div>
                                             <input id="cbx1" aria-label="Toggle accessibility mode"
                                                    aria-describedby="cog-disability" type="checkbox"
-                                                   class="cbx" onclick="handleAccProfile()" onkeydown="enter2click(this)"
+                                                   class="cbx" onclick="handleAccProfile()"
+                                                   onkeydown="enter2click(this)"
                                                    style="display:none"/>
                                             <label for="cbx1" class="toggle">
                                             <span>
@@ -200,7 +230,8 @@
                                             </div>
                                             <input id="cbx2" aria-label="Toggle accessibility mode"
                                                    aria-describedby="labelId" type="checkbox" class="cbx"
-                                                   style="display:none " onclick="handleAccProfile()" onkeydown="enter2click(this)"/>
+                                                   style="display:none " onclick="handleAccProfile()"
+                                                   onkeydown="enter2click(this)"/>
                                             <label for="cbx2" class="toggle">
                                             <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
@@ -223,7 +254,8 @@
                                             </div>
                                             <input id="cbx3" aria-label="Toggle accessibility mode"
                                                    aria-describedby="labelId" type="checkbox" class="cbx"
-                                                   style="display:none" onclick="handleAccProfile()" onkeydown="enter2click(this)"/>
+                                                   style="display:none" onclick="handleAccProfile()"
+                                                   onkeydown="enter2click(this)"/>
                                             <label for="cbx3" class="toggle">
                                         <span>
                                           <svg width="10px" height="10px" viewBox="0 0 10 10">
@@ -282,16 +314,10 @@
                                 </div>
                             </div>
                             <div id="nav-bottom" class="nav__bottom" title="Close Menu">
-                                <i id="nav-close" class="uil uil-multiply nav__close" tabindex="0" role="menu" aria-label="Close menu" onkeydown="enter2click()">
+                                <i id="nav-close" class="uil uil-multiply nav__close" tabindex="0" role="menu"
+                                   aria-label="Close menu" onkeydown="enter2click()">
                                 </i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="nav__btn">
-                        <div id="nav-mobile-toggle" class="nav-mobile__toggle" title="Open Menu" role="menu"
-                             onkeydown="return searchKeyPress(event);"
-                             aria-label="Open menu and accessibility settings" tabindex="0" >
-                            <i class="uil uil-apps"></i>
                         </div>
                     </div>
                 </nav>
@@ -392,7 +418,7 @@
                     <div class="portfolio__head">
                         <h3 id="portfolio-site">
                             <a type="application" href="https://www.apps.benedict.lang-familie.de"
-                               target="_blank" aria-label="My portfolio site (new tab)" >
+                               target="_blank" aria-label="My portfolio site (new tab)">
                                 Mein Portfolio
                             </a>
                         </h3>
@@ -450,7 +476,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore minus quidem quis
                         recusandae
                         sit vel voluptate. Aspernatur aut autem beatae cum esse harum iste, officia quis tempore ullam
-                        velit?
+                        velit? <code>this.is(a bit) => {of code}</code>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos exercitationem laudantium
                         mollitia.
                         Dolore dolorem et eum expedita harum, in iure libero molestiae perferendis praesentium quas
@@ -515,17 +541,17 @@
                         hervorragenden barrierefreien <span lang="en">User Experience</span>
                         beiträgt.
                     </p>
-                    <!--<div class="about__button link__button">
-                        <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
-                           class="btn button__flex">
-                            CV herunterladen<i class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>-->
-                    <button class="btn" title="Download Curriculum Vitae" aria-label="Download Curriculum Vitae"
-                            onclick="window.open('media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf', '_blank');">
-                        CV herunterladen
-                        <i class="uil uil-download-alt button__icon"></i>
-                    </button>
+                    <br>
+                    <a download="" href="media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf"
+                       class="btn button__flex">
+                        CV herunterladen<i class="uil uil-download-alt button__icon"></i>
+                    </a>
+                    <!--<form action ="./media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf" method="GET">
+                        <button type="submit" class="btn" title="Download Curriculum Vitae" aria-label="Download Curriculum Vitae">
+                            CV herunterladen
+                            <i class="uil uil-download-alt button__icon"></i>
+                        </button>
+                    </form>onclick="window.open('media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf', '_blank');"-->
                 </section>
             </main>
         </div>

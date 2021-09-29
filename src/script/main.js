@@ -12,9 +12,6 @@ $(window).on("load", () => {
     }, 300);
 });
 
-/*import sal from "sal.js";
-data-sal-duration="1200" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce"*/
-
 /* ==== NAV MENU HEADER ====*/
 const   navMenu = document.getElementById('nav-menu'),
         navMobileToggle = document.getElementById('nav-mobile-toggle'),
@@ -26,32 +23,45 @@ const   navMenu = document.getElementById('nav-menu'),
         scrollToTop = document.getElementById('scroll-to-top');
 
 //Show mobile Menu
-if(navMobileToggle || navDesktopToggle){
-    navMobileToggle.addEventListener('click', showNav);
-    navDesktopToggle.addEventListener('click', showNav);
+if(navMobileToggle){
+    navMobileToggle.addEventListener('click', showMenu);
+    navDesktopToggle.addEventListener('click', showMenu);
 }
-function showNav(){
+function showMenu(){
+    navDesktopToggle.nextElementSibling.classList.add('open');
     navMenu.classList.add('show__menu');
     scrollToTop.classList.add('hidden');
     disableScroll(document.body);
 }
 //Hide mobile Menu
 if(navClose) {
-    function closeMenu() {
-        navMenu.classList.remove('show__menu');
-        scrollToTop.classList.remove('hidden');
-        enableScroll(document.body);
-    }
     navClose.addEventListener('click', closeMenu);
     main.addEventListener('click', closeMenu);
 }
 const navLink = document.querySelectorAll('.nav__link');
 function linkAction(){
-    document.getElementById('nav-menu').classList.remove('show__menu');
-    console.log("pressed");
+    closeMenu();
 }
+navDesktopToggle.addEventListener('change', function() {
+    if (this.checked) {
+        showMenu();
+    } else {
+        closeMenu();
+    }
+});
 navLink.forEach(n => n.addEventListener('click', linkAction));
-//toggle desktop navbar
+function closeMenu() {
+    navDesktopToggle.nextElementSibling.classList.remove('open');
+    enableScroll(document.body);
+    navMenu.classList.remove('show__menu');
+    scrollToTop.classList.remove('hidden');
+}
+//TODO
+$('#nav-desktop-label').click(function(){
+    $('#nav-desktop-label').toggleClass('open');
+})
+
+//toggle sticky desktop navbar
 let prevScrollPos = window.pageYOffset;
 window.addEventListener("scroll", () => {
     if(bpTablet.matches){
@@ -62,10 +72,13 @@ window.addEventListener("scroll", () => {
             header.classList.remove('headerHidden');
         }
         prevScrollPos = currentScrollPos;
-        if (window.pageYOffset <= 50) {
+        if (window.pageYOffset <= 70) {
             header.classList.add('headerSticky');
+            navMenu.classList.add('nav__menu-sticky');
+            console.log("Sticky!");
         } else {
             header.classList.remove('headerSticky');
+            navMenu.classList.remove('nav__menu-sticky');
         }
     }
 });
