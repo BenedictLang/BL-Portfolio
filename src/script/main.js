@@ -2,24 +2,31 @@
 import styles from '../styles/1-helpers/_export.scss';
 
 /* ==== LOADER ====*/
-$(window).on("load", () => {
-    $(".loader-wrapper").fadeTo(1000, 0, "swing")
+$(window).on("load", siteLoader);
+const loader = document.getElementById('loader-wrapper');
+function siteLoader() {
+    $(".loader-wrapper").fadeTo(950, 0, "swing")
         .fadeOut("slow", function() {
-            $(this).remove();
+            /*$(this).remove();*/
         });
     setTimeout(function() {
         $(".blur").removeClass();
     }, 300);
-});
+}
+
+
 
 /* ==== NAV MENU HEADER ====*/
 const   navMenu = document.getElementById('nav-menu'),
         navMobileToggle = document.getElementById('nav-mobile-toggle'),
         navDesktopToggle = document.getElementById('nav-desktop-toggle'),
         navClose = document.getElementById('nav-close'),
-        main = document.getElementById('main'),
         header = document.getElementById('header'),
+        main = document.getElementById('main'),
+        footer = document.getElementById('footer'),
+        //TODO export breakpoint variable
         bpTablet = window.matchMedia("(min-width: 850px)"),
+        bpLandscape = window.matchMedia("(max-height: 500px)"),
         scrollToTop = document.getElementById('scroll-to-top');
 
 //Show mobile Menu
@@ -31,6 +38,8 @@ function showMenu(){
     navDesktopToggle.nextElementSibling.classList.add('open');
     navMenu.classList.add('show__menu');
     scrollToTop.classList.add('hidden');
+    main.classList.add('blur');
+    footer.classList.add('blur');
     disableScroll(document.body);
 }
 //Hide mobile Menu
@@ -53,35 +62,34 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 function closeMenu() {
     navDesktopToggle.nextElementSibling.classList.remove('open');
     enableScroll(document.body);
+    main.classList.remove('blur');
+    footer.classList.remove('blur');
     navMenu.classList.remove('show__menu');
     scrollToTop.classList.remove('hidden');
 }
-//TODO
-$('#nav-desktop-label').click(function(){
-    $('#nav-desktop-label').toggleClass('open');
-})
 
 //toggle sticky desktop navbar
 let prevScrollPos = window.pageYOffset;
-window.addEventListener("scroll", () => {
-    if(bpTablet.matches){
-        const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-        if(currentScrollPos > prevScrollPos){
-            header.classList.add('headerHidden');
-        } else {
-            header.classList.remove('headerHidden');
+['scroll','load'].forEach( evt =>
+    window.addEventListener(evt, () => {
+        if(bpTablet.matches || bpLandscape.matches){
+            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+            if(currentScrollPos > prevScrollPos){
+                header.classList.add('headerHidden');
+            } else {
+                header.classList.remove('headerHidden');
+            }
+            prevScrollPos = currentScrollPos;
+            if (window.pageYOffset <= 70) {
+                header.classList.add('headerSticky');
+                navMenu.classList.add('nav__menu-sticky');
+            } else {
+                header.classList.remove('headerSticky');
+                navMenu.classList.remove('nav__menu-sticky');
+            }
         }
-        prevScrollPos = currentScrollPos;
-        if (window.pageYOffset <= 70) {
-            header.classList.add('headerSticky');
-            navMenu.classList.add('nav__menu-sticky');
-            console.log("Sticky!");
-        } else {
-            header.classList.remove('headerSticky');
-            navMenu.classList.remove('nav__menu-sticky');
-        }
-    }
-});
+    }, false)
+);
 
 
 //Toggle hamburger menu
@@ -242,6 +250,7 @@ window.handleAccProfile = function handleAccProfile() {
     }
     if(accCbx[2].checked){
         adhdProfile.disabled = false;
+        document.body.classList.add("animation__hidden");
         const mask = document.createElement('div');
         mask.id = 'acc-mask';
             mask.insertAdjacentHTML('afterbegin', '<div id="mask-top" aria-hidden="true"></div><div id="mask-bottom" aria-hidden="true"></div>');
@@ -253,6 +262,7 @@ window.handleAccProfile = function handleAccProfile() {
             $maskBottom.css({height: (window.innerHeight - (e.clientY + 70))});
         });
     } else {
+        document.body.classList.remove("animation__hidden");
         adhdProfile.disabled = true;
         const mask = document.getElementById('acc-mask');
         if(mask != null){
@@ -279,6 +289,18 @@ function disableScroll(element) {
 function enableScroll(element) {
     element.classList.remove("stop-scroll");
 }
+
+//disable animations on resize or orientation change
+let resizeTimer;
+["resize"].forEach(evt => {
+    window.addEventListener(evt, () => {
+        document.body.classList.add("animation__hidden");
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.body.classList.remove("animation__hidden");
+        }, 400);
+    });
+});
 
 //sets current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();

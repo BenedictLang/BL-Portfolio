@@ -16,6 +16,10 @@ body {
   }
 }
 
+#main {
+  transition: filter .3s ease-in-out;
+}
+
 #bg-coa{
   opacity: 0.15;
   position: fixed;

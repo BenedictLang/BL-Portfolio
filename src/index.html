@@ -24,10 +24,9 @@
 <div id="main-grid">
     <div id="wrapper" class="wrapper blur">
         <div class="wrap">
-            <!--    headerHidden headerSticky-->
             <header id="header" class="header header_container">
 
-                <div class="nav-bar">
+                <div class="nav__bar">
                     <!--    <object id="logo" data="media/Wappen_modern_SW_minimalistisch.svg" type="image/svg+xml"></object>-->
                     <!--    <use xlink:href=""></use>-->
                     <!--    <div id="logo"></div>-->
@@ -74,17 +73,6 @@
                             <i class="uil uil-apps"></i>
                         </div>
                     </div>
-                    <!--<div id="nav-desktop-toggle" role="button" aria-label="toggle menu" onkeydown="enter2click(this)">
-                        <div id="hamburger">
-                            <span class="nav__hamLine"></span>
-                            <span class="nav__hamLine"></span>
-                            <span class="nav__hamLine"></span>
-                        </div>
-                        <div id="cross">
-                            <span class="nav__hamLine"></span>
-                            <span class="nav__hamLine"></span>
-                        </div>
-                    </div>-->
                     <input type="checkbox" id="nav-desktop-toggle" role="checkbox" aria-checked="false"
                            style="display:none" title="menu" aria-label="toggle menu" onkeydown="enter2click(event)">
                     <label id="nav-desktop-label" for="nav-desktop-toggle" aria-hidden="true" title="menu">
@@ -247,7 +235,7 @@
                                                     <strong class="short">ADHD/ADHS Friendly Profile</strong>
                                                     <br>
                                                     <span>
-                                                Reduces distractions and improves focus on the essential elements of the site,
+                                                Reduces distractions, animations and improves focus on the essential elements of the site,
                                                     to help people with ADHD and Neurodevelopmental disorders.
                                             </span>
                                                 </label>
@@ -555,7 +543,7 @@
                 </section>
             </main>
         </div>
-        <footer class="darkMode">
+        <footer id="footer" class="darkMode">
             <div class="sub-footer darkMode">
                 <a href="https://www.lang-familie.de" title="Wappen Lang" class=""
                    aria-label="Lang Family site"
@@ -663,7 +651,7 @@
         </div>
     </div>
 </div>
-<div class="loader-wrapper" aria-hidden="true">
+<div id="loader-wrapper" class="loader-wrapper" aria-hidden="true">
     <svg
             id="loader-logo"
             xmlns="http://www.w3.org/2000/svg"

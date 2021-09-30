@@ -26,10 +26,10 @@
   justify-content: space-between;
 }
 
-.nav-bar {
+.nav__bar {
   position: relative;
   max-height: 100%;
-  padding: 4vh 4vw;
+  padding: 2rem 4vw;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -44,6 +44,7 @@
 .nav__logo {
   cursor: pointer;
   max-width: 140px;
+  max-height: 100%;
   width: 22vw;
   #logo-header {
     min-width: 100px;
@@ -51,6 +52,10 @@
     max-width: 190px;
     height: 100%;
   }
+}
+
+.nav__btn {
+  font-size: v.$icon-size;
 }
 
 #menu-list {
@@ -200,6 +205,7 @@ label.toggle {
   width: 100%;
   max-width: 100%;
   backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
   /*background: linear-gradient(110deg, rgba(63,87, 150, 0) 42%, rgba(20, 27, 43, 0.7) 84%, rgba(20, 27, 43, 1) 100%);*/
   position: absolute;
   bottom: 0;

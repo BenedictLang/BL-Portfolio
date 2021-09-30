@@ -4,3 +4,5 @@ node_modules
 .github
 /.cache/
 .parcel-cache
+/.parcel-cache/
+/.github/

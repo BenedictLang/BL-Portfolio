@@ -28,7 +28,7 @@ body {
   margin: 0 0 v.$header-h 0;
   height: 100%;
   color: v.$clr-text;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   &:before {
     /*background: transparent no-repeat;*/
     content: "";
@@ -62,6 +62,11 @@ footer {
 
 .stop-scroll {
   overflow: hidden;
+}
+
+input:not([type="checkbox"]), textarea, select {
+  -webkit-border-radius:0;
+  border-radius:0;
 }
 
 img, image, svg {
@@ -470,6 +475,16 @@ a.btn{
   left: 0;
   top: 0;
   border-radius: v.$radius;
+}
+
+/* EFFECTS */
+.blur{
+  filter: blur(50px);
+}
+
+.animation__hidden * {
+  animation: none !important;
+  transition: none !important;
 }
 
 @keyframes glowing {
