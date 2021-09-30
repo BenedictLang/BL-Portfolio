@@ -35,6 +35,7 @@ body {
     height: 100vh;
     width: 100%;
   }
+  will-change: filter;
 }
 
 main {
@@ -42,7 +43,6 @@ main {
 }
 
 #wrapper {
-  overflow-x: hidden !important;
   width: 100vw;
   position: relative;
   /*margin: 10vw;*/
@@ -65,9 +65,10 @@ footer {
   overflow: hidden;
 }
 
-input:not([type="checkbox"]), textarea, select {
+input:not([type="checkbox"]), input:not([type=radio]), textarea, select {
   -webkit-border-radius:0;
   border-radius:0;
+  -webkit-appearance: none;
 }
 
 img, image, svg {
@@ -480,7 +481,7 @@ a.btn{
 
 /* EFFECTS */
 .blur{
-  filter: blur(50px);
+  filter: blur(45px);
 }
 
 .blur-light{

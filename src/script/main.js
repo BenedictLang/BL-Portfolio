@@ -22,6 +22,7 @@ const   navMenu = document.getElementById('nav-menu'),
         navDesktopToggle = document.getElementById('nav-desktop-toggle'),
         navClose = document.getElementById('nav-close'),
         header = document.getElementById('header'),
+        contentWrapper = document.getElementById('content-wrapper'),
         main = document.getElementById('main'),
         footer = document.getElementById('footer'),
         //TODO export breakpoint variable
@@ -39,11 +40,9 @@ function showMenu(){
     navMenu.classList.add('show__menu');
     scrollToTop.classList.add('hidden');
     if(bpTablet.matches || bpLandscape.matches) {
-        main.classList.add('blur');
-        footer.classList.add('blur');
+        contentWrapper.classList.add('blur');
     } else {
-        main.classList.add('blur-light');
-        footer.classList.add('blur-light');
+        contentWrapper.classList.add('blur-light');
     }
     disableScroll(document.body);
 }
@@ -68,10 +67,8 @@ function linkAction(){
 function closeMenu() {
     navDesktopToggle.nextElementSibling.classList.remove('open');
     enableScroll(document.body);
-    main.classList.remove('blur');
-    footer.classList.remove('blur');
-    main.classList.remove('blur-light');
-    footer.classList.remove('blur-light');
+    contentWrapper.classList.remove('blur');
+    contentWrapper.classList.remove('blur-light');
     navMenu.classList.remove('show__menu');
     scrollToTop.classList.remove('hidden');
 }
