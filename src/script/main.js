@@ -30,7 +30,7 @@ const   navMenu = document.getElementById('nav-menu'),
         scrollToTop = document.getElementById('scroll-to-top');
 
 //Show mobile Menu
-if(navMobileToggle){
+if(navMobileToggle || navDesktopToggle){
     navMobileToggle.addEventListener('click', showMenu);
     navDesktopToggle.addEventListener('click', showMenu);
 }
@@ -38,19 +38,16 @@ function showMenu(){
     navDesktopToggle.nextElementSibling.classList.add('open');
     navMenu.classList.add('show__menu');
     scrollToTop.classList.add('hidden');
-    main.classList.add('blur');
-    footer.classList.add('blur');
+    if(bpTablet.matches || bpLandscape.matches) {
+        main.classList.add('blur');
+        footer.classList.add('blur');
+    } else {
+        main.classList.add('blur-light');
+        footer.classList.add('blur-light');
+    }
     disableScroll(document.body);
 }
-//Hide mobile Menu
-if(navClose) {
-    navClose.addEventListener('click', closeMenu);
-    main.addEventListener('click', closeMenu);
-}
-const navLink = document.querySelectorAll('.nav__link');
-function linkAction(){
-    closeMenu();
-}
+//Hide Menu
 navDesktopToggle.addEventListener('change', function() {
     if (this.checked) {
         showMenu();
@@ -58,12 +55,23 @@ navDesktopToggle.addEventListener('change', function() {
         closeMenu();
     }
 });
+if(navClose || main) {
+    navClose.addEventListener('click', closeMenu);
+    main.addEventListener('click', closeMenu);
+}
+//hide menu if link clicked
+const navLink = document.querySelectorAll('.nav__link');
 navLink.forEach(n => n.addEventListener('click', linkAction));
+function linkAction(){
+    closeMenu();
+}
 function closeMenu() {
     navDesktopToggle.nextElementSibling.classList.remove('open');
     enableScroll(document.body);
     main.classList.remove('blur');
     footer.classList.remove('blur');
+    main.classList.remove('blur-light');
+    footer.classList.remove('blur-light');
     navMenu.classList.remove('show__menu');
     scrollToTop.classList.remove('hidden');
 }
@@ -93,9 +101,9 @@ let prevScrollPos = window.pageYOffset;
 
 
 //Toggle hamburger menu
-$('#nav-desktop-toggle').click(function(){
+/*$('#nav-desktop-toggle').click(function(){
     $(this).toggleClass('open');
-})
+})*/
 
 
 
@@ -295,6 +303,7 @@ let resizeTimer;
 ["resize"].forEach(evt => {
     window.addEventListener(evt, () => {
         document.body.classList.add("animation__hidden");
+        closeMenu();
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             document.body.classList.remove("animation__hidden");

@@ -482,6 +482,10 @@ a.btn{
   filter: blur(50px);
 }
 
+.blur-light{
+  filter: blur(3px);
+}
+
 .animation__hidden * {
   animation: none !important;
   transition: none !important;
