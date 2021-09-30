@@ -100,12 +100,6 @@ let prevScrollPos = window.pageYOffset;
 );
 
 
-//Toggle hamburger menu
-/*$('#nav-desktop-toggle').click(function(){
-    $(this).toggleClass('open');
-})*/
-
-
 
 /* ==== 3D HEADER ====*/
 //TODO
@@ -303,7 +297,7 @@ let resizeTimer;
 ["resize"].forEach(evt => {
     window.addEventListener(evt, () => {
         document.body.classList.add("animation__hidden");
-        closeMenu();
+        /*closeMenu();*/
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             document.body.classList.remove("animation__hidden");

@@ -42,6 +42,7 @@ main {
 }
 
 #wrapper {
+  overflow-x: hidden !important;
   width: 100vw;
   position: relative;
   /*margin: 10vw;*/
