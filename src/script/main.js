@@ -1,5 +1,4 @@
 /*General*/
-import styles from '../styles/1-helpers/_export.scss';
 
 /* ==== LOADER ====*/
 $(window).on("load", siteLoader);
