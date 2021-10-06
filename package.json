@@ -16,6 +16,7 @@
     "src": "^1.1.2"
   },
   "devDependencies": {
+    "@parcel/transformer-html": "^2.0.0-rc.0",
     "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "jquery": "^1.11.1",
