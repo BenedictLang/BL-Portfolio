@@ -119,7 +119,7 @@ header {
 
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem !important;
+  gap: 1vh !important;
   overflow-x: hidden;
   overflow-y: auto;
   &::-webkit-scrollbar {
@@ -148,7 +148,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 1rem 0;
+  padding: 1rem 0 5vh 0;
 }
 
 .legals {
