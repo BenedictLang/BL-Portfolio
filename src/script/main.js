@@ -13,10 +13,35 @@ function siteLoader() {
     }, 300);
 }
 
+const faders = document.querySelectorAll('.fade-in');
 
+const appearOptions = {
+    threshold: .4,
+    rootMargin: "0px 0px 0px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(
+function(
+    entries,
+    appearOnScroll
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+},
+appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
 
 /* ==== NAV MENU HEADER ====*/
 const   navMenu = document.getElementById('nav-menu'),
+        menuList = document.getElementById('menu-list'),
         navMobileToggle = document.getElementById('nav-mobile-toggle'),
         navDesktopToggle = document.getElementById('nav-desktop-toggle'),
         navClose = document.getElementById('nav-close'),
@@ -87,9 +112,11 @@ let prevScrollPos = window.pageYOffset;
             if (window.pageYOffset <= 70) {
                 header.classList.add('headerSticky');
                 navMenu.classList.add('nav__menu-sticky');
+                menuList.classList.add('menu__list-sticky');
             } else {
                 header.classList.remove('headerSticky');
                 navMenu.classList.remove('nav__menu-sticky');
+                menuList.classList.remove('menu__list-sticky');
             }
         }
     }, false)

@@ -76,6 +76,11 @@ header {
   }
 }
 
+#nav-grid {
+  gap: 4vh !important;
+  padding: 2vw 0;
+}
+
 .accessibility__toggle,
 #dark-mode-toggle-header {
   background: transparent;
