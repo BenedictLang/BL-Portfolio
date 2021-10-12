@@ -1,5 +1,9 @@
 /*General*/
 
+//TODO export breakpoint variable
+const   bpTablet = window.matchMedia("(min-width: 850px)"),
+        bpLandscape = window.matchMedia("(max-height: 500px)");
+
 /* ==== LOADER ====*/
 $(window).on("load", siteLoader);
 const loader = document.getElementById('loader-wrapper');
@@ -13,31 +17,34 @@ function siteLoader() {
     }, 300);
 }
 
+//fade in content on scroll
 const faders = document.querySelectorAll('.fade-in');
-
 const appearOptions = {
-    threshold: .4,
+    threshold: .6,
     rootMargin: "0px 0px 0px 0px"
 };
-
-const appearOnScroll = new IntersectionObserver(
-function(
-    entries,
-    appearOnScroll
-) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting){
-        } else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
+if (bpTablet.matches || bpLandscape.matches){
+    const appearOnScroll = new IntersectionObserver(
+    function(
+        entries,
+        appearOnScroll
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting){
+            } else {
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    },
+    appearOptions);
+    faders.forEach(fader => {
+        if (bpTablet.matches || bpLandscape.matches){
+            appearOnScroll.observe(fader);
         }
-    });
-},
-appearOptions);
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
+    });
+}
 
 /* ==== NAV MENU HEADER ====*/
 const   navMenu = document.getElementById('nav-menu'),
@@ -49,9 +56,6 @@ const   navMenu = document.getElementById('nav-menu'),
         contentWrapper = document.getElementById('content-wrapper'),
         main = document.getElementById('main'),
         footer = document.getElementById('footer'),
-        //TODO export breakpoint variable
-        bpTablet = window.matchMedia("(min-width: 850px)"),
-        bpLandscape = window.matchMedia("(max-height: 500px)"),
         scrollToTop = document.getElementById('scroll-to-top');
 
 //Show mobile Menu
