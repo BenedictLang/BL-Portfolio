@@ -359,14 +359,16 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
 }
 
 @media screen and (min-width: v.$bpWideS) {
-  /*.header {
-    position: sticky;
-    !*background: transparent;*!
-    !*box-shadow: none;*!
+  .header {
+    background: v.$clr-background;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
-  .nav {
-    !*display: flex;*!
+  .headerSticky {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   #nav-desktop-toggle,
@@ -375,10 +377,97 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
   }
 
   .nav__menu {
-    bottom: 0;
+    transform: translate(0);
+    background: none;
+    padding: 0 3vw 0 4vw;
+    box-shadow: none;
+    top: 0;
+    bottom: 0!important;
+    height: var(--header-h);
+    align-items: center;
+  }
+
+  #menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    top: 0;
+    position: relative;
+    min-height: auto;
+    /* bottom: .2rem; */
+
+  }
+
+  .menu__list-sticky {
+    min-height: unset;
+  }
+
+
+  #nav-grid {
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0 !important;
+    margin-block-start: 0;
+  }
+
+  .nav__item {
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    //TODO center for higher header
+    padding: .7rem!important;
+    align-items: center;
+  }
+
+  .search-form {
+   margin-top: 0;
+    display: none;
+  }
+
+  .legals,
+  .nav__additions,
+  #nav-separator{
+  display: none;
+  }
+
+  /*.hidden {
+    display: block!important;
+  }*/
+
+  .nav__link {
+    padding: 0 1vw;
+    font-weight: normal;
+  }
+
+  a.nav__link {
+    background-image: linear-gradient(
+                    45deg,v.$clr-bg 10%,v.$clr-primary);
+    background-position: 0 120%;
+    background-repeat: no-repeat;
+    background-size: 0 .6rem;
+    transition: all .5s;
+    &:hover {
+      color: v.$clr-primary;
+      background-size: 100% .6rem;
+    }
   }
 
   .nav__icon {
-    display: none;
-  }*/
+  display: none;
+  }
 }

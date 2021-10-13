@@ -152,7 +152,7 @@ abbr {
 }
 
 a {
-  transition: color .3s;
+  transition: all .3s;
   &:hover {
     color: v.$clr-text;
   }
