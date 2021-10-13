@@ -42,7 +42,7 @@ if (bpTablet.matches || bpLandscape.matches){
             appearOnScroll.observe(fader);
     });
 } else {
-    console.log("Mobile: fade in off")
+    //ignore fade in for mobile performance
     faders.forEach(element => {
         element.classList.add('appear');
     });
