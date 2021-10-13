@@ -39,10 +39,12 @@ if (bpTablet.matches || bpLandscape.matches){
     },
     appearOptions);
     faders.forEach(fader => {
-        if (bpTablet.matches || bpLandscape.matches){
             appearOnScroll.observe(fader);
-        }
-
+    });
+} else {
+    //ignore fade in for mobile performance
+    faders.forEach(element => {
+        element.classList.add('appear');
     });
 }
 
