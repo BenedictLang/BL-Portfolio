@@ -62,6 +62,22 @@ body {
   transform: translateY(0);
 }
 
+.info-illustration {
+  /*margin-top: 2vh;*/
+  width: 100%;
+}
+
+@media screen and (min-width: v.$bpTablet),
+screen and (max-height: 500px) and (min-width: v.$bpMobile) {
+  .page-section{
+    display: flex;
+  }
+  .info-illustration {
+    margin-right: 4vw;
+    width: 45%;
+  }
+}
+
 @media (min-width: 40em) {
   .split {
     display: flex;
