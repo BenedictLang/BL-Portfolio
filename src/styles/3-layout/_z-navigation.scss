@@ -461,6 +461,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     background-repeat: no-repeat;
     background-size: 0 .6rem;
     transition: all .5s;
+    font-weight: normal;
     &:hover {
       color: v.$clr-primary;
       background-size: 100% .6rem;

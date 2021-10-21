@@ -2,17 +2,14 @@
 
 /* Footer */
 footer {
+  --footer-inset: 5vw;
   bottom: 0;
   top: auto;
   position: page;
   width: 95%;
-  transform: translateX(5vw);
+  transform: translateX(var(--footer-inset));
   @media screen and (min-width: v.$bpTablet){
-    background: linear-gradient(
-                    60deg,
-                    #2C4A81,
-                    v.$clr-bg
-    );
+    background: v.$clr-background;
     border-top-left-radius: 70px;
     box-shadow: -10px -5px 12px rgba(10 10 10 /.5);
   }
@@ -38,7 +35,7 @@ footer {
   display: none;
   @media screen and (min-width: v.$bpTablet) {
     max-width: 100%;
-    padding: 2.5em v.$pdd-side;
+    padding: 2.5em calc(var(--pdd-side) - var(--footer-inset));
     display: flex;
     justify-content: space-between;
     margin-top: auto;
@@ -46,7 +43,6 @@ footer {
 }
 
 .footer {
-  transform: translateX(-5vw);
   max-width: 95%;
   padding: 1.5rem v.$pdd-side v.$header-h v.$pdd-side;
   @media screen and (min-width: v.$bpTablet){
@@ -69,6 +65,8 @@ footer {
       }
     }
   }
+  //noinspection CssInvalidFunction
+  transform: translateX(calc(var(--footer-inset) * -1));
 }
 
 #dark-mode-toggle-footer {

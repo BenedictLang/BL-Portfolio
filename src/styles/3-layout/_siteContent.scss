@@ -45,6 +45,17 @@ body {
   margin-right: v.$mb-15;
 }
 
+.page-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page-section__text>p {
+  padding: 1rem 0;
+}
+
 .grid {
   display: grid;
   gap: v.$mb-15;
@@ -64,17 +75,27 @@ body {
 
 .info-illustration {
   /*margin-top: 2vh;*/
-  width: 100%;
+  min-width: 100%;
+  max-height: 30vh;
+  margin: 5vh 0;
 }
 
-@media screen and (min-width: v.$bpTablet),
+@media screen and (min-width: v.$bpLaptop),
 screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   .page-section{
-    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 100;
   }
+
+  .page-section__text {
+    max-width: 100%;
+  }
+
   .info-illustration {
+    min-width: 40%;
     margin-right: 4vw;
-    width: 45%;
+    max-height: 50vh;
   }
 }
 
@@ -102,7 +123,7 @@ section.page-section:nth-of-type(even) {
 section.slider{
   min-height: 94vh;
   @media screen and (min-width: v.$bpTablet) {
-    min-height: 95vh;
+    min-height: 94vh;
   }
 }
 

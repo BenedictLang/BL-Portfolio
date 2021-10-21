@@ -16,9 +16,9 @@ red:        0
 */
 
 /* default style */
-:root {
+:root { 
   --clr-primary: hsl(14, 70%, 60%);
-  --clr-secondary: rgba(20, 27, 43, 0.7);
+  --clr-secondary: rgba(20, 27, 43, 0.8);
   --clr-third: rgba(20, 27, 43, 0.29);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, var(--clr-primary) 55%, rgba(63, 87, 150, 0.9) 100%);
   --clr-scene: var(--clr-text);
@@ -29,11 +29,14 @@ red:        0
   --alpha: 0.8;
   --beta: 0.55;
   --gamma: 0.3;
+
+
+  --pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
 }
 
 /* theme dark style */
 .darkMode {
-  --clr-secondary: rgba(255, 255, 255, 0.2);
+  --clr-secondary: rgba(255, 255, 255, 0.4);
   --clr-third: rgba(156, 170, 255, 0.14);
   --clr-container: linear-gradient(20deg, #E27E50FF 22%, rgba(226, 126, 80, 0.6) 35%, rgba(63, 87, 150, 0.2) 80%, rgba(38, 49, 80, 0) 95%);
   --clr-scene: #0c101a;
@@ -129,7 +132,7 @@ $z-fixed: 100;
 $z-modal: 1000;
 
 /* Paddings & grid */
-$pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
+$pdd-side: var(--pdd-side);
 $pdd-tb: 10vh;
 
 // *********
