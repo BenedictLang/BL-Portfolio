@@ -51,10 +51,12 @@ h3 {
   font-weight: normal;
 }
 
-h4 {
+h4,
+figcaption{
   font-size: clamp(.35em, .5em + 5vw, 1.6em);
   font-family: v.$ft-subtitle;
   font-weight: bold;
+  font-style: normal;
 }
 
 h6 {

@@ -43,6 +43,9 @@ if (bpTablet.matches || bpLandscape.matches){
     });
 } else {
     //ignore fade in for mobile performance
+    ignoreFadeIn();
+}
+function ignoreFadeIn() {
     faders.forEach(element => {
         element.classList.add('appear');
     });
@@ -303,6 +306,7 @@ window.handleAccProfile = function handleAccProfile() {
     for(let e of accCbx) {
         if (e.checked) {
             defaultProfile.disabled = false;
+            ignoreFadeIn();
             break;
         } else {
             defaultProfile.disabled = true;
