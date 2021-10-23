@@ -17,8 +17,15 @@ function siteLoader() {
     }, 300);
 }
 
-//fade in content on scroll
-const faders = document.querySelectorAll('.fade-in');
+/* ==== Fade in content on scroll ==== */
+const fadersUp = document.querySelectorAll('.fade-in');
+const fadersL = document.querySelectorAll('.fade-in__left');
+const fadersR = document.querySelectorAll('.fade-in__right');
+const sucFaders = document.querySelectorAll('.fade-in__elements');
+let faders = Array.from(fadersUp);
+/*faders.append(Array.from(fadersL));
+faders.append(Array.from(fadersR));*/
+/*Array.from(fadersL), Array.from(fadersR)*/
 const appearOptions = {
     threshold: .6,
     rootMargin: "0px 0px 0px 0px"
