@@ -354,11 +354,18 @@ iframe {
 
 .contact2-form {
   width: 100%;
+  > input {
+    background-color: #4CAF50;
+  }
+}
+
+input.contact-form__input,
+textarea.contact-form__input{
+  background-color: transparent;
 }
 
 .contact2-form-title {
   display: block;
-  font-family: Poppins-Bold;
   font-size: 39px;
   color: #333333;
   line-height: 1.2;
@@ -374,7 +381,7 @@ iframe {
 .wrap-input2 {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 1px solid v.$clr-third;
   margin-bottom: 37px;
 }
 
@@ -382,9 +389,9 @@ iframe {
   display: block;
   width: 100%;
 
-  font-family: Poppins-Regular;
+  font-family: inherit;
   font-size: 15px;
-  color: #555555;
+  color: v.$clr-text;
   line-height: 1.2;
 }
 
@@ -424,14 +431,12 @@ iframe {
   display: block;
   width: 100%;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
-
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  color: #999999;
+  font-size: .9em;
+  color: v.$clr-text;
+  font-family: inherit;
   line-height: 1.2;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -477,7 +482,7 @@ textarea.input2 + .focus-input2::after {
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
-
+//TODO responsive form
 @media (max-width: 576px) {
   .wrap-contact2 {
     padding: 72px 15px 90px 15px;
@@ -498,7 +503,7 @@ textarea.input2 + .focus-input2::after {
   position: absolute;
   max-width: 70%;
   background-color: white;
-  border: 1px solid #c80000;
+  border: 1px solid v.$clr-primary;
   border-radius: 2px;
   padding: 4px 25px 4px 10px;
   top: 50%;
@@ -510,8 +515,8 @@ textarea.input2 + .focus-input2::after {
   right: 0px;
   pointer-events: none;
 
-  font-family: Poppins-Regular;
-  color: #c80000;
+  font-family: inherit;
+  color: v.$clr-primary;
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
@@ -526,11 +531,11 @@ textarea.input2 + .focus-input2::after {
 }
 
 .alert-validate::after {
-  content: "\f12a";
-  font-family: FontAwesome;
+  content: "X";
+  font-family: inherit;
   display: block;
   position: absolute;
-  color: #c80000;
+  color: v.$clr-primary;
   font-size: 16px;
   top: 50%;
   -webkit-transform: translateY(-50%);

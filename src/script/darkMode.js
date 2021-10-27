@@ -18,6 +18,7 @@ function darkModeInit() {
             darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         }
     }
+
     if (darkMode === true) {
         document.documentElement.classList.add('darkMode');
         document.querySelector('.theme-icon').classList.remove('uil-sun');
@@ -28,7 +29,13 @@ function darkModeInit() {
         document.querySelector('.theme-icon').classList.add('uil-sun');
     }
 }
-
+/*
+        for (const icon in themeIcon) {
+            icon.classList.remove('uil-sun');
+            icon.classList.add('uil-moon');
+        }
+        const themeIcon = document.querySelectorAll('.theme-icon');
+        */
 /*export function darkModeToggle() {
     document.documentElement.classList.toggle('darkMode');
     if (typeof (Storage) !== "undefined") {

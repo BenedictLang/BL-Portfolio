@@ -385,6 +385,8 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     bottom: 0!important;
     height: var(--header-h);
     align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   #menu-list {
@@ -469,6 +471,28 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
   }
 
   .nav__icon {
-  display: none;
+    display: none;
+  }
+
+  .service__items {
+    display: flex;
+    justify-content: normal;
+    padding: 0;
+    > * {
+      padding: 0 1rem;
+    }
+    #dark-mode-toggle-header {
+      display: none;
+    }
+    #accessibility-toggle {
+      font-size: 1.5em;
+      /*border: 1px solid v.$clr-text;
+      border-radius: v.$radius;
+      padding: 1rem;*/
+    }
+  }
+  #nav-separator {
+    display: flex;
+    height: 50%;
   }
 }
