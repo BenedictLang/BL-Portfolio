@@ -217,6 +217,47 @@ section.slider{
 }
 
 /* ==== CONTACT SECTION ==== */
+.contact {
+  padding: 1rem;
+}
+
+.section-title {
+  padding-bottom: 1rem;
+}
+
+.contact-wrapper {
+  --border: 3.5px;
+  padding: 3rem;
+  width: 50%;
+  min-width: 250px;
+  height: 100%;
+  border-radius: v.$radius;
+  /*border: 0.15em solid v.$clr-text;*/
+  background: v.$clr-bg;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border));
+    left: calc(-1 * var(--border));
+    z-index: -1;
+    width: calc(100% + var(--border) * 2);
+    height: calc(100% + var(--border) * 2);
+    background: linear-gradient(
+                    60deg,
+                    #2C4A81,
+                    v.$clr-primary,
+                    #488fc7,
+                    v.$clr-primary,
+                    #22c0fa,
+                    #274377
+    );
+    background-size: 300% 300%;
+    border-radius: v.$radius * 1.2;
+    animation: moveGradient 7s alternate infinite;
+    @include m.shadow;
+  }
+}
 /*---------------------------------------------*/
 input {
   outline: none;
