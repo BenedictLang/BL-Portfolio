@@ -162,6 +162,15 @@ section.slider{
   align-items: center;
 }
 
+@media screen and (min-width: v.$bpLaptop),
+screen and (max-height: 500px) and (min-width: v.$bpMobile) {
+  .home__content {
+    grid-template-columns: .7fr 3fr;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+  }
+}
+
 .home__socials {
   display: grid;
   grid-template-columns: max-content;
