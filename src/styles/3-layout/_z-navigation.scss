@@ -484,15 +484,22 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     #dark-mode-toggle-header {
       display: none;
     }
+    .search-button__show,
     #accessibility-toggle {
       font-size: 1.5em;
-      /*border: 1px solid v.$clr-text;
-      border-radius: v.$radius;
-      padding: 1rem;*/
+      font-style: normal;
+      font-weight: 400;
+      color: v.$clr-text;
     }
   }
+
   #nav-separator {
     display: flex;
     height: 50%;
+  }
+
+  #search-form,
+  .nav__additions{
+    display: flex;
   }
 }

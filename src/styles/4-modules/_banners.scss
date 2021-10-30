@@ -1,0 +1,150 @@
+// ********
+// Banner
+// ********
+@use '../1-helpers/variables' as v;
+@use '../1-helpers/mixins' as m;
+
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  transition: all .3s ease-in-out;
+  &:before {
+    box-shadow: inset 0 0 9px rgba(0 0 0 /.5);
+  }
+}
+
+.banner {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .8rem 5vw;
+  max-width: 100vw;
+  max-height: 5rem;
+  @include m.smoothTransition(.4s);
+  .banner-close {
+    color: v.$clr-text;
+    transition: all .3s ease-in-out;
+    i {
+      margin: 0 .5em;
+      font-size: 1.5em;
+    }
+    &:hover {
+      border-radius: v.$radius * .6;
+      transform: scale(1.2) rotate(90deg);
+      opacity: .8;
+    }
+  }
+  & > * {
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+  }
+}
+
+.banner__content {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.banner__icon {
+  font-weight: bolder;
+  font-size: 2.5em;
+  padding: 0 1rem;
+}
+
+.cookie-banner {
+  display: none;
+}
+
+@media screen and (min-width: v.$bpTablet),
+screen and (max-height: 500px) and (min-width: v.$bpMobile){
+  .banner__icon {
+    font-size: 1.3em;
+  }
+
+  .cookie-banner {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+    top: auto;
+    z-index: v.$z-modal;
+    background: v.$clr-bg;
+    border-top-right-radius: v.$radius;
+    border-top-left-radius: v.$radius;
+    border: 2px solid v.$clr-text;
+    border-bottom: 0;
+    padding: 1rem;
+  }
+}
+
+.banner__info {
+  background: linear-gradient(40deg, royalblue, #254f85);
+}
+
+.banner__news {
+  background: linear-gradient(90deg, #e0aa45, #ffaa5a);
+}
+
+.banner__warning {
+  background: linear-gradient(90deg, v.$clr-primary, #ffbe4c);
+}
+
+#error {
+  background-color: #FFDDDD;
+  border-left: 6px solid #F44336;
+}
+
+#success {
+  background-color: #DDFFDD;
+  border-left: 6px solid #4CAF50;
+  display: none;
+}
+
+#info {
+  background-color: #E7F3FE;
+  border-left: 6px solid #2196F3;
+  display: none;
+}
+
+/*.banner-message div {
+  padding: 4px 8px;
+  display: none;
+}*/
+
+/*
+!* Banner close button *!
+.banner-close {
+  cursor: pointer;
+}
+
+.banner-close div {
+  width: 20px;
+  height: 3px;
+  border-radius: 1px;
+  margin: 7px 0;
+  background-color: #000;
+  transition: 0.25s ease-in-out;
+}
+
+.banner-close:hover div {
+  background-color: #777;
+}
+
+.banner-close1 {
+  transform: translate(0px, 5px) rotate(-45deg);
+}
+
+.banner-close2 {
+  transform: translate(0px, -5px) rotate(45deg);
+}*/
+

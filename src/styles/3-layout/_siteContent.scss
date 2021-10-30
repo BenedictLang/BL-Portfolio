@@ -164,9 +164,16 @@ section.slider{
 
 @media screen and (min-width: v.$bpLaptop),
 screen and (max-height: 500px) and (min-width: v.$bpMobile) {
+  #home {
+    position: relative;
+    min-height: clamp(720px, 95vh, 2000px);
+  }
   .home__content {
     grid-template-columns: .7fr 3fr;
-    padding-top: 2vh;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    padding-top: 0;
     padding-bottom: 5vh;
   }
 }
@@ -182,6 +189,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   color: v.$clr-primary;
   &:hover {
     color: v.$clr-text;
+    transform: scale(1.2);
   }
 }
 
@@ -223,6 +231,23 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 /* ==== ABOUT SECTION ==== */
 .about__button {
   margin-top: 4rem;
+}
+
+.about__experiences {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about__experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__experience-years {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 /* ==== CONTACT SECTION ==== */

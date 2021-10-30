@@ -143,6 +143,12 @@ footer {
   align-items: center;
 }
 
+.social-link {
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
 .social-img {
   margin: 0 clamp(4px, 1vw, 100px);
   font-size: large;

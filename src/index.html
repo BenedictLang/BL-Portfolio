@@ -21,6 +21,44 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body id="start">
+<div class="banner-section">
+    <div class="banner__info banner" title="information">
+        <div class="banner__content">
+            <i class="uil uil-comment-info-alt icon banner__icon"></i>
+            <span>Please note that this site is <strong>under construction</strong>. 🚧 Functions might not already work or do not work properly!</span>
+        </div>
+        <button type="button" class="banner-close">
+            <i class="uil uil-times icon"></i>
+        </button>
+    </div>
+    <div class="banner__warning banner" title="warning" style="display:none">
+        <div class="banner__content">
+            <i class="uil uil-shield-exclamation icon banner__icon"></i>
+            <span>This is a warning! style="display:none"</span>
+        </div>
+        <button type="button" class="banner-close">
+            <i class="uil uil-times icon"></i>
+        </button>
+    </div>
+    <div class="banner__news banner" title="news" style="display:none">
+        <div class="banner__content">
+            <i class="uil uil-star icon banner__icon"></i>
+            <span>This is some interesting news! style="display:none"</span>
+        </div>
+        <button type="button" class="banner-close">
+            <i class="uil uil-times icon"></i>
+        </button>
+    </div>
+    <div class="cookie-banner banner" style="display:none;">
+        <div class="banner__content">
+            <i class="uil uil-comment-info-alt icon banner__icon"></i>
+            <span>We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.</span>
+        </div>
+        <button type="button" class="banner-close">
+            <i class="uil uil-times icon"></i>
+        </button>
+    </div>
+</div>
 <div id="main-grid">
     <div id="wrapper" class="wrapper blur">
         <div class="wrap">
@@ -101,6 +139,10 @@
                                         aria-pressed="true" onclick="darkModeToggle()">
                                     <i class="theme-icon uil"></i>
                                 </button>
+                                <!--<button type="button" onclick="search();" aria-label="submit search"
+                                        class="search-button__show">
+                                    <i class="uil uil-search"></i>
+                                </button>-->
                             </div>
                             <hr class="nav__separator">
                             <div id="menu-list" class="menu__list">
@@ -315,17 +357,17 @@
                                 <div class="home__socials">
                                     <a href="https://github.com/BenedictLang" class="home__social-icon"
                                        aria-label="GitHub Profil (new tab)"
-                                       target="_blank">
+                                       target="_blank" title="GitHub">
                                         <i class="uil uil-github-alt"></i>
                                     </a>
                                     <a href="https://www.linkedin.com/in/benedict-lang-72b78721a"
                                        class="home__social-icon"
-                                       aria-label="linkedIn Profil (new tab)" target="_blank">
+                                       aria-label="linkedIn Profil (new tab)" target="_blank" title="LinkedIn">
                                         <i class="uil uil-linkedin-alt"></i>
                                     </a>
                                     <a href="https://discord.gg/QMjhZnBxgV"
                                        aria-label="Discord Server beitreten und Sprachchat betreten (new tab)"
-                                       class="home__social-icon" target="_blank">
+                                       class="home__social-icon" target="_blank" title="Discord">
                                         <i class="uil uil-discord"></i>
                                         <!--<i class="icon" aria-label="Discord logo">
                                             <svg class="disco-ico" aria-label="Discord logo"
@@ -352,7 +394,7 @@
                                     </a>
                                     <a href="https://www.instagram.com/bl_design.de/" class="home__social-icon"
                                        aria-label="Instagram Profile (new tab)"
-                                       target="_blank">
+                                       target="_blank" title="Instagram">
                                         <i class="uil uil-instagram "></i>
                                     </a>
                                 </div>
@@ -1122,6 +1164,20 @@
                                 hervorragenden barrierefreien <span lang="en">User Experience</span>
                                 beiträgt.
                             </p>
+                            <div class="about__experiences">
+                                <div class="about__experience">
+                                    <span id="experience-design" class="about__experience-years">06 Jahre</span>
+                                    <span class="about__experience-name">Grafikdesign<br>Erfahrung</span>
+                                </div>
+                                <div class="about__experience">
+                                    <span id="experience-web" class="about__experience-years">04 Jahre</span>
+                                    <span class="about__experience-name">Web Entwicklung<br>Erfahrung</span>
+                                </div>
+                                <div class="about__experience">
+                                    <span id="experience-dev" class="about__experience-years">06 Jahre</span>
+                                    <span class="about__experience-name">Software Entwicklung<br>Erfahrung</span>
+                                </div>
+                            </div>
                             <br>
                             <a href="#contact"
                                class="btn button__flex fade-in">

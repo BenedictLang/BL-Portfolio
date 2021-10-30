@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   @include m.flex;
-  z-index: v.$z-modal;
+  z-index: v.$z-modal*10;
 }
 
   .blur {

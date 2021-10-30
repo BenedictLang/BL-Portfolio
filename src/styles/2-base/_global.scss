@@ -110,6 +110,13 @@ abbr {
   cursor: help;
 }
 
+//global class toggle
+.hidden {
+  opacity: 0;
+  display: none !important;
+  transform: scale(0);
+}
+
 //Tooltip
 .tooltip {
   position: relative;
@@ -399,6 +406,7 @@ a.btn{
 
   &:hover {
     border-radius: v.$radius + 1rem;
+    transform: scale(1.1);
   }
 
   &:active {
