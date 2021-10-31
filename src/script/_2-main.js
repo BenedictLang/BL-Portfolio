@@ -2,21 +2,22 @@
 
 //TODO export breakpoint variable
 const   bpTablet = window.matchMedia("(min-width: 850px)"),
+        bpWs = window.matchMedia("(min-width: 1440px)"),
         bpLandscape = window.matchMedia("(max-height: 500px)");
 
 /* ==== MOVE TO MOUSE POSITION ====*/
-var moveForce = 30; // max popup movement in pixels
-var rotateForce = 20; // max popup rotation in deg
+const moveForce = 30; // max popup movement in pixels
+const rotateForce = 20; // max popup rotation in deg
 
 $(document).mousemove(function(e) {
-    var docX = $(document).width();
-    var docY = $(document).height();
+    const docX = $(document).width();
+    const docY = $(document).height();
 
-    var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
-    var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
+    const moveX = (e.pageX - docX / 2) / (docX / 2) * -moveForce;
+    const moveY = (e.pageY - docY / 2) / (docY / 2) * -moveForce;
 
-    var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
-    var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+    const rotateY = (e.pageX / docX * rotateForce * 2) - rotateForce;
+    const rotateX = -((e.pageY / docY * rotateForce * 2) - rotateForce);
 
     $('.moveToMouse')
         .css('left', moveX+'px')
@@ -29,7 +30,10 @@ const fadersUp = document.querySelectorAll('.fade-in');
 const fadersL = document.querySelectorAll('.fade-in__left');
 const fadersR = document.querySelectorAll('.fade-in__right');
 const sucFaders = document.querySelectorAll('.fade-in__elements');
-let faders = Array.from(fadersUp);
+const faders = Array.from(fadersUp);
+/*const faders = new Element[1];*/
+/*faders.append();*/
+/*faders.append(Array.from(fadersUp));*/
 /*faders.append(Array.from(fadersL));
 faders.append(Array.from(fadersR));*/
 /*Array.from(fadersL), Array.from(fadersR)*/
@@ -52,10 +56,20 @@ if (bpTablet.matches || bpLandscape.matches){
         });
     },
     appearOptions);
-    faders.forEach(fader => {
+    /*for (let i = 0; i < faders.length; i++) {
+        faders[i].forEach(fader => {
             appearOnScroll.observe(fader);
+        });
+    } */
+    /*faders.forEach(faderDirection => {
+        faderDirection.forEach(fader => {
+            appearOnScroll.observe(fader);
+        })
+    });*/
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
     });
-} else {
+    } else {
     //ignore fade in for mobile performance
     ignoreFadeIn();
 }
@@ -75,23 +89,28 @@ const   navMenu = document.getElementById('nav-menu'),
         contentWrapper = document.getElementById('content-wrapper'),
         main = document.getElementById('main'),
         footer = document.getElementById('footer'),
+        bannerSection = document.querySelector('.banner-section'),
         scrollToTop = document.getElementById('scroll-to-top');
 
-//Show mobile Menu
-if(navMobileToggle || navDesktopToggle){
+//Show Menu
+if((navMobileToggle || navDesktopToggle)){
     navMobileToggle.addEventListener('click', showMenu);
     navDesktopToggle.addEventListener('click', showMenu);
 }
 function showMenu(){
-    navDesktopToggle.nextElementSibling.classList.add('open');
-    navMenu.classList.add('show__menu');
-    scrollToTop.classList.add('hidden');
-    if(bpTablet.matches || bpLandscape.matches) {
-        contentWrapper.classList.add('blur');
-    } else {
-        contentWrapper.classList.add('blur-light');
+    if(!bpWs.matches){
+        bannerSection.classList.add('shrinkY');
+        navDesktopToggle.nextElementSibling.classList.add('open');
+        navMenu.classList.add('show__menu');
+        scrollToTop.classList.add('hidden');
+        /*navMenu.classList.remove('shrinkX');*/
+        if(bpTablet.matches || bpLandscape.matches) {
+            contentWrapper.classList.add('blur');
+        } else {
+            contentWrapper.classList.add('blur-light');
+        }
+        disableScroll(document.body);
     }
-    disableScroll(document.body);
 }
 //Hide Menu
 navDesktopToggle.addEventListener('change', function() {
@@ -112,12 +131,16 @@ function linkAction(){
     closeMenu();
 }
 function closeMenu() {
-    navDesktopToggle.nextElementSibling.classList.remove('open');
-    enableScroll(document.body);
-    contentWrapper.classList.remove('blur');
-    contentWrapper.classList.remove('blur-light');
-    navMenu.classList.remove('show__menu');
-    scrollToTop.classList.remove('hidden');
+    if(!bpWs.matches){
+        navDesktopToggle.nextElementSibling.classList.remove('open');
+        enableScroll(document.body);
+        contentWrapper.classList.remove('blur');
+        contentWrapper.classList.remove('blur-light');
+        navMenu.classList.remove('show__menu');
+        /*navMenu.classList.add('shrinkX');*/
+        scrollToTop.classList.remove('hidden');
+        bannerSection.classList.remove('shrinkY');
+    }
 }
 
 //toggle sticky desktop navbar
@@ -205,8 +228,7 @@ banners.forEach(bannerBtn => {
     bannerBtn.addEventListener('click', function() {
         bannerBtn.parentElement.style.opacity = '0';
         setTimeout(() => {
-            bannerBtn.parentElement.style.padding = '0';
-            bannerBtn.parentElement.style.maxHeight = '0';
+            bannerBtn.parentElement.classList.add('shrinkY');
         }, 200);
         setTimeout(() => {
             bannerBtn.parentElement.classList.add('hidden');
@@ -214,5 +236,17 @@ banners.forEach(bannerBtn => {
     });
 });
 
-//sets current year
+
+//*************
+//year adaption
+//*************
+
+//current year
 document.getElementById("currentYear").innerHTML = new Date().getFullYear().toString();
+
+//experience years
+document.getElementById("experience-design").innerHTML = (new Date().getFullYear() - 2014).toString() + "+";
+
+document.getElementById("experience-web").innerHTML = (new Date().getFullYear() - 2017).toString() + "+";
+
+document.getElementById("experience-dev").innerHTML = (new Date().getFullYear() - 2019).toString() + "+";

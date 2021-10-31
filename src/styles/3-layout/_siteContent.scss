@@ -235,19 +235,43 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 
 .about__experiences {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin: 2rem 0;
+  & > * {
+    flex-basis: max-content;
+  }
+}
+
+@media screen and (min-width: v.$bpMobile){
+  .about__experiences {
+    flex-flow: row wrap;
+  }
 }
 
 .about__experience {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1vw;
+  background-color: v.$clr-bg;
+  border-radius: v.$radius;
+  transition: (all .3s ease-in-out);
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  line-height: 1.5rem;
 }
 
 .about__experience-years {
   font-weight: bold;
   font-size: 1.5em;
+  padding-bottom: .8rem;
 }
 
 /* ==== CONTACT SECTION ==== */

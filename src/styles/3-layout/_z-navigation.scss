@@ -138,6 +138,10 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     top: clamp(15px, 5vh, 60px);
   }
 
+  .nav__bar {
+    height: unset;
+  }
+
   .headerHidden {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
