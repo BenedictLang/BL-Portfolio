@@ -197,7 +197,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     position: absolute;
     bottom: auto;
     /*top: 0;*/
-    max-height: 100vh;
+    max-height: 100vh!important;
     height: 100vh;
     box-shadow: 0 -4px 13px 0 rgba(0, 0, 0, 0.40), 0 2px 15px 0 rgba(0, 0, 0, 0.30);
     /*border-radius: 0;*/

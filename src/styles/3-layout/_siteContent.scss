@@ -122,6 +122,22 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     gap: 2em;
   }
 }
+section {
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: v.$bpLaptop){
+  .section-title {
+    text-align: left;
+  }
+}
+
 section.subtitle {
   display: block;
   font-size: small;
@@ -145,9 +161,6 @@ section.page-section:last-of-type {
 /* ==== HOME SECTION==== */
 section.slider{
   min-height: 94vh;
-  @media screen and (min-width: v.$bpTablet) {
-    min-height: 94vh;
-  }
 }
 
 .home__container  {
@@ -157,12 +170,12 @@ section.slider{
 
 .home__content {
   grid-template-columns: .7fr 3fr;
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-bottom: v.$pdd-tb;
   align-items: center;
 }
 
-@media screen and (min-width: v.$bpLaptop),
+@media screen and (min-width: v.$bpTablet),
 screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   #home {
     position: relative;
@@ -176,6 +189,8 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     padding-top: 0;
     padding-bottom: 5vh;
   }
+
+
 }
 
 .home__socials {
@@ -208,8 +223,11 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 }
 
 /* ==== PORTFOLIO SECTION ==== */
+#portfolio {
+  min-height: 100vh;
+}
 .portfolio__head {
-  display: flex;
+  /*display: flex;*/
   @media screen and (min-width: v.$bpLaptop) {
     display: flex;
     justify-content: space-between;
@@ -252,6 +270,9 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 
 .about__experience {
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -277,10 +298,6 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 /* ==== CONTACT SECTION ==== */
 .contact {
   padding: 1rem;
-}
-
-.section-title {
-  padding-bottom: 1rem;
 }
 
 .contact-wrapper {
