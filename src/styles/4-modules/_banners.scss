@@ -38,6 +38,9 @@
       transform: scale(1.2) rotate(90deg);
       opacity: .8;
     }
+    &:focus {
+      outline: v.$clr-text 1px;
+    }
   }
   & > * {
     background-size: 400%;

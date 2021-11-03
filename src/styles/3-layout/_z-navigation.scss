@@ -363,6 +363,55 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
 }
 
 @media screen and (min-width: v.$bpWideS) {
+  #nav-grid {
+    list-style: none;
+    li{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      min-width: 112px;
+    }
+  }
+  .sub-menu{
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    min-height: 120px;
+    width: 100%;
+    left: 0;
+    top: 48px;
+    z-index: v.$z-modal;
+    background-color: #4CAF50;
+    ul{
+      transform: translate(0,-100%);
+      transition: (all 0.5s 0.1s);
+      position: relative;
+    }
+    li{
+      display:block;
+      padding: 0;
+      width: 100%;
+      background: red !important;
+    }
+  }
+  @for $i from 1 through 4{
+    #nav-grid li:nth-child(#{$i}){
+      &:hover ul div{
+        transform: (translate(0,0));
+      }
+    }
+  }
+
+  .sub-menu {
+    display: block;
+  }
+
+  .dropdown-arrow {
+    display: block;
+    @include m.transition(transform);
+  }
+
   .header {
     background: v.$clr-background;
     backdrop-filter: none;
@@ -406,7 +455,6 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     position: relative;
     min-height: auto;
     /* bottom: .2rem; */
-
   }
 
   .menu__list-sticky {
@@ -418,6 +466,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -435,7 +484,6 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     &:last-of-type {
       padding-bottom: 0;
     }
-    //TODO center for higher header
     padding: .7rem!important;
     align-items: center;
   }

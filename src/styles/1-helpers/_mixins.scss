@@ -20,8 +20,8 @@
   box-shadow: 0 4px 9px rgba(0 0 0 /.4);
 }
 
-@mixin transition{
-  transition: all .3s ease-in-out;
+@mixin transition($selector){
+  transition: $selector .3s ease-in-out;
 }
 
 @mixin smoothTransition($time){

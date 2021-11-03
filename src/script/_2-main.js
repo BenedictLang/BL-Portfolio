@@ -90,6 +90,8 @@ const   navMenu = document.getElementById('nav-menu'),
         main = document.getElementById('main'),
         footer = document.getElementById('footer'),
         bannerSection = document.querySelector('.banner-section'),
+        navItem = document.querySelectorAll('.nav__item'),
+        dropdownArrow = document.querySelector('.dropdown-arrow'),
         scrollToTop = document.getElementById('scroll-to-top');
 
 //Show Menu
@@ -168,6 +170,28 @@ let prevScrollPos = window.pageYOffset;
     }, false)
 );
 
+//Dropdown menu
+navItem.forEach($entry => {
+    let arrow = $entry.querySelector('.dropdown-arrow');
+    if (arrow != null){
+        hover($entry, () => {
+            console.log(arrow);
+            rotate90(arrow);
+        });
+        $entry.addEventListener('focus', () => {
+            rotate90(arrow);
+        });
+    }
+});
+
+function hover($element, fn){
+    $element.addEventListener('mouseenter', fn)
+    $element.addEventListener('mouseleave', fn)
+}
+
+function rotate90($element) {
+    $element.classList.toggle('rotate90');
+}
 
 
 /* ==== 3D HEADER ====*/

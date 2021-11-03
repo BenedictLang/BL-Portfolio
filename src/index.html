@@ -123,8 +123,7 @@
                         </span>
                     </label>
                 </div>
-                <nav class="nav">
-                    <div id="nav-list">
+                <nav id="nav-list" class="nav">
                         <div id="nav-menu" class="nav__menu">
                             <div class="service__items">
                                 <input id="accessibility-cbx" class="cbx-icon" aria-label="show accessibility settings"
@@ -148,37 +147,51 @@
                             <hr class="nav__separator">
                             <div id="menu-list" class="menu__list">
                                 <ul id="nav-grid" class="nav__list scrollbar__mini grid">
-                                    <li class="nav__item">
+                                    <li id="nav__item-start" class="nav__item">
                                         <a href="#start" class="nav__link">
                                             <i class="nav__icon uil uil-estate"></i>
                                             Home
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li id="nav__item-portfolio" class="nav__item">
                                         <a href="#portfolio" class="nav__link">
                                             <i class="nav__icon uil uil-presentation-play"></i>
                                             Portfolio
+                                            <i class="uil uil-angle-right dropdown-arrow"></i>
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li id="nav__item-about" class="nav__item">
                                         <a href="#about" class="nav__link">
                                             <i class="nav__icon uil uil-user"></i>
                                             Über mich
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li id="nav__item-skills" class="nav__item">
                                         <a href="#skills" class="nav__link">
                                             <i class="nav__icon uil uil-book-alt"></i>
                                             Skills
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li id="nav__item-services" class="nav__item">
                                         <a href="#services" class="nav__link">
                                             <i class="nav__icon uil uil-suitcase"></i>
                                             Leistungen
+                                            <i class="uil uil-angle-right dropdown-arrow"></i>
                                         </a>
-                                    </li>
-                                    <li class="nav__item">
+                                        <ul class="sub-menu nav__item" style="display: none">
+                                            <li><a href="#" class="nav__link">Secondary1</a></li>
+                                            <li><a href="#" class="nav__link">Secondary2</a></li>
+                                            <li><a href="#" class="nav__link">Slider3</a>
+                                                <ul>
+                                                    <li><a href="#" class="nav__link">Tertiary1</a></li>
+                                                    <li><a href="#" class="nav__link">Tertiary2</a></li>
+                                                    <li><a href="#" class="nav__link">Tertiary3</a></li>
+                                                    <li><a href="#" class="nav__link">Tertiary4</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#" class="nav__link">Secondary4</a></li>
+                                        </ul>
+                                    <li id="nav__item-contact" class="nav__item">
                                         <a href="#contact" class="nav__link">
                                             <i class="nav__icon uil uil-message"></i>
                                             Kontakt
@@ -348,7 +361,7 @@
                                 </i>
                             </div>
                         </div>
-                    </div>
+
                 </nav>
             </header>
             <div id="content-wrapper">
