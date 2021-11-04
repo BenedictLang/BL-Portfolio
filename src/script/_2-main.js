@@ -260,6 +260,66 @@ banners.forEach(bannerBtn => {
     });
 });
 
+//reCaptcha for forms
+function onSubmit($token) {
+    document.getElementById("contact-form").submit();
+}
+
+let nameCorrect = function check(element) {
+    return (element.id === 'contact-input__name' && element.value.length > 3);
+    },
+    subjectExists = function check(element) {
+        return (element.id === 'contact-input__subject' && element.value.length > 10);
+    },
+    mailCorrect = function check(element) {
+        return (element.id === 'contact-input__mail' && (element.value.includes('@') && element.value.includes('.') && element.value.indexOf('.') < element.value.length -2));
+    },
+    messageExists = function check(element) {
+        return (element.id === 'contact-input__message' && element.value.length > 30);
+    };
+
+
+
+document.querySelectorAll('.contact-form__input').forEach(input => {
+    input.addEventListener('input', (e) => {
+        let indicator = e.target.parentElement.querySelector('.input-border');
+        if (nameCorrect(e.target) || subjectExists(e.target) || mailCorrect(e.target) || messageExists(e.target)){
+            valid(indicator);
+        } else {
+            invalid(indicator);
+        }
+
+        function invalid($element){
+            $element.classList.remove('input-valid');
+        }
+        function valid($element){
+            $element.classList.add('input-valid');
+        }
+    });
+});
+
+document.querySelector('.contact-form__submit').addEventListener('click', (event) => {
+    event.preventDefault();
+    let   name = document.getElementById('contact-input__name'),
+        subject = document.getElementById('contact-input__subject'),
+        mail = document.getElementById('contact-input__mail'),
+        msg = document.getElementById('contact-input__message');
+    if (nameCorrect(name) && subjectExists(subject) && mailCorrect(mail) && messageExists(msg)){
+        document.getElementById('contact-form__submit-message').innerText = '';
+        console.info("Form submitted");
+        console.info(name.value, subject.value, mail.value, msg.value);
+        event.target.innerText = 'Nachricht abgeschickt!';
+        name.value = '';
+        subject.value = '';
+        mail.value = '';
+        msg.value = '';
+        event.target.disable = true;
+        return false;
+    } else {
+        document.getElementById('contact-form__submit-message').innerText = 'Überprüfen Sie die markierte Eingabe!';
+    }
+});
+
 
 //*************
 //year adaption

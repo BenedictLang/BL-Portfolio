@@ -59,6 +59,7 @@ $clr-alpha: var(--alpha) !default;
 $clr-beta: var(--beta) !default;
 $clr-gamma: var(--gamma) !default;
 
+
 //**************
 // BREAKPOINTS
 //**************
@@ -67,9 +68,9 @@ $bpMobile: 400px;
 
 /* Medium devices (tablets) */
 /*$bp-tablet: 768px;*/
-$bpTablet: 768px;
+$bpTablet: 850px;
 
-/* Large devices (desktops) */
+/* Large devices (laptops) */
 $bpLaptop: 968px;
 
 /* Extra large devices (large desktops) */
@@ -77,6 +78,7 @@ $bpDesktop: 1200px;
 
 /* Widescreen devices (wide desktops) */
 $bpWideS: 1440px;
+
 
 // *******
 // FONTS
@@ -94,6 +96,7 @@ Helvetica
 Poppins
 Raleway
 */
+
 
 // *********
 // SCALING
@@ -134,6 +137,7 @@ $z-modal: 1000;
 /* Paddings & grid */
 $pdd-side: var(--pdd-side);
 $pdd-tb: 10vh;
+
 
 // *********
 // OTHERS

@@ -8,5 +8,5 @@ function siteLoader() {
         });
     setTimeout(function() {
         $(".blur").removeClass();
-    }, 400);
+    }, 350);
 }

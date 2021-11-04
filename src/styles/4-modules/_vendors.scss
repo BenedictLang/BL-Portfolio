@@ -1,0 +1,20 @@
+@use '../1-helpers/variables' as v;
+
+/* form reCaptcha*/
+.g-captcha__notice {
+  margin-top: 4vh;
+  font-size: smaller;
+  color: v.$clr-text;
+  /*text-align: center;*/
+  display: flex;
+  max-width: 600px;
+}
+.grecaptcha-badge {
+  display: none!important;
+  opacity: 0!important;
+}
+
+.rc-anchor-logo-img {
+  height: 1rem;
+  margin-right: clamp(2px, 1vw, 7px);
+}
