@@ -389,6 +389,8 @@ textarea.input {
   #contact-form__submit-message{
     color: v.$clr-primary;
     font-weight: normal;
+    margin-bottom: 3vh;
+    @include m.smoothTransition(.3s);
   }
   .input {
     display: block;
@@ -448,16 +450,9 @@ textarea.input {
                     #274377
     );
   }
-
-/*  input:valid ~ .input-border,
-  textarea:valid ~ .input-border{
-    background: linear-gradient(
-                      60deg,
-                      #274377,
-                      #22c0fa,
-                      #274377
-      );
-  }*/
+  .contact-form__submit {
+    margin-top: 0;
+  }
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }

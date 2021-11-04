@@ -1,6 +1,32 @@
 @use '../1-helpers/variables' as v;
+@use '../1-helpers/mixins' as m;
 
 /* form reCaptcha*/
+.submit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //remove automatic recaptcha div from flexbox
+  /*flex-wrap:wrap;*/
+  gap: 1rem;
+  & > div:first-of-type {
+    display: none;
+  }
+  & img {
+    /*flex: 0 0 0;*/
+  }
+  &:hover, &:focus-within {
+    .rc-anchor-logo-img {
+      opacity: 1;
+    }
+  }
+  &:hover ~ .g-captcha__notice,
+  &:focus-within ~ .g-captcha__notice{
+    opacity: 1;
+    font-size: medium;
+  }
+  @include m.smoothTransition(.5s);
+}
 .g-captcha__notice {
   margin-top: 4vh;
   font-size: smaller;
@@ -8,6 +34,15 @@
   /*text-align: center;*/
   display: flex;
   max-width: 600px;
+  &:hover, &:focus-within {
+    opacity: 1;
+    font-size: medium;
+    & ~ .rc-anchor-logo-img {
+      opacity: 1;
+    }
+  }
+  /*opacity: 0;*/
+  @include m.smoothTransition(.5s);
 }
 .grecaptcha-badge {
   display: none!important;
@@ -15,6 +50,18 @@
 }
 
 .rc-anchor-logo-img {
-  height: 1rem;
-  margin-right: clamp(2px, 1vw, 7px);
+  display: none;
+  height: 100%;
+  max-height: 30px;
+  right: 0;
+  margin: 0 clamp(7px, 2vw, 15px);
+  opacity: 0;
+  @include m.smoothTransition(.5s);
+}
+
+@media screen and (min-width: v.$bpMobile),
+screen and (max-height: 500px) and (min-width: v.$bpMobile){
+  .rc-anchor-logo-img {
+    display: block;
+  }
 }

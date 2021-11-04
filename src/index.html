@@ -1965,12 +1965,14 @@
                                     <div class="container-contact-form-btn">
                                         <div class="contact-form-btn-wrapper">
                                             <div id="contact-form__submit-message"></div>
-                                            <button type="submit" id="contact-form__submit" class="g-recaptcha btn contact-form__submit" title="submit message" data-sitekey="6LdETgodAAAAAJ0jrGJGkZIRcQixMPwqsX5FX7vF" data-callback="onSubmit" data-action="submit" onsubmit="onSubmit(this.token)">
-                                                Nachricht abschicken
-                                            </button>
+                                            <div class="submit-wrapper">
+                                                <button type="submit" id="contact-form__submit" class="g-recaptcha btn contact-form__submit" title="submit message" data-sitekey="6LdETgodAAAAAJ0jrGJGkZIRcQixMPwqsX5FX7vF" data-callback="onSubmit" data-action="submit" onsubmit="onSubmit(this.token)">
+                                                    Nachricht abschicken <i class="uil uil-message icon button__icon"></i>
+                                                </button>
+                                                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" title="Google reCAPTCHA" alt="Google reCaptcha protection logo" class="rc-anchor-logo-img">
+                                            </div>
                                             <br>
                                             <div class="g-captcha__notice">
-                                                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" title="Google reCAPTCHA" alt="Google reCaptcha protection logo" class="rc-anchor-logo-img">
                                                 <span>
                                                     Diese Website ist durch das neueste reCAPTCHA vor unbefugten Anfragen geschützt und es gelten die
                                                     <a href="https://policies.google.com/privacy" aria-label="Google Privacy Information" target="_blank">Datenschutzbestimmungen</a> und <a href="https://policies.google.com/terms" aria-label="Google terms" target="_blank">Nutzungsbedingungen</a> von Google.
@@ -3684,25 +3686,6 @@
             accSettings.classList.add('hidden');
             navMobile.removeClass('hidden');
             document.getElementById('nav-menu').style.maxHeight = "90vh";
-        }
-    }
-    //THEME SETTINGS
-    window.darkModeToggle = function darkModeToggle() {
-        const themeIcon = Array.from(document.querySelectorAll('.theme-icon'));
-        document.documentElement.classList.toggle('darkMode');
-        if (typeof (Storage) !== "undefined") {
-            localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode').toString());
-        }
-        if (!document.documentElement.classList.contains('darkMode')) {
-            themeIcon.forEach(icon => {
-                icon.classList.remove('uil-moon');
-                icon.classList.add('uil-sun');
-            });
-        } else {
-            themeIcon.forEach(icon => {
-                icon.classList.add('uil-moon');
-                icon.classList.remove('uil-sun');
-            });
         }
     }
 </script>

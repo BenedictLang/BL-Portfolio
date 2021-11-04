@@ -218,6 +218,7 @@ input {
 .button__icon {
   font-size: 1.4em;
   margin-left: v.$mb-05;
+  transform: translateY(-15px);
 }
 
 button {

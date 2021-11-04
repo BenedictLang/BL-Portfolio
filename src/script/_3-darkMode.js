@@ -1,53 +1,59 @@
 // Dark mode
-darkModeInit();
-/*const themeIcon = document.querySelector('.theme-icon').classList;*/
-function darkModeInit() {
-    let darkMode = null;
+ThemeInit();
+function ThemeInit() {
+    let darkModePreferred = null;
     if (typeof(Storage) !== "undefined") {
         switch (localStorage.getItem("darkMode")) {
             case 'true':
-                darkMode = true;
+                darkModePreferred = true;
                 break;
             case 'false':
-                darkMode = false;
+                darkModePreferred = false;
                 break;
         }
     }
-    if (darkMode === null) {
+    if (darkModePreferred === null) {
         if (window.matchMedia) {
-            darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            darkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
         }
     }
 
-    if (darkMode === true) {
+    if (darkModePreferred === true) {
         document.documentElement.classList.add('darkMode');
-        document.querySelector('.theme-icon').classList.remove('uil-sun');
-        document.querySelector('.theme-icon').classList.add('uil-moon');
-    } else if (darkMode === false) {
+        loadThemeIcon()
+    } else if (darkModePreferred === false) {
         document.documentElement.classList.remove('darkMode');
-        document.querySelector('.theme-icon').classList.remove('uil-moon');
-        document.querySelector('.theme-icon').classList.add('uil-sun');
+        loadThemeIcon()
     }
 }
-/*
-        for (const icon in themeIcon) {
-            icon.classList.remove('uil-sun');
-            icon.classList.add('uil-moon');
-        }
-        const themeIcon = document.querySelectorAll('.theme-icon');
-        */
-/*export function darkModeToggle() {
+
+document.querySelectorAll('.dark-mode-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => darkModeToggle);
+});
+
+//toggle theme mode
+window.darkModeToggle = function darkModeToggle() {
     document.documentElement.classList.toggle('darkMode');
+    loadThemeIcon()
+}
+
+//set theme icon
+function loadThemeIcon(){
+
+    const themeIcon = Array.from(document.querySelectorAll('.theme-icon'));
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("darkMode", document.documentElement.classList.contains('darkMode').toString());
     }
-}*/
-/*function darkModeIcon() {
-    if (document.querySelector('.theme-icon').classList.contains('uil-moon')){
-        document.querySelector('.theme-icon').classList.remove('uil-moon');
-        document.querySelector('.theme-icon').classList.add('uil-sun');
+    if (!document.documentElement.classList.contains('darkMode')) {
+        themeIcon.forEach(icon => {
+            icon.classList.remove('uil-moon');
+            icon.classList.add('uil-sun');
+        });
     } else {
-        document.querySelector('.theme-icon').classList.remove('uil-sun');
-        document.querySelector('.theme-icon').classList.add('uil-moon');
+        themeIcon.forEach(icon => {
+            icon.classList.add('uil-moon');
+            icon.classList.remove('uil-sun');
+        });
     }
-}*/
+}
+

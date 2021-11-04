@@ -316,7 +316,7 @@ document.querySelector('.contact-form__submit').addEventListener('click', (event
         event.target.disable = true;
         return false;
     } else {
-        document.getElementById('contact-form__submit-message').innerText = 'Überprüfen Sie die markierte Eingabe!';
+        document.getElementById('contact-form__submit-message').innerHTML = '<i class="uil uil-exclamation-triangle"></i> Überprüfen Sie die markierte Eingabe!';
     }
 });
 
