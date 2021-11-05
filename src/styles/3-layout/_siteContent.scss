@@ -160,7 +160,25 @@ section.page-section:last-of-type {
 
 /* ==== HOME SECTION==== */
 section.slider{
-  min-height: 94vh;
+  min-height: 95vh;
+  //noinspection CssUnknownTarget
+  //background-image: linear-gradient(245deg, v.$clr-third 0%, v.$clr-bg 80%), url(data-url:../media/Background-fluid-lines-anim.svg);
+  background-size: cover;
+  background: linear-gradient(245deg, v.$clr-third 0%, v.$clr-bg 80%) no-repeat 0 0;
+}
+
+#background-anim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  /*bottom: 0;
+  right: auto;*/
+  object-fit: cover;
+  object-position: 0;
+  z-index: -1;
+  opacity: .7;
 }
 
 .home__container  {
@@ -179,7 +197,7 @@ section.slider{
 screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   #home {
     position: relative;
-    min-height: clamp(720px, 95vh, 2000px);
+    min-height: clamp(720px, 100vh, 2000px);
   }
   .home__content {
     grid-template-columns: .7fr 3fr;

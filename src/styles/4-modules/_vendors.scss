@@ -18,14 +18,16 @@
   &:hover, &:focus-within {
     .rc-anchor-logo-img {
       opacity: 1;
+      @include m.smoothTransition(.3s);
     }
   }
   &:hover ~ .g-captcha__notice,
   &:focus-within ~ .g-captcha__notice{
     opacity: 1;
     font-size: medium;
+    @include m.smoothTransition(.3s);
   }
-  @include m.smoothTransition(.5s);
+  @include m.speedUpTransition(1.5s);
 }
 .g-captcha__notice {
   margin-top: 4vh;
@@ -40,9 +42,10 @@
     & ~ .rc-anchor-logo-img {
       opacity: 1;
     }
+    @include m.smoothTransition(.3s);
   }
-  /*opacity: 0;*/
-  @include m.smoothTransition(.5s);
+  opacity: .6;
+  @include m.speedUpTransition(1.5s);
 }
 .grecaptcha-badge {
   display: none!important;
@@ -56,7 +59,7 @@
   right: 0;
   margin: 0 clamp(7px, 2vw, 15px);
   opacity: 0;
-  @include m.smoothTransition(.5s);
+  @include m.speedUpTransition(1.5s);
 }
 
 @media screen and (min-width: v.$bpMobile),

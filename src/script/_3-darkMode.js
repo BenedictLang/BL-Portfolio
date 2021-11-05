@@ -20,10 +20,10 @@ function ThemeInit() {
 
     if (darkModePreferred === true) {
         document.documentElement.classList.add('darkMode');
-        loadThemeIcon()
+        loadTheme()
     } else if (darkModePreferred === false) {
         document.documentElement.classList.remove('darkMode');
-        loadThemeIcon()
+        loadTheme()
     }
 }
 
@@ -34,10 +34,22 @@ document.querySelectorAll('.dark-mode-toggle').forEach((toggle) => {
 //toggle theme mode
 window.darkModeToggle = function darkModeToggle() {
     document.documentElement.classList.toggle('darkMode');
-    loadThemeIcon()
+    loadTheme()
 }
 
-//set theme icon
+//set theme
+function loadTheme(){
+    loadThemeIcon();
+    loadSVGColors();
+}
+
+function loadSVGColors() {
+    const svg = document.querySelector('.svg').contentDocument,
+    textClr = svg.querySelectorAll('.svg-element__textClr');
+    const style = getComputedStyle(document.body);
+    Array.from(textClr).forEach(e => {e.style.fill = style.getPropertyValue('--clr-text');})
+}
+
 function loadThemeIcon(){
 
     const themeIcon = Array.from(document.querySelectorAll('.theme-icon'));

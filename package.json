@@ -15,11 +15,13 @@
     "src": "^1.1.2"
   },
   "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.0.0",
     "@parcel/transformer-html": "^2.0.0-rc.0",
     "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-inline-string": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "normalize.css": "^8.0.1",
     "jquery": "^1.11.1",
+    "normalize.css": "^8.0.1",
     "parcel": "^2.0.0",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "sass": "^1.38.1"
