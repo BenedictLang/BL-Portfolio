@@ -40,28 +40,31 @@
 
   #hamburger {
     position:absolute;
-    height:100%;
     width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     span {
+      /*right: 50%;*/
       height:3px;
       position:relative;
       top:2px;
-      margin:9px 0;
+      margin:5px 0;
       display: flex;
       align-items: center;
       &:nth-child(1){
+        transition-delay:.75s;
+        width:30px;
+        transform: translateX(0px);
+      }
+      &:nth-child(2){
         transition-delay:.5s;
         width:37px;
         transform: translateX(0px);
       }
-      &:nth-child(2){
+      &:nth-child(3){
         transition-delay:.625s;
         width:24px;
-        transform: translateX(0px);
-      }
-      &:nth-child(3){
-        transition-delay:.75s;
-        width:30px;
         transform: translateX(0px);
       }
     }
@@ -70,22 +73,22 @@
     position:absolute;
     height:100%;
     width:100%;
-    transform:rotate(45deg) translateX(-5px) translateY(5px);
+    transform:rotate(45deg);
     span{
       &:nth-child(1){
         height:0;
         width:3px;
         position:absolute;
-        top: 5px;
-        left:22px;
+        top: 0px;
+        left:30px;
         transition-delay:0s;
       }
       &:nth-child(2){
         width:0;
         height:3px;
         position:absolute;
-        left:5px;
-        top:22px;
+        left:13px;
+        top:18px;
         transition-delay:.25s;
       }
     }
@@ -93,7 +96,6 @@
 }
 
 #nav-desktop-label.open {
-  /*background: v.$clr-primary;*/
   #hamburger {
     span {
       width:0;
@@ -122,6 +124,9 @@
       }
     }
   }
+}
+#nav-desktop-label > * {
+  /*transform: translateX(-20%);*/
 }
 
 
@@ -158,14 +163,15 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     box-shadow: 0 0 0 rgba(0 0 0 /0);
     top: -80px;
     transition: all .3s ease-in-out;
+    /*position: absolute;*/
   }
 
   .headerSticky {
     max-width: 100vw;
     margin: 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    transition: all .3s ease-in-out;
+    backdrop-filter: brightness(100%) blur(0);
+    -webkit-backdrop-filter: brightness(100%) blur(0);
+    transition: all .5s ease;
     top: 0;
     box-shadow: none;
     position: absolute;
@@ -210,14 +216,44 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     /*top: 0;*/
     max-height: 100vh!important;
     height: 100vh;
+    max-width: 100vw;
     box-shadow: 0 -4px 13px 0 rgba(0, 0, 0, 0.40), 0 2px 15px 0 rgba(0, 0, 0, 0.30);
+    background: none;
     /*border-radius: 0;*/
     @include m.smoothTransition(.3s);
-    transform: skewX(15deg) translateX(120vw);
+    /*transform: skewX(15deg) translateX(120vw);*/
     /* OPTIONAL */
     top: clamp(70px, 10vh, 85px);
     border-radius: 20px;
     overflow: hidden;
+    opacity: 0;
+    display: none;
+    &::before {
+      content: "";
+      background: var(--clr-background);
+      height: 100vh;
+      width: 0;
+      top: 0;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: -1;
+      @include m.smoothTransition(.3s);
+      transition-delay:1.1s;
+    }
+  }
+
+  .show__menu {
+    display: inherit;
+    opacity: 1;
+    &::before {
+      content: "";
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      right: 0;
+    }
   }
 
   .menu__list {
@@ -241,7 +277,13 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
   }
 
   .nav__item{
+    @include m.smoothTransition(.3s);
     padding: 4vh 0;
+  }
+  @for $i from 1 through 6{
+      .nav__item li:nth-of-type(#{$i}){
+        transition-delay:1.1s*$i;
+      }
   }
 
   .nav__link {
@@ -266,10 +308,6 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     right: 4vw;
     bottom: auto;
     top: 1rem;
-  }
-
-  .show__menu {
-    transform: translateX(0);
   }
 
   #nav-desktop-toggle,
@@ -456,6 +494,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
+    opacity: 1;
   }
 
   #menu-list {

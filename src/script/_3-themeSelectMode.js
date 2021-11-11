@@ -47,7 +47,9 @@ function loadSVGColors() {
     const svg = document.querySelector('.svg').contentDocument,
     textClr = svg.querySelectorAll('.svg-element__textClr');
     const style = getComputedStyle(document.body);
-    Array.from(textClr).forEach(e => {e.style.fill = style.getPropertyValue('--clr-text');})
+    Array.from(textClr).forEach(e => {
+        e.style.fill = style.getPropertyValue('--clr-text');
+    });
 }
 
 function loadThemeIcon(){
