@@ -467,9 +467,10 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
   }
 
   .header {
-    background: v.$clr-background;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    /*background: v.$clr-background;*/
+
+    /*backdrop-filter: none;
+    -webkit-backdrop-filter: none;*/
   }
 
   .headerSticky {
@@ -562,6 +563,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     padding: 0 1vw;
     font-weight: normal;
   }
+
 
   a.nav__link {
     background-image: linear-gradient(45deg,rgba(0,0,0,0) 0%,v.$clr-primary);

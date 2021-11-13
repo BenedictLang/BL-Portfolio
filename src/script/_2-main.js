@@ -157,7 +157,7 @@ let prevScrollPos = window.pageYOffset;
                 header.classList.remove('headerHidden');
             }
             prevScrollPos = currentScrollPos;
-            if (window.pageYOffset <= 70) {
+            if (window.pageYOffset <= 50) {
                 header.classList.add('headerSticky');
                 navMenu.classList.add('nav__menu-sticky');
                 menuList.classList.add('menu__list-sticky');
@@ -198,7 +198,7 @@ function rotate90($element) {
 //TODO
 
 /* ==== 3D FOOTER ====*/
-$(document).ready(function($) {
+/*$(document).ready(function($) {
 
     //Scroll to top btn
     $(window).on('scroll', function() {
@@ -220,7 +220,7 @@ $(document).ready(function($) {
         }, 500);
         $('nav-menu').classList.remove('show__menu');
     });
-});
+});*/
 
 /**
  * Toggle y-scroll
@@ -308,6 +308,7 @@ document.querySelector('.contact-form__submit').addEventListener('click', (event
         document.getElementById('contact-form__submit-message').innerText = '';
         console.info("Form submitted");
         console.info(name.value, subject.value, mail.value, msg.value);
+        //TODO
         event.target.innerText = 'Nachricht abgeschickt!';
         name.value = '';
         subject.value = '';

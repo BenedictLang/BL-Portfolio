@@ -148,9 +148,10 @@ section.page-section {
   max-height:100%;
 }
 
-section.page-section:nth-of-type(even) {
-  background: v.$clr-primary;
-  box-shadow: inset 0 -7px 9px rgba(0 0 0 /.4);
+section.page-section.contrast-section {
+  background: v.$clr-container;
+  color: white;
+  box-shadow: 0 7px 9px rgba(0 0 0 /.4), 0 -7px 9px rgba(0 0 0 /.4);
 }
 
 section.page-section:last-of-type {
@@ -164,21 +165,40 @@ section.slider{
   //noinspection CssUnknownTarget
   //background-image: linear-gradient(245deg, v.$clr-third 0%, v.$clr-bg 80%), url(data-url:../media/Background-fluid-lines-anim.svg);
   background-size: cover;
-  background: linear-gradient(245deg, v.$clr-third 10%, v.$clr-bg 70%) no-repeat 0 0;
+  background: var(--clr-slider) no-repeat 0 0;
 }
 
-#background-anim {
-  position: fixed;
-  left: 0;
+/*.background-wrapper {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0 0 100% 0;
+}*/
+
+#background-anim{
+  overflow:hidden;
+  position: absolute;
   top: 0;
+  bottom: 0;
   min-width: 100vw;
   min-height: 100vh;
-  bottom: 0;
-  /*right: auto;*/
   object-fit: cover;
-  object-position: 0;
+  object-position: top;
   z-index: -1;
   opacity: .6;
+}
+
+@media screen and (min-width: v.$bpTablet),
+screen and (max-height: 500px) and (min-width: v.$bpMobile) {
+  #background-anim{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    width: auto;
+    min-height: 100%;
+    bottom: 0;
+  }
 }
 
 .home__container  {
@@ -204,8 +224,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding-top: 0;
-    padding-bottom: 5vh;
+    margin-right: v.$pdd-side;
   }
 }
 
@@ -227,6 +246,8 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 .home__image {
   width: clamp(50px, 50px + 25vw, 285px);
   fill: v.$clr-primary;
+  filter: drop-shadow(0 0 19px v.$clr-primary);
+  -webkit-filter: drop-shadow(0 0 19px v.$clr-primary);
 }
 
 .home__data {
@@ -372,7 +393,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
                     v.$clr-primary,
                     #488fc7,
                     v.$clr-primary,
-                    #22c0fa,
+                    #e34065,
                     #274377
     );
     background-size: 300% 300%;

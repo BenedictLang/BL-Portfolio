@@ -475,7 +475,7 @@ a.btn{
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(50deg, transparent, #2C4A81, v.$clr-primary, v.$clr-primary, #22c0fa, #488fc7, #274377, transparent);
+  background: linear-gradient(50deg, transparent, #cb2949, v.$clr-primary, v.$clr-primary, #488fc7, #274377, transparent);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -569,32 +569,29 @@ a.btn{
     width: calc(100% + var(--border-width) * 2);
     height: calc(100% + var(--border-width) * 2);
     background: linear-gradient(
-                    60deg,
+                    130deg,
                     #2C4A81,
                     v.$clr-primary,
                     #488fc7,
                     v.$clr-primary,
-                    #22c0fa,
+                    #cb2949,
                     #274377
     );
     background-size: 300% 300%;
     border-radius: calc(2 * var(--border-width));
-    animation: moveGradient 6s alternate infinite;
+    animation: moveGradient 20s alternate infinite;
   }
 }
 
 @keyframes moveGradient {
-  10% {
-    background-position: 0 10%;
+  0% {
+    background-position: 0 50%;
   }
-  40% {
-    background-position: 100% 50%;
-  }
-  70% {
-    background-position: 80% 30%;
+  50% {
+    background-position: 100% 30%;
   }
   100% {
-    background-position: 100% 50%;
+    background-position: 0 50%;
   }
 }
 

@@ -420,7 +420,8 @@
                 <main id="main" class="main page-content">
 <!-- ================================== HOME ================================== -->
                     <section id="home" aria-label="slider" class="home section slider">
-                        <object id="background-anim" class="svg" aria-hidden="true" data="./media/Background-fluid-lines-anim.svg" type="image/svg+xml"></object>
+                        <!--<div class="background-wrapper"></div>-->
+                        <object id="background-anim" class="svg" aria-hidden="true" data="./media/Background-fluid-lines.svg" type="image/svg+xml"></object>
                         <div class="home__container container grid">
                             <div class="home__content grid">
                                 <div class="home__socials">
@@ -446,7 +447,7 @@
                                     </a>
                                 </div>
                                 <div class="home__image">
-                                    <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                                    <svg id="profile-img" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" aria-label="Profilbild Benedict Lang"
                                          xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <mask id="maskImage" mask-type="alpha">
                                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
@@ -475,9 +476,8 @@
                                         ein durchdachtes <strong>Nutzererlebnis</strong>.
                                     </p>
                                     <p class="description">
-                                        Erfahren in Grafikdesign, UI Design, UX und Webentwicklung.
-                                        <br>
-                                        Backend Erfahrung mit Java, SQL, JS & PHP.
+                                        Ich bin Softwareentwickler, fokussiert darauf, ein beeindruckendes Nutzererlebnis zu schaffen.
+                                        Ansprechende Interfaces Backend Erfahrung mit Java, SQL, JS & PHP.
                                     </p>
                                     <button class="btn scroll-down glow-on-hover fade-in"
                                             aria-label="Contact information"
@@ -490,7 +490,7 @@
 
                     </section>
 <!-- ================================== PORTFOLIO ================================== -->
-                    <section id="portfolio" class="page-section">
+                    <section id="portfolio" class="page-section contrast-section darkMode">
                         <div class="page-section__text">
                             <div class="section-title">
                                 <div class="portfolio__head fade-in section-title">
@@ -500,12 +500,12 @@
                                             Mein Portfolio
                                         </a>
                                     </h3>
-                                    <a type="application" href="https://www.apps.benedict.lang-familie.de"
+                                    <!--<a type="application" href="https://www.apps.benedict.lang-familie.de"
                                        target="_blank"
                                        aria-label="My portfolio site (new tab)"
                                        class="portfolio__button-more link__contrast draw">-
                                         Mehr
-                                        entdecken!</a>
+                                        entdecken!</a>-->
                                 </div>
                                 <h4 class="fade-in section-title">Ein kleiner Einblick in ein paar Projekte</h4>
                             </div>
@@ -1241,7 +1241,7 @@
                         </form>onclick="window.open('media/documents/Lebenslauf%20-%20Benedict%20Lang%202021.pdf', '_blank');"-->
                     </section>
 <!-- ================================== SKILLS ================================== -->
-                    <section id="skills" class="skills page-section">
+                    <section id="skills" class="skills page-section contrast-section darkMode">
                         <div class="page-section__text">
                             <div class="section-title">
                                 <h3 class="fade-in">Meine Skills</h3>
