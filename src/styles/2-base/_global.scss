@@ -95,9 +95,14 @@ img, image, svg {
   }*/
 }
 
-svg {
-  width:  auto;
-  height: auto;
+.placeholder__img {
+  width: 10%;
+  min-width: 90px;
+}
+
+svg, object[type="image/svg+xml"] {
+
+  overflow: hidden;
 }
 
 .icon svg {
@@ -221,6 +226,7 @@ input {
   font-size: 1.4em;
   margin-left: v.$mb-05;
   transform: translateY(-15px);
+  @include m.transition(margin-left);
 }
 
 button {
@@ -308,6 +314,10 @@ a.btn{
     background-color: v.$clr-text;
     color: v.$clr-bg;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .2), 0 13px 30px 0 rgba(0, 0, 0, .14);
+  }
+
+  &:hover .button__icon {
+    margin-left: v.$mb-1;
   }
 
   &:focus {
@@ -579,7 +589,7 @@ a.btn{
     );
     background-size: 300% 300%;
     border-radius: calc(2 * var(--border-width));
-    animation: moveGradient 20s alternate infinite;
+    animation: moveGradient 10s alternate infinite ease-in-out;
   }
 }
 
@@ -588,7 +598,7 @@ a.btn{
     background-position: 0 50%;
   }
   50% {
-    background-position: 100% 30%;
+    background-position: 100% 10%;
   }
   100% {
     background-position: 0 50%;

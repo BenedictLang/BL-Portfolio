@@ -487,7 +487,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </section>
 <!-- ================================== PORTFOLIO ================================== -->
                     <section id="portfolio" class="page-section contrast-section darkMode">
@@ -509,44 +508,23 @@
                                 </div>
                                 <h4 class="fade-in section-title">Ein kleiner Einblick in ein paar Projekte</h4>
                             </div>
-                            <p class="fade-in">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, alias commodi cum
-                                cupiditate <code>this.is(a bit) => {of code}</code>
-                                deleniti, est incidunt ipsa iste itaque laborum modi, omnis quia rem sed similique vitae
-                                voluptas
-                                voluptate voluptatem.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid amet autem
-                                consequatur
-                                deserunt error fugiat, impedit maxime natus numquam odio, optio repudiandae voluptatum!
-                                Consequuntur
-                                fugit in iusto officiis praesentium.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore minus quidem
-                                quis
-                                recusandae
-                                sit vel voluptate. Aspernatur aut autem beatae cum esse harum iste, officia quis tempore
-                                ullam
-                                velit?
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos exercitationem
-                                laudantium
-                                mollitia.
-                                Dolore dolorem et eum expedita harum, in iure libero molestiae perferendis praesentium
-                                quas
-                                quibusdam
-                                quos sunt voluptatum.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugit ipsum mollitia
-                                placeat
-                                voluptatem!
-                                Eum fugiat nemo perspiciatis sed. Assumenda aut cum eveniet explicabo ipsa magnam quae,
-                                tempora
-                                veritatis voluptatum?
-                            </p>
-                            <button class="btn btn__contrast fade-in" aria-label="Contact information"
-                                    onclick="window.open('https://www.apps.benedict.lang-familie.de', '_blank');">
-                                Gesamtes
-                                Portfolio<i
-                                    class="uil uil-archive icon button__icon"></i>
-                            </button>
                         </div>
+                        <div class="portfolio-wrapper fade-in">
+                            <div class="portfolio-wrapper__header">
+                                <div class="portfolio-wrapper__dots"></div>
+                                <div class="portfolio-wrapper__dots"></div>
+                                <div class="portfolio-wrapper__dots"></div>
+                            </div>
+                            <div class="portfolio-content">
+                                <object class="svg placeholder__img" aria-hidden="true" data="./media/icons/Img-broken-icon.svg" type="image/svg+xml"></object>
+                                Coming soon ...
+                            </div>
+                        </div>
+                        <button class="btn btn__contrast fade-in" aria-label="Contact information"
+                                onclick="window.open('https://www.apps.benedict.lang-familie.de', '_blank');">
+                            Gesamtes Portfolio<i
+                                class="uil uil-archive icon button__icon"></i>
+                        </button>
                     </section>
 <!-- ================================== ABOUT SECTION ================================== -->
                     <section id="about" class="page-section">
@@ -1944,23 +1922,23 @@
                                 <form id="contact-form" class="contact-form validate-form">
                                     <div class="input-wrapper validate-input" data-validate="Name benötigt">
                                         <input id="contact-input__name" required class="input contact-form__input" type="text" name="name">
-                                        <label for="contact-input__name" class="input-placeholder" data-placeholder="NAME">NAME</label>
+                                        <label for="contact-input__name" class="input-placeholder" data-placeholder="NAME">NAME <span class="form__required">*</span></label>
                                         <div class="input-border"></div>
                                     </div>
                                     <div class="input-wrapper validate-input" data-validate="Betreff benötigt">
                                         <input id="contact-input__subject" required class="input contact-form__input" type="text" name="subject">
-                                        <label for="contact-input__subject" class="input-placeholder" data-placeholder="SUBJECT">BETREFF</label>
+                                        <label for="contact-input__subject" class="input-placeholder" data-placeholder="SUBJECT">BETREFF <span class="form__required">*</span></label>
                                         <div class="input-border"></div>
                                     </div>
                                     <div class="input-wrapper validate-input"
                                          data-validate="Valid email is required: name@host.xyz">
                                         <input id="contact-input__mail" required class="input contact-form__input" type="text" name="email">
-                                        <label for="contact-input__mail" class="input-placeholder" data-placeholder="E-MAIL">E-MAIL ADRESSE</label>
+                                        <label for="contact-input__mail" class="input-placeholder" data-placeholder="E-MAIL">E-MAIL ADRESSE <span class="form__required">*</span></label>
                                         <div class="input-border"></div>
                                     </div>
                                     <div class="input-wrapper validate-input" data-validate="Nachricht benötigt">
                                         <textarea required id="contact-input__message" class="input contact-form__input scrollbar__mini" name="message"></textarea>
-                                        <label for="contact-input__message" class="input-placeholder" data-placeholder="MESSAGE">NACHRICHT</label>
+                                        <label for="contact-input__message" class="input-placeholder" data-placeholder="MESSAGE">NACHRICHT <span class="form__required">*</span></label>
                                         <div class="input-border"></div>
                                     </div>
                                     <div class="container-contact-form-btn">

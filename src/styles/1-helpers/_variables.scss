@@ -19,6 +19,7 @@ hsl(225,72,63)
 /* default style */
 :root { 
   --clr-primary: hsl(225, 63%, 66%);
+  --clr-primary-contrast: rgba(227, 64, 101, 1);
   --clr-secondary: rgba(20, 27, 43, 0.8);
   --clr-third: rgba(20, 27, 43, 0.29);
   --clr-container: linear-gradient(20deg, var(--clr-primary) 0, var(--clr-bg) 70%);
@@ -30,8 +31,7 @@ hsl(225,72,63)
   --alpha: 0.8;
   --beta: 0.55;
   --gamma: 0.3;
-  --clr-slider: linear-gradient(75deg, rgb(255, 255, 255), var(--clr-third));
-
+  --clr-slider: linear-gradient(75deg, rgba(255, 255, 255, 0.95) 35%, var(--clr-third));
   --pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
 }
 
@@ -40,8 +40,8 @@ hsl(225,72,63)
   --clr-secondary: rgba(255, 255, 255, 0.4);
   --clr-third: rgba(156, 170, 255, 0.14);
   --clr-container: linear-gradient(55deg, var(--clr-primary), var(--clr-bg));
-  --clr-slider: linear-gradient(75deg, var(--clr-scene), rgba(36, 51, 82, 0.61));
-  --clr-scene: #111725;
+  --clr-slider: linear-gradient(75deg, var(--clr-scene) 25%, rgba(36, 51, 82, 0.61));
+  --clr-scene: rgba(17, 23, 37, 1);
   --clr-background: linear-gradient(75deg, #141B2B, #243352);
   --clr-bg: rgb(36, 51, 82);
   --clr-text: rgb(255, 255, 255);
@@ -52,6 +52,7 @@ hsl(225,72,63)
 $clr-text: var(--clr-text) !default;
 $clr-icon: var(--clr-icon) !default;
 $clr-primary: var(--clr-primary) !default;
+$clr-primary-contrast: var(--clr-primary-contrast) !default;
 $clr-secondary: var(--clr-secondary) !default;
 $clr-third: var(--clr-third) !default;
 $clr-container: var(--clr-container) !default;

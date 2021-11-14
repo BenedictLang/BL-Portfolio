@@ -44,11 +44,18 @@ function loadTheme(){
 }
 
 function loadSVGColors() {
-    const svg = document.querySelector('.svg').contentDocument,
-    textClr = svg.querySelectorAll('.svg-element__textClr');
-    const style = getComputedStyle(document.body);
-    Array.from(textClr).forEach(e => {
-        e.style.fill = style.getPropertyValue('--clr-text');
+    const svg = document.querySelectorAll('.svg');
+    Array.from(svg).forEach(svg => {
+        const style = getComputedStyle(document.body);
+        const element = svg.contentDocument;
+        const textClr = element.querySelectorAll('.svg-element__textClr');
+        Array.from(textClr).forEach(e => {
+            e.style.fill = style.getPropertyValue('--clr-text');
+        });
+        const primeConClr = element.querySelectorAll('.svg-element__primeContrastClr');
+        Array.from(primeConClr).forEach(e => {
+            e.style.fill = style.getPropertyValue('--clr-primary-contrast');
+        });
     });
 }
 

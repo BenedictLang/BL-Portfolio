@@ -154,6 +154,13 @@ section.page-section.contrast-section {
   box-shadow: 0 7px 9px rgba(0 0 0 /.4), 0 -7px 9px rgba(0 0 0 /.4);
 }
 
+@media screen and (min-width: v.$bpWideS) {
+  section.page-section.contrast-section {
+    border-radius: v.$radius;
+    margin: 0 2rem;
+  }
+}
+
 section.page-section:last-of-type {
   background: transparent;
   box-shadow: none;
@@ -161,6 +168,7 @@ section.page-section:last-of-type {
 
 /* ==== HOME SECTION==== */
 section.slider{
+  box-shadow: inset 0 -7px 0 v.$clr-primary, 0 -7px 9px rgba(0 0 0 /.4);
   min-height: 95vh;
   //noinspection CssUnknownTarget
   //background-image: linear-gradient(245deg, v.$clr-third 0%, v.$clr-bg 80%), url(data-url:../media/Background-fluid-lines-anim.svg);
@@ -181,11 +189,12 @@ section.slider{
   top: 0;
   bottom: 0;
   min-width: 100vw;
-  min-height: 100vh;
+  //TODO fit to parent (try background integration)
+  min-height: 200vh;
   object-fit: cover;
   object-position: top;
   z-index: -1;
-  opacity: .6;
+  opacity: .3;
 }
 
 @media screen and (min-width: v.$bpTablet),
@@ -282,12 +291,14 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     opacity: 1;
     transform: translate(0, 0) scale(1);
   }
-
 }
 
 /* ==== PORTFOLIO SECTION ==== */
 #portfolio {
   min-height: 100vh;
+  justify-content: unset;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .portfolio__head {
   /*display: flex;*/
@@ -307,6 +318,75 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   padding: 0;
   margin: 10px 10px 20px 10px;
   align-items: center;
+}
+
+
+@media screen and (min-width: v.$bpWideS) {
+  #portfolio {
+    transform: translateY(-5rem);
+  }
+}
+
+.portfolio-wrapper{
+  background: v.$clr-scene;
+  min-height: 60vh;
+  width: 100%;
+  border-radius: v.$radius;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: -1;
+    //noinspection CssUnknownTarget
+    background-image: url(data-url:../media/Background-fluid-lines.svg), linear-gradient(v.$clr-scene,  v.$clr-scene);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+  .wrapper-background {
+    position: absolute;
+    z-index: -1;
+    opacity: .05;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .portfolio-wrapper__header {
+    height: 2rem;
+    background: v.$clr-background;
+    margin: .3rem;
+    border-top-left-radius: v.$radius * .7;
+    border-top-right-radius: v.$radius * .7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+  }
+  .portfolio-wrapper__dots {
+    height: .8rem;
+    width: .8rem;
+    background: v.$clr-primary;
+    border-radius: 50%;
+    margin: 0 .4rem;
+    &:nth-of-type(3) {
+      background: v.$clr-primary-contrast;
+      margin-right: .7rem;
+    }
+  }
+  .portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    & > * {
+      padding: 1rem;
+    }
+  }
 }
 
 /* ==== ABOUT SECTION ==== */
@@ -450,6 +530,10 @@ textarea.input {
     background-color: transparent;
   }
 
+  span.form__required {
+    color: v.$clr-primary;
+  }
+
   #contact-form__submit-message{
     color: v.$clr-primary;
     font-weight: normal;
@@ -495,7 +579,7 @@ textarea.input {
     background: linear-gradient(
                     60deg,
                     v.$clr-primary,
-                    v.$clr-primary
+                    #cb2949
     );
     @include m.smoothTransition(.3s)
   }
