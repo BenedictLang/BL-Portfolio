@@ -32,6 +32,10 @@
   transition: all $time cubic-bezier(1, 0, 1, 0);
 }
 
+@mixin slowDownTransition($time){
+  transition: all $time cubic-bezier(1, 0, 1, 0);
+}
+
 @mixin stroke-anim{
   stroke-dasharray: 90;
   stroke-dashoffset: 80;

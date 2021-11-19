@@ -334,7 +334,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 
 @media screen and (min-width: v.$bpWideS) {
   #portfolio {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 }
 
@@ -401,6 +401,9 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 }
 
 /* ==== ABOUT SECTION ==== */
+#about {
+  position: relative;
+}
 .about__button {
   margin-top: 4rem;
 }
@@ -448,6 +451,107 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   font-weight: bold;
   font-size: 1.5em;
   padding-bottom: .8rem;
+}
+.background-lines {
+  display: none;
+}
+
+@media screen and (min-width: v.$bpTablet),
+screen and (max-height: 500px) and (min-width: v.$bpMobile) {
+  .background-lines {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    pointer-events: none;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: -1;
+    svg {
+      max-width: unset;
+      fill: none;
+    }
+    .background-lines__stroke {
+      position: relative;
+      z-index: 2;
+      path {
+        stroke-width: .2vw;
+        stroke-opacity: .4;
+        stroke: v.$clr-primary;
+        transition:all 1s;
+      }
+    }
+    .background-lines__dash {
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      path {
+        stroke-dasharray: 6;
+        stroke-opacity: .15;
+        stroke: v.$clr-secondary;
+      }
+    }
+  }
+
+  #bg__line01 {
+    left: 20%;
+    margin-left: -36px;
+    top: 50%;
+  }
+
+  #bg__line02 {
+    margin-left: -400px;
+    top: -180px;
+    -webkit-transform: translateX(-70%);
+    transform: translateX(-70%);
+  }
+
+  #bg__line04 {
+    margin-top: 0;
+    left: 80%;
+    top: 75%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #bg__line05 {
+    margin-left: 0;
+    top: 80%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (min-width: v.$bpLaptop) {
+  #bg__line01{
+    left: 20%;
+    margin-left: -36px;
+    top: 0;
+  }
+
+  #bg__line02{
+    margin-left: -300px;
+    top: -100px;
+    -webkit-transform: translateX(-70%);
+    transform: translateX(-70%);
+  }
+
+  #bg__line04 {
+    margin-top: -100px;
+    left: 80%;
+    top: 80%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  #bg__line05 {
+    margin-left: 0;
+    top: 80%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
 
 /* ==== CONTACT SECTION ==== */
@@ -543,6 +647,8 @@ textarea.input {
 
   span.form__required {
     color: v.$clr-primary;
+    font-size: 1.2em;
+    font-weight: bolder;
   }
 
   #contact-form__submit-message{

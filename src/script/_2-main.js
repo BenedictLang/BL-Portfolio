@@ -1,7 +1,7 @@
 /*General*/
 
 //TODO export breakpoint variable
-const   bpTablet = window.matchMedia("(min-width: 850px)"),
+export const   bpTablet = window.matchMedia("(min-width: 850px)"),
         bpWs = window.matchMedia("(min-width: 1440px)"),
         bpLandscape = window.matchMedia("(max-height: 500px)");
 
@@ -24,60 +24,6 @@ $(document).mousemove(function(e) {
         .css('top', moveY+'px')
         .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
 });
-
-/* ==== Fade in content on scroll ==== */
-const fadersUp = document.querySelectorAll('.fade-in');
-const fadersL = document.querySelectorAll('.fade-in__left');
-const fadersR = document.querySelectorAll('.fade-in__right');
-const sucFaders = document.querySelectorAll('.fade-in__elements');
-const faders = Array.from(fadersUp);
-/*const faders = new Element[1];*/
-/*faders.append();*/
-/*faders.append(Array.from(fadersUp));*/
-/*faders.append(Array.from(fadersL));
-faders.append(Array.from(fadersR));*/
-/*Array.from(fadersL), Array.from(fadersR)*/
-const appearOptions = {
-    threshold: .6,
-    rootMargin: "0px 0px 0px 0px"
-};
-if (bpTablet.matches || bpLandscape.matches){
-    const appearOnScroll = new IntersectionObserver(
-    function(
-        entries,
-        appearOnScroll
-    ) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting){
-            } else {
-                entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
-            }
-        });
-    },
-    appearOptions);
-    /*for (let i = 0; i < faders.length; i++) {
-        faders[i].forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    } */
-    /*faders.forEach(faderDirection => {
-        faderDirection.forEach(fader => {
-            appearOnScroll.observe(fader);
-        })
-    });*/
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-    } else {
-    //ignore fade in for mobile performance
-    ignoreFadeIn();
-}
-function ignoreFadeIn() {
-    faders.forEach(element => {
-        element.classList.add('appear');
-    });
-}
 
 /* ==== NAV MENU HEADER ====*/
 const   navMenu = document.getElementById('nav-menu'),
