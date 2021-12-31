@@ -44,9 +44,9 @@ function loadTheme(){
 }
 
 function loadSVGColors() {
+    const style = getComputedStyle(document.body);
     const svg = document.querySelectorAll('.svg');
     Array.from(svg).forEach(svg => {
-        const style = getComputedStyle(document.body);
         const element = svg.contentDocument;
         const textClr = element.querySelectorAll('.svg-element__textClr');
         Array.from(textClr).forEach(e => {

@@ -16,6 +16,8 @@
     box-shadow: inset 0 0 9px rgba(0 0 0 /.5);
   }
   @include m.smoothTransition(.4s);
+  position: sticky;
+  top: 0;
 }
 
 .banner {

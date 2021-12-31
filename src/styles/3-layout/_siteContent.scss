@@ -128,7 +128,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -175,6 +175,7 @@ section.slider{
 
 #home {
   position: relative;
+  overflow: hidden;
   /*&:before {
     //can't color
     content: '';
@@ -194,33 +195,31 @@ section.slider{
   }*/
 }
 
-/*.background-wrapper {
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding: 0 0 100% 0;
-}*/
-
-#background-anim{
-  overflow:hidden;
+#background-lines__wrapper {
+  width: fit-content;
+  height: fit-content;
+  display: block;
   position: absolute;
-  top: 0;
+  z-index: -1;
+  min-height:100vh;
+  min-width: 100vw;
+}
+
+#background-anim {
+  overflow:hidden;
   bottom: 0;
   min-width: 100vw;
-  width: auto;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 100vh;
   object-fit: cover;
   object-position: top;
-  z-index: -1;
   opacity: .3;
 }
 
-@media screen and (min-width: 1500px) {
+/*@media screen and (min-width: 1500px) {
   #background-anim{
     max-height: unset;
   }
-}
+}*/
 
 .home__container  {
   margin: 0 v.$pdd-side;
@@ -287,6 +286,9 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 
   .home__data {
     grid-column: unset;
+    .title {
+      margin-bottom: 1rem;
+    }
   }
 
   .home__image { 
@@ -309,14 +311,12 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   min-height: 100vh;
   justify-content: unset;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
-.portfolio__head {
-  /*display: flex;*/
-  @media screen and (min-width: v.$bpLaptop) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+@media screen and (min-width: v.$bpLaptop) {
+  #portfolio {
+    align-items: flex-start;
   }
 }
 
@@ -622,35 +622,37 @@ textarea, input {
 
 input.input {
   height: 45px;
+  padding: 0 5%;
 }
 
 textarea.input {
   min-height: 115px;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding: 13px 5%;
 }
 
 #contact-form {
   padding-top: 1rem;
   .input-wrapper {
+    //input fields shadow border
     width: 100%;
     position: relative;
-    border-bottom: 2px solid v.$clr-third;
+    border-bottom: 2px solid v.$clr-scene;
     margin-bottom: 37px;
+    border-radius: v.$radius;
   }
   textarea {
     resize: none;
   }
   .contact-form__input {
-    background-color: transparent;
+    //input fields bg
+    background-color: v.$clr-third;
+    border-radius: v.$radius;
   }
-
   span.form__required {
     color: v.$clr-primary;
     font-size: 1.2em;
     font-weight: bolder;
   }
-
   #contact-form__submit-message{
     color: v.$clr-primary;
     font-weight: normal;
@@ -660,10 +662,17 @@ textarea.input {
   .input {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: clamp(0.125rem, 1rem + 1vw, 1rem);
     color: v.$clr-text;
     line-height: 1.2;
+    & ~ label {
+      left: 5%;
+    }
+    &:not(textarea) ~ label {
+      top: 25%;
+    }
   }
+
   .input-placeholder{
     color: v.$clr-text;
     position: absolute;
@@ -680,8 +689,8 @@ textarea.input {
   input:valid ~ label,
   textarea:valid ~ label {
     font-size: 0.75em;
-    color: v.$clr-secondary;
-    top: -15px;
+    color: v.$clr-text;
+    top: -18px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -689,7 +698,7 @@ textarea.input {
   //sub line
   .input-border {
     position: absolute;
-    left: 0;
+    left: 5%;
     bottom: -2px;
     width: 0;
     height: 2px;
@@ -704,15 +713,14 @@ textarea.input {
   input:valid ~ .input-border,
   textarea:focus ~ .input-border,
   textarea:valid ~ .input-border{
-    width: 100%;
+    width: 90%;
   }
   .input-valid {
-    width: 100%;
+    width: 90%;
     background: linear-gradient(
                     60deg,
-                    #274377,
-                    #22c0fa,
-                    #274377
+                    #50e28f,
+                    #50e28f
     );
   }
   .contact-form__submit {

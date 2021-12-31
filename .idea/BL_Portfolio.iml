@@ -85,5 +85,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="scrollreveal" level="application" />
     <orderEntry type="library" name="aos" level="application" />
+    <orderEntry type="library" name="api" level="application" />
   </component>
 </module>
