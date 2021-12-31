@@ -41,11 +41,11 @@ const   navMenu = document.getElementById('nav-menu'),
         dropdownArrow = document.querySelector('.dropdown-arrow'),
         scrollToTop = document.getElementById('scroll-to-top');
 
-//Show Menu
+//Show Menu & Acc
 if((navMobileToggle || navDesktopToggle) && accSettingsToggle){
     navMobileToggle.addEventListener('click', showMenu);
     navDesktopToggle.addEventListener('click', showMenu);
-    accSettingsToggle.addEventListener('click', toggleAccSettings);
+    accSettingsToggle.addEventListener('click', () => toggleAccSettings(false));
 }
 function showMenu(){
     if(!bpWs.matches){
@@ -68,7 +68,14 @@ navDesktopToggle.addEventListener('change', function() {
 });
 if(navClose || main) {
     navClose.addEventListener('click', closeMenu);
-    main.addEventListener('click', closeMenu);
+    //close on click on body
+    main.addEventListener('click', () => {
+        console.log("main clicked");
+        closeMenu();
+        //navMenu.classList.remove('show__menu');
+        accSettingsToggle.checked = false;
+        toggleAccSettings(true);
+    });
 }
 //hide menu if link clicked
 const navLink = document.querySelectorAll('.nav__link');
@@ -77,7 +84,7 @@ function linkAction(){
     closeMenu();
 }
 function closeMenu() {
-    if(!bpWs.matches){
+    //if(!bpWs.matches){
         navDesktopToggle.nextElementSibling.classList.remove('open');
         enableScroll(document.body);
         blurBG(false);
@@ -85,16 +92,33 @@ function closeMenu() {
         /*navMenu.classList.add('shrinkX');*/
         scrollToTop.classList.remove('hidden');
         bannerSection.classList.remove('shrinkY');
-    }
+    //}
 }
 
+
+//ACCESSIBILITY SETTINGS
 //Accessibility toggle
-function toggleAccSettings() {
-    if(accSettingsToggle.checked || navDesktopToggle.checked) {
+function toggleAccSettings($mainClicked) {
+    const accSettings = document.getElementById('accessibility');
+    if (accSettingsToggle.checked) {
+        accSettings.classList.remove('hidden');
+        navMenu.style.maxHeight = "90vh";
+        menuList.classList.add('hidden');
         bannerSection.classList.add('shrinkY');
         blurBG(true);
         disableScroll(document.body);
     } else {
+        menuList.classList.remove('hidden');
+        accSettings.classList.add('hidden');
+        /*if(!navMenu.classList.contains('show__menu') || ($mainClicked && navMenu.classList.contains('show__menu'))){
+            bannerSection.classList.remove('shrinkY');
+            blurBG(false);
+            enableScroll(document.body);
+            //navMenu.style.maxHeight = "90vh";
+        }*/
+        /*accSettingsToggle.checked = false;*/
+    }
+    if($mainClicked || (bpWs.matches && !accSettingsToggle.checked)){
         bannerSection.classList.remove('shrinkY');
         blurBG(false);
         enableScroll(document.body);
@@ -129,7 +153,7 @@ let prevScrollPos = window.pageYOffset;
 //Dropdown menu
 navItem.forEach($entry => {
     let arrow = $entry.querySelector('.dropdown-arrow');
-    if (arrow != null){
+    if (arrow != null) {
         hover($entry, () => {
             console.log(arrow);
             rotate90(arrow);

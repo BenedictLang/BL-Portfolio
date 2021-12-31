@@ -106,7 +106,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
 }
 
 .banner__warning {
-  background: linear-gradient(90deg, v.$clr-primary, #ffbe4c);
+  background: linear-gradient(90deg, v.$clr-primary-contrast, v.$clr-primary);
 }
 
 #error {

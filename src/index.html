@@ -183,7 +183,7 @@
                             <div class="service__items">
                                 <input id="accessibility-cbx" class="cbx-icon" aria-label="show accessibility settings"
                                        aria-checked="false" type="checkbox"
-                                       style="display:none" onclick="accSettings()"/>
+                                       style="display:none"/>
                                 <label id="accessibility-toggle" for="accessibility-cbx"
                                        class="cbx-icon accessibility__toggle"
                                        title="Accessibility Settings" tabindex="0">
@@ -281,7 +281,7 @@
                                         Barrierefreiheit & Usability Tools
                                     </h4>
                                     <a class="nav__subtitle" href="#main"
-                                       onclick="document.getElementById('nav-menu').classList.remove('show__menu');">Skip
+                                       onclick="document.getElementById('nav-menu').classList.remove('show__menu');"><!--TODO-->Skip
                                         to
                                         main content</a>
                                 </div>
@@ -404,7 +404,7 @@
                                             <a class="nav__sub accessibility__list"
                                                aria-label="link to contact form (same tab)"
                                                href="#contact"
-                                               onclick="document.getElementById('nav-menu').classList.remove('show__menu');">
+                                               onclick="document.getElementById('nav-menu').classList.remove('show__menu');"><!--TODO-->
                                                 Help or Feedback?</a>
                                         </li>
                                     </ul>
@@ -3723,22 +3723,6 @@
     </div>
 </div>
 <script type="module" src="./index.js" defer></script>
-<script type="module">
-
-    //ACCESSIBILITY SETTINGS
-    window.accSettings = function accSettings() {
-        const navMobile = $('#menu-list');
-        const accSettings = document.getElementById('accessibility');
-        if (accSettings.classList.contains('hidden')) {
-            accSettings.classList.remove('hidden');
-            document.getElementById('nav-menu').style.maxHeight = "90vh";
-            navMobile.addClass('hidden');
-        } else {
-            accSettings.classList.add('hidden');
-            navMobile.removeClass('hidden');
-            document.getElementById('nav-menu').style.maxHeight = "90vh";
-        }
-    }
-</script>
+<script type="module"></script>
 </body>
 </html>
