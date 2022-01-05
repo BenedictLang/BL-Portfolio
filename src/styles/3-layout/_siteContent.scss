@@ -203,6 +203,7 @@ section.slider{
   z-index: -1;
   min-height:100vh;
   min-width: 100vw;
+  top: 0;
 }
 
 #background-anim {
@@ -354,7 +355,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     opacity: 0.05;
     z-index: -1;
     //noinspection CssUnknownTarget
-    background-image: url(data-url:../media/Background-fluid-lines.svg), linear-gradient(v.$clr-scene,  v.$clr-scene);
+    background-image: url(data-url:../media/images/Background-fluid-lines.svg), linear-gradient(v.$clr-scene,  v.$clr-scene);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -455,7 +456,13 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
 
 /* ================ LOGO CAROUSEL SECTION ================ */
 section#customers {
+  --logo-cards: 6;
+  --logo-margin: 5vw;
+  --logo-width: 320px;
+  min-height: unset;
   justify-content: center;
+  //margin-top: 20vh;
+  margin-bottom: 15vh;
   padding: 0;
 }
 
@@ -463,24 +470,22 @@ section#customers {
   background: linear-gradient(to right,  v.$clr-scene 1%, rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 10s;
 
 // Animation
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc((-300px - (50px * 2)) * (6)))} //(card lengths + margins) * amount o. cards
+  100% { transform: translateX(calc(-1 * (var(--logo-width) + (var(--logo-margin) * 2) - 21px) * (var(--logo-cards))))} //(card lengths + margins) * amount o. cards
 }
 
 
 // Styling
 .customer-slider {
-
   background: v.$clr-scene;
   height: clamp(60px, 13vh, 10rem);
   overflow: hidden;
   position: relative;
-  width: clamp(300px, 90vw, 110rem);
-  border-radius: v.$radius;
+  width: 100vw;
   @include m.transition(all);
 
   &:hover .slide-track {
@@ -519,7 +524,7 @@ $animationSpeed: 40s;
   .slide-track {
     animation: scroll $animationSpeed linear infinite;
     display: flex;
-    width: (300px) * 6 * 3;
+    width: calc(var(--logo-width) * var(--logo-cards) * 3);
     //justify-content: space-evenly;
     align-content: center;
     height: 100%;
@@ -530,13 +535,27 @@ $animationSpeed: 40s;
     justify-content: center;
     align-items: center;
     height: 100%;
-    max-width: 300px;
-    min-width: 300px;
-    margin: 0 50px;
+    width: var(--logo-width);
+    margin: 0 var(--logo-margin);
     &>* {
       height: 65%;
-      width: 250px;
+      max-width: 250px;
     }
+  }
+}
+
+@media screen and (min-width: v.$bpDesktop){
+  section#customers {
+    min-height: unset;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+    padding: 0;
+  }
+
+  .customer-slider {
+    width: clamp(300px, 90vw, 110rem);
+    border-radius: v.$radius;
   }
 }
 
@@ -764,7 +783,7 @@ textarea.input {
   }
 
   .input-placeholder{
-    color: v.$clr-text;
+    color: v.$clr-secondary;
     position: absolute;
     top: 15px;
     left: 0;
@@ -779,7 +798,7 @@ textarea.input {
   input:valid ~ label,
   textarea:valid ~ label {
     font-size: 0.75em;
-    color: v.$clr-text;
+    color: v.$clr-secondary;
     top: -18px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
