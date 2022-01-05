@@ -66,15 +66,17 @@ navDesktopToggle.addEventListener('change', function() {
         closeMenu();
     }
 });
+const subMenu = document.querySelectorAll('.nav__list-sub');
 if(navClose || main) {
     navClose.addEventListener('click', closeMenu);
     //close on click on body
     main.addEventListener('click', () => {
-        console.log("main clicked");
         closeMenu();
-        //navMenu.classList.remove('show__menu');
         accSettingsToggle.checked = false;
         toggleAccSettings(true);
+        subMenu.forEach(($menu) => {
+            $menu.classList.add('hidden');
+        });
     });
 }
 //hide menu if link clicked
@@ -155,11 +157,15 @@ navItem.forEach($entry => {
     let arrow = $entry.querySelector('.dropdown-arrow');
     if (arrow != null) {
         hover($entry, () => {
-            console.log(arrow);
-            rotate90(arrow);
+
         });
         $entry.addEventListener('focus', () => {
             rotate90(arrow);
+        });
+        $entry.addEventListener('click', () => {
+            rotate90(arrow);
+            let subMenu = $entry.querySelector('.nav__list-sub');
+            subMenu.classList.remove('hidden');
         });
     }
 });
@@ -170,6 +176,7 @@ function hover($element, fn){
 }
 
 function rotate90($element) {
+    //TODO change
     $element.classList.toggle('rotate90');
 }
 

@@ -470,7 +470,7 @@ section#customers {
   background: linear-gradient(to right,  v.$clr-scene 1%, rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 10s;
+$animationSpeed: 40s;
 
 // Animation
 @keyframes scroll {
@@ -650,14 +650,14 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
   #bg__line04 {
     margin-top: -100px;
     left: 80%;
-    top: 80%;
+    top: 75%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
   }
 
   #bg__line05 {
     margin-left: 0;
-    top: 80%;
+    top: 83%;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }

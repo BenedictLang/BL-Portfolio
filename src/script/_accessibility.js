@@ -73,13 +73,13 @@ const visionProfile = document.createElement('style');
 document.head.appendChild(visionProfile);
 visionProfile.sheet.insertRule("a, button, i.uil{font-size:1.7em!important;letter-spacing:.15em!important}",
     0);
-visionProfile.sheet.insertRule(".link__contrast,a, p, li{font-size:2em!important;line-height:2em!important;letter-spacing:.15em!important}",
+visionProfile.sheet.insertRule(".link__contrast,a, p, li{font-size:1.7em!important;line-height:2em!important;letter-spacing:.15em!important}",
     1);
 visionProfile.sheet.insertRule("span.copyright{line-height:1.5em!important;font-style:normal!important;font-size:1.7em!important;letter-spacing:.15em!important}",
     2);
-visionProfile.sheet.insertRule("h1,h2,h3,h4 ,h5 ,h6 {line-height:2em!important;letter-spacing:.15em!important;font-weight:bolder!important;font-family:Arial,serif!important;font-size:2.7em!important}",
+visionProfile.sheet.insertRule("h1,h2,h3,h4 ,h5 ,h6 {line-height:2em!important;letter-spacing:.13em!important;font-weight:bolder!important;font-family:Arial,serif!important;font-size:2.5em!important}",
     3);
-visionProfile.sheet.insertRule("h1, h1 a{font-size:3.5em!important;font-weight:800!important}",
+visionProfile.sheet.insertRule("h1, h1 a{font-size:2.5em!important;font-weight:800!important}",
     4);
 visionProfile.sheet.insertRule(".accessibility__settings{display:flex;flex-direction:column}",
     5);

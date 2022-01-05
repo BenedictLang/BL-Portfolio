@@ -546,6 +546,62 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     @include m.transition(transform);
   }
 
+  .nav__list-sub {
+    @include m.smoothTransition(all);
+    opacity: 1;
+    transform: scale(1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top: 100%;
+    margin: 1rem 0;
+    background: v.$clr-container;
+    border-radius: v.$radius;
+    @include m.shadow;
+    //border: v.$clr-text 2px solid;
+    &> * {
+      margin: 1rem;
+    }
+
+    .sub-menu__list {
+      display: flex;
+      gap: 5vw;
+      .sub-menu__item {
+        .nav__link {
+          font-weight: bold;
+          padding: 0;
+          &:hover {
+            color: var(--clr-scene);
+            background-size: 0 0.6rem;
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: left;
+          li {
+            text-align: left;
+            font-size: large;
+            color: v.$clr-text;
+          }
+        }
+      }
+    }
+
+    .sub-menu__image {
+      background: v.$clr-scene;
+      border-radius: v.$radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &> * {
+        width: auto;
+        margin: 2rem;
+      }
+    }
+  }
+
   .header {
     /*background: v.$clr-background;*/
 
@@ -657,7 +713,8 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     background-size: 0 .6rem;
     transition: all .5s;
     font-weight: normal;
-    &:hover {
+    &:hover,
+    &:checked {
       color: v.$clr-primary;
       background-size: 100% .6rem;
     }
@@ -726,7 +783,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     max-width: calc(50rem + 5vw);
     position: relative;
     margin: 0;
-    width: calc(100% - (var(--acc-margin) * 2));
+    //width: calc(100% - (var(--acc-margin) * 2));
     padding: 0 2rem 0 0;
   }
 
