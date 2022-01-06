@@ -461,7 +461,6 @@ section#customers {
   --logo-width: 320px;
   min-height: unset;
   justify-content: center;
-  //margin-top: 20vh;
   margin-bottom: 15vh;
   padding: 0;
 }
@@ -475,7 +474,7 @@ $animationSpeed: 40s;
 // Animation
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-1 * (var(--logo-width) + (var(--logo-margin) * 2) - 21px) * (var(--logo-cards))))} //(card lengths + margins) * amount o. cards
+  100% { transform: translateX(calc(-1 * (var(--logo-width) + (var(--logo-margin) * 2) - 0px) * (var(--logo-cards))))} //(card lengths + margins) * amount o. cards
 }
 
 
@@ -513,7 +512,7 @@ $animationSpeed: 40s;
   &::after {
     right: 0;
     top: 0;
-    transform: rotateZ(180deg);
+    transform: rotate(180deg);
   }
 
   &::before {
@@ -535,11 +534,13 @@ $animationSpeed: 40s;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: var(--logo-width);
+    max-width: var(--logo-width);
+    min-width: var(--logo-width);
     margin: 0 var(--logo-margin);
     &>* {
       height: 65%;
-      max-width: 250px;
+      max-width: var(--logo-width);
+      min-width: var(--logo-width);
     }
   }
 }
@@ -692,12 +693,15 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile) {
     width: calc(100% + var(--border) * 2);
     height: calc(100% + var(--border) * 2);
     background: linear-gradient(
-                    60deg,
-                    #2C4A81,
-                    v.$clr-primary,
+                    130deg,
+                    v.$clr-primary-contrast,
+                    #2C4A81 5%,
+                    v.$clr-primary 15%,
+                    #488fc7 25%,
+                    v.$clr-primary 35%,
+                    v.$clr-primary-contrast,
+                    #274377,
                     #488fc7,
-                    v.$clr-primary,
-                    #e34065,
                     #274377
     );
     background-size: 300% 300%;
@@ -814,7 +818,7 @@ textarea.input {
     background: linear-gradient(
                     60deg,
                     v.$clr-primary,
-                    #cb2949
+                    #cb2949 60%
     );
     @include m.smoothTransition(.3s)
   }

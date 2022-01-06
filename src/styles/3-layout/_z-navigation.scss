@@ -350,7 +350,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
   }
   @for $i from 1 through 6{
       .nav__item li:nth-of-type(#{$i}){
-        transition-delay:1.1s*$i;
+        transition-delay:.5s*$i;
       }
   }
 
@@ -499,6 +499,8 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
 @media screen and (min-width: v.$bpWideS) {
   #nav-grid {
     list-style: none;
+    display: flex;
+    align-items: center;
     li{
       display: inline-block;
       position: relative;
@@ -567,14 +569,21 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     .sub-menu__list {
       display: flex;
       gap: 5vw;
+      .nav__icon {
+        display: block;
+        font-size: 1em;
+        padding-right: .5rem;
+      }
+
       .sub-menu__item {
         .nav__link {
-          font-weight: bold;
+          font-weight: normal;
           padding: 0;
-          &:hover {
-            color: var(--clr-scene);
-            background-size: 0 0.6rem;
-          }
+        }
+        .nav__title {
+          display: flex;
+          font-weight: bold;
+          margin: 0;
         }
         ul {
           display: flex;
@@ -713,12 +722,27 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     background-size: 0 .6rem;
     transition: all .5s;
     font-weight: normal;
-    &:hover,
-    &:checked {
-      color: v.$clr-primary;
-      background-size: 100% .6rem;
+
+  }
+
+  .nav__item:hover .nav__link,
+  .nav__item:focus .nav__link{
+    color: v.$clr-primary;
+    background-size: 100% .6rem;
+  }
+
+  .sub-menu__item {
+
+  }
+
+  .nav__list-sub .sub-menu__list a.nav__link {
+    color: v.$clr-text;
+    background-size: 0;
+    &:hover {
+      color: v.$clr-scene;
     }
   }
+
   .nav__icon {
     display: none;
   }

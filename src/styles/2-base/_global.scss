@@ -577,11 +577,14 @@ a.btn{
     height: calc(100% + var(--border-width) * 2);
     background: linear-gradient(
                     130deg,
-                    #2C4A81,
-                    v.$clr-primary,
+                    v.$clr-primary-contrast,
+                    #2C4A81 5%,
+                    v.$clr-primary 15%,
+                    #488fc7 25%,
+                    v.$clr-primary 35%,
+                    v.$clr-primary-contrast,
+                    #274377,
                     #488fc7,
-                    v.$clr-primary,
-                    #cb2949,
                     #274377
     );
     background-size: 300% 300%;

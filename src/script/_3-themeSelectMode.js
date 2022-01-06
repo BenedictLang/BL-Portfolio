@@ -18,13 +18,15 @@ function ThemeInit() {
         }
     }
 
-    if (darkModePreferred === true) {
+    /*if (darkModePreferred === true) {
         document.documentElement.classList.add('darkMode');
-        loadTheme()
+        loadTheme();
     } else if (darkModePreferred === false) {
         document.documentElement.classList.remove('darkMode');
-        loadTheme()
-    }
+        loadTheme();
+    }*/
+    document.documentElement.classList.add('darkMode');
+    loadTheme();
 }
 
 document.querySelectorAll('.dark-mode-toggle').forEach((toggle) => {
@@ -34,8 +36,13 @@ document.querySelectorAll('.dark-mode-toggle').forEach((toggle) => {
 //toggle theme mode
 window.darkModeToggle = function darkModeToggle() {
     document.documentElement.classList.toggle('darkMode');
-    loadTheme()
+    loadTheme();
 }
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const newColorScheme = e.matches ? "dark" : "light";
+    document.documentElement.classList.toggle('darkMode');
+    loadTheme();
+});
 
 //set theme
 function loadTheme(){
@@ -48,14 +55,19 @@ function loadSVGColors() {
     const svg = document.querySelectorAll('.svg');
     Array.from(svg).forEach(svg => {
         const element = svg.contentDocument;
+        if (element == null) return console.log(svg);
         const textClr = element.querySelectorAll('.svg-element__textClr');
-        Array.from(textClr).forEach(e => {
-            e.style.fill = style.getPropertyValue('--clr-text');
-        });
+        if(textClr != null) {
+            Array.from(textClr).forEach(e => {
+                e.style.fill = style.getPropertyValue('--clr-text');
+            });
+        }
         const primeConClr = element.querySelectorAll('.svg-element__primeContrastClr');
-        Array.from(primeConClr).forEach(e => {
-            e.style.fill = style.getPropertyValue('--clr-primary-contrast');
-        });
+        if(primeConClr != null) {
+            Array.from(primeConClr).forEach(e => {
+                e.style.fill = style.getPropertyValue('--clr-primary-contrast');
+            });
+        }
     });
 }
 

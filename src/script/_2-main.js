@@ -76,6 +76,7 @@ if(navClose || main) {
         toggleAccSettings(true);
         subMenu.forEach(($menu) => {
             $menu.classList.add('hidden');
+            rotate90($menu.parentElement.querySelector('.dropdown-arrow'), false);
         });
     });
 }
@@ -131,6 +132,10 @@ function toggleAccSettings($mainClicked) {
 let prevScrollPos = window.pageYOffset;
 ['scroll','load'].forEach( evt =>
     window.addEventListener(evt, () => {
+        subMenu.forEach(($menu) => {
+            $menu.classList.add('hidden');
+            rotate90($menu.parentElement.querySelector('.dropdown-arrow'), false);
+        });
         if(bpTablet.matches || bpLandscape.matches){
             const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
             if(currentScrollPos > prevScrollPos){
@@ -154,30 +159,41 @@ let prevScrollPos = window.pageYOffset;
 
 //Dropdown menu
 navItem.forEach($entry => {
+    let navLink = $entry.querySelector('.nav__link');
     let arrow = $entry.querySelector('.dropdown-arrow');
+    let subMenu = $entry.querySelector('.nav__list-sub');
     if (arrow != null) {
-        hover($entry, () => {
-
-        });
-        $entry.addEventListener('focus', () => {
-            rotate90(arrow);
-        });
-        $entry.addEventListener('click', () => {
-            rotate90(arrow);
-            let subMenu = $entry.querySelector('.nav__list-sub');
-            subMenu.classList.remove('hidden');
+        ['click'].forEach(evt => {
+            navLink.addEventListener(evt, () => {
+                if(subMenu.classList.contains('hidden')) {
+                    rotate90(arrow, true);
+                    subMenu.classList.remove('hidden');
+                } else {
+                    rotate90(arrow, false);
+                    subMenu.classList.add('hidden');
+                }
+            });
         });
     }
 });
 
-function hover($element, fn){
-    $element.addEventListener('mouseenter', fn)
-    $element.addEventListener('mouseleave', fn)
+function getSubNavElements($entry) {
+    let arrow = $entry.querySelector('.dropdown-arrow');
+    let subMenu = $entry.querySelector('.nav__list-sub');
 }
 
-function rotate90($element) {
-    //TODO change
-    $element.classList.toggle('rotate90');
+function hover($element, fn){
+    ['mouseenter', 'mouseleave'].forEach(evt => {
+        $element.addEventListener(evt, fn)
+    });
+}
+
+function rotate90($element, $activated) {
+    if($activated) {
+        $element.classList.add('rotate90')
+    } else {
+        $element.classList.remove('rotate90')
+    }
 }
 
 function blurBG($show) {
