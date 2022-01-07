@@ -102,6 +102,7 @@ function closeMenu() {
 //ACCESSIBILITY SETTINGS
 //Accessibility toggle
 function toggleAccSettings($mainClicked) {
+    console.log("Switched");
     const accSettings = document.getElementById('accessibility');
     if (accSettingsToggle.checked) {
         accSettings.classList.remove('hidden');
@@ -110,22 +111,17 @@ function toggleAccSettings($mainClicked) {
         bannerSection.classList.add('shrinkY');
         blurBG(true);
         disableScroll(document.body);
+    } else if($mainClicked || (bpWs.matches && !accSettingsToggle.checked)){
+        menuList.classList.remove('hidden');
+        bannerSection.classList.remove('shrinkY');
+        accSettings.classList.add('hidden');
+        blurBG(false);
+        enableScroll(document.body);
     } else {
         menuList.classList.remove('hidden');
         accSettings.classList.add('hidden');
-        /*if(!navMenu.classList.contains('show__menu') || ($mainClicked && navMenu.classList.contains('show__menu'))){
-            bannerSection.classList.remove('shrinkY');
-            blurBG(false);
-            enableScroll(document.body);
-            //navMenu.style.maxHeight = "90vh";
-        }*/
-        /*accSettingsToggle.checked = false;*/
     }
-    if($mainClicked || (bpWs.matches && !accSettingsToggle.checked)){
-        bannerSection.classList.remove('shrinkY');
-        blurBG(false);
-        enableScroll(document.body);
-    }
+
 }
 
 //toggle sticky desktop navbar
@@ -176,17 +172,6 @@ navItem.forEach($entry => {
         });
     }
 });
-
-function getSubNavElements($entry) {
-    let arrow = $entry.querySelector('.dropdown-arrow');
-    let subMenu = $entry.querySelector('.nav__list-sub');
-}
-
-function hover($element, fn){
-    ['mouseenter', 'mouseleave'].forEach(evt => {
-        $element.addEventListener(evt, fn)
-    });
-}
 
 function rotate90($element, $activated) {
     if($activated) {
@@ -265,8 +250,7 @@ let resizeTimer;
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             document.body.classList.remove("animation__hidden");
-        }, 400);
-
+        }, 200);
         resizeBG();
     });
 });

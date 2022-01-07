@@ -504,8 +504,10 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
     li{
       display: inline-block;
       position: relative;
-      cursor: pointer;
       min-width: 112px;
+      .nav__link {
+        cursor: pointer;
+      }
     }
   }
   .sub-menu{
@@ -550,6 +552,7 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
 
   .nav__list-sub {
     @include m.smoothTransition(all);
+    cursor: default;
     opacity: 1;
     transform: scale(1);
     display: flex;
@@ -576,14 +579,17 @@ screen and (max-height: 500px) and (min-width: v.$bpMobile){
       }
 
       .sub-menu__item {
+        cursor: default;
         .nav__link {
           font-weight: normal;
           padding: 0;
+          cursor: pointer;
         }
         .nav__title {
           display: flex;
           font-weight: bold;
           margin: 0;
+          font-size: 1em;
         }
         ul {
           display: flex;
