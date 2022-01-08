@@ -53,18 +53,18 @@ function loadTheme(){
 function loadSVGColors() {
     const style = getComputedStyle(document.body);
     const svg = document.querySelectorAll('.svg');
-    Array.from(svg).forEach(svg => {
+    svg.forEach(svg => {
         const element = svg.contentDocument;
         if (element == null) return console.log(svg);
         const textClr = element.querySelectorAll('.svg-element__textClr');
         if(textClr != null) {
-            Array.from(textClr).forEach(e => {
+            textClr.forEach(e => {
                 e.style.fill = style.getPropertyValue('--clr-text');
             });
         }
         const primeConClr = element.querySelectorAll('.svg-element__primeContrastClr');
         if(primeConClr != null) {
-            Array.from(primeConClr).forEach(e => {
+            primeConClr.forEach(e => {
                 e.style.fill = style.getPropertyValue('--clr-primary-contrast');
             });
         }

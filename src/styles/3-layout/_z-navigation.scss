@@ -132,7 +132,7 @@
 
 /* ================================== TABLET OR LANDSCAPE SCREEN MENU ================================== */
 @media screen and (min-width: v.$bpTablet),
-screen and (max-height: 500px) and (min-width: v.$bpMobile){
+screen and (max-height: v.$bpLandscape) and (min-width: v.$bpMobile){
   .header {
     backdrop-filter: brightness(80%) blur(10px);
     -webkit-backdrop-filter: brightness(80%) blur(10px);

@@ -1,9 +1,9 @@
 /*General*/
 
-//TODO export breakpoint variable
-export const   bpTablet = window.matchMedia("(min-width: 850px)"),
-        bpWs = window.matchMedia("(min-width: 1440px)"),
-        bpLandscape = window.matchMedia("(max-height: 500px)");
+const style = getComputedStyle(document.body);
+export const   bpTablet = window.matchMedia(`(min-width:${style.getPropertyValue("--bpTablet")}`),
+    bpWs =  window.matchMedia(`(min-width:${style.getPropertyValue("--bpWideS")}`),
+    bpLandscape = window.matchMedia(`(max-width:${style.getPropertyValue("--bpLandscape")}`);
 
 /* ==== MOVE TO MOUSE POSITION ====*/
 const moveForce = 30; // max popup movement in pixels
