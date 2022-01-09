@@ -79,7 +79,7 @@
         height:0;
         width:3px;
         position:absolute;
-        top: 0px;
+        top: 0;
         left:30px;
         transition-delay:0s;
       }
@@ -566,12 +566,12 @@ screen and (max-height: v.$bpLandscape) and (min-width: v.$bpMobile){
     @include m.shadow;
     //border: v.$clr-text 2px solid;
     &> * {
-      margin: 1rem;
+      margin: 1.5rem;
     }
 
     .sub-menu__list {
       display: flex;
-      gap: 5vw;
+      gap: 2vw;
       .nav__icon {
         display: block;
         font-size: 1em;
@@ -589,7 +589,7 @@ screen and (max-height: v.$bpLandscape) and (min-width: v.$bpMobile){
           display: flex;
           font-weight: bold;
           margin: 0;
-          font-size: 1em;
+          font-size: .8em;
         }
         ul {
           display: flex;

@@ -83,3 +83,43 @@ function offset($element) {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return rect.top + scrollTop;
 }
+
+const cards = document.querySelectorAll(".card");
+cards.forEach(card => {
+    rotateElement2Mouse(card.parentElement, card);
+});
+
+
+function rotateElement2Mouse($actionCaller, $target) {
+    $actionCaller.addEventListener("mousemove", cardMouseMove);
+    $actionCaller.addEventListener("mouseleave", cardMouseLeave);
+
+    const moveForce = 25; // max popup movement in pixels
+    const rotateForce = 13; // max popup rotation in deg
+
+    function cardMouseMove(e) {
+        const cardW = $actionCaller.clientWidth;
+        const cardH = $actionCaller.clientHeight;
+
+        const rect = $actionCaller.getBoundingClientRect();
+        const cardX = e.clientX - rect.left; //x position within the element.
+        const cardY = e.clientY - rect.top;  //y position within the element.
+        const centerX = (cardX - $target.offsetLeft) - ($target.offsetWidth/2);
+        const centerY = (cardY - $target.offsetTop) - $target.offsetHeight/2;
+
+        const moveX = (e.clientX - cardW) / (-cardW) * -moveForce;
+        const moveY = -(e.clientY - cardH) / (-cardH) * -moveForce;
+
+        const rotateX = (- centerY / rect.width) * rotateForce * 3;
+        const rotateY = (centerX / rect.height) * rotateForce  * 2  - rotateForce;
+        $target.style.left = `${moveX}px`;
+        $target.style.top = `${moveY}px`;
+        $target.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    }
+
+    function cardMouseLeave(event) {
+        $target.style.left = `0px`;
+        $target.style.top = `0px`;
+        $target.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    }
+}

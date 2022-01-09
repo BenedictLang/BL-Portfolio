@@ -6,9 +6,24 @@
   font-family: 'iconscout/unicons';
   src: url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-1.woff2') format('embedded-opentype'), /* IE6-IE8 */
   url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-1.woff2') format('woff2'), /* Super Modern Browsers */
-  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-1.woff') format('woff'), /* Pretty Modern Browsers */
-  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-1.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-1.svg') format('svg'); /* Legacy iOS */
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-2.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-3.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-4.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-5.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-6.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-7.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-8.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-9.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-10.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-11.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-12.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-13.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-14.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-15.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-16.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-17.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-18.woff2') format('woff2'),
+  url('https://unicons.iconscout.com/release/v4.0.0/fonts/line/unicons-19.woff2') format('woff2')
 }
 
 body {
@@ -21,6 +36,7 @@ a {
   text-decoration: none;
   font-style: italic;
   font-weight: lighter;
+
   &.nav__link {
     color: v.$clr-text;
     font-weight: lighter;
@@ -62,15 +78,16 @@ h3 {
 }
 
 h4,
-figcaption{
+figcaption {
   font-size: clamp(.35em, .5em + 5vw, 1.6em);
   font-family: v.$ft-subtitle;
   font-weight: bold;
   font-style: normal;
 }
 
-h6 {
-    color: v.$clr-primary;
+h5 {
+  //color: v.$clr-primary;
+  font-size: clamp(.35em, .5em + 5vw, 1.6em);
 }
 
 p,
