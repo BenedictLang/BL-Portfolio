@@ -9,4 +9,7 @@ function siteLoader() {
     setTimeout(function() {
         $(".blur").removeClass();
     }, 350);
+    setTimeout(function() {
+        document.getElementById('background-anim').classList.remove("fade-in__scale");
+    }, 500);
 }

@@ -91,11 +91,13 @@ cards.forEach(card => {
 
 
 function rotateElement2Mouse($actionCaller, $target) {
-    $actionCaller.addEventListener("mousemove", cardMouseMove);
+    $actionCaller.addEventListener("mousemove", e => {
+        if (bpTablet.matches) cardMouseMove(e);
+    });
     $actionCaller.addEventListener("mouseleave", cardMouseLeave);
 
     const moveForce = 25; // max popup movement in pixels
-    const rotateForce = 13; // max popup rotation in deg
+    const rotateForce = 8; // max popup rotation in deg
 
     function cardMouseMove(e) {
         const cardW = $actionCaller.clientWidth;
