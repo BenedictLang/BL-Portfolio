@@ -65,7 +65,7 @@ const line04 = document.getElementById('bg__line04-stroke').querySelector('.sect
 const line05 = document.getElementById('bg__line05-stroke').querySelector('.section__draw');
 window.addEventListener('scroll', ()=> {
     const currentScrollPos = Math.floor(window.pageYOffset) || document.documentElement.scrollTop;
-    setupStroke(line02, currentScrollPos, 0);
+    setupStroke(line02, currentScrollPos, 150);
     setupStroke(line04, currentScrollPos, 550);
     setupStroke(line05, currentScrollPos, 500);
     /*if (targetOffset - currentScrollPos < (window.innerHeight * .5)){
@@ -97,7 +97,7 @@ function rotateElement2Mouse($actionCaller, $target) {
     $actionCaller.addEventListener("mouseleave", cardMouseLeave);
 
     const moveForce = 25; // max popup movement in pixels
-    const rotateForce = 8; // max popup rotation in deg
+    const rotateForce = 10; // max popup rotation in deg
 
     function cardMouseMove(e) {
         const cardW = $actionCaller.clientWidth;
@@ -119,7 +119,7 @@ function rotateElement2Mouse($actionCaller, $target) {
         $target.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     }
 
-    function cardMouseLeave(event) {
+    function cardMouseLeave() {
         $target.style.left = `0px`;
         $target.style.top = `0px`;
         $target.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
