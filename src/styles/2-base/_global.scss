@@ -120,6 +120,14 @@ abbr {
   transform: scale(0);
 }
 
+.shrink {
+  transform: scale(.9)!important;
+  font-weight: lighter!important;
+  //font-size: x-large!important;
+  //background: #4CAF50;
+  @include m.transition(all);
+}
+
 .shrinkY {
   max-height: 0!important;
   padding: 0!important;
@@ -130,6 +138,11 @@ abbr {
   max-width: 0!important;
   padding: 0!important;
   margin: 0!important;
+}
+
+.grow {
+  font-weight: 700!important;
+  font-size: xx-large!important;
 }
 
 .rotate90 {

@@ -2,7 +2,7 @@
 
 /* ==== Fade in content on scroll ==== */
 
-const {bpTablet, bpLandscape} = require("./_2-main");
+const {bpTablet, bpLandscape, bpWs} = require("./_2-main");
 const fadersUp = document.querySelectorAll('.fade-in');
 const fadersL = document.querySelectorAll('.fade-in__left');
 const fadersR = document.querySelectorAll('.fade-in__right');
@@ -57,8 +57,43 @@ function ignoreFadeIn() {
     });
 }
 
+/* ==== Parallax scroll ==== */
+window.addEventListener('scroll', () => {
+    const target = document.querySelectorAll('.parallax');
+    if (bpLandscape.matches || bpWs.matches){
+        for (let i = 0; i < target.length; i++) {
+            const pos = window.pageYOffset * target[i].dataset.rate;
+            if (target[i].dataset.direction === 'vertical') {
+                target[i].style.transform = `translate3d(0, ${pos}px, 0)`;
+            } else {
+                const posX = window.pageYOffset * target[i].dataset.ratex;
+                const posY = window.pageYOffset * target[i].dataset.ratey;
+                target[i].style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+            }
+        }
+    } else {
+        for (let i = 0; i < target.length; i++) {
+            target[i].style.transform = `translate3d(0, 0, 0)`;
+        }
+    }
+});
+
 
 /* ==== Fade line stroke on scroll ==== */
+/*
+element
+const path = document.querySelector('.bg__line');
+const pathLength = path.getTotalLength();
+path.style.strokeDasharray = pathLength + ' ' + pathLength;
+path.style.strokeDashoffset = pathLength;
+window.addEventListener('scroll', () => {
+    const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    const drawLength = pathLength * scrollPercentage;
+
+    path.style.strokeDashoffset = pathLength - drawLength;
+});
+
+*/
 
 const line02 = document.getElementById('bg__line02-stroke').querySelector('.section__draw');
 const line04 = document.getElementById('bg__line04-stroke').querySelector('.section__draw');
@@ -86,7 +121,7 @@ function offset($element) {
 
 const cards = document.querySelectorAll(".card");
 cards.forEach(card => {
-    rotateElement2Mouse(card.parentElement, card);
+    rotateElement2Mouse(card.closest('section'), card);
 });
 
 
@@ -97,8 +132,7 @@ function rotateElement2Mouse($actionCaller, $target) {
     $actionCaller.addEventListener("mouseleave", cardMouseLeave);
 
     const moveForce = 25; // max popup movement in pixels
-    const rotateForce = 10; // max popup rotation in deg
-
+    const rotateForce = 9; // max popup rotation in deg
     function cardMouseMove(e) {
         const cardW = $actionCaller.clientWidth;
         const cardH = $actionCaller.clientHeight;
@@ -106,13 +140,13 @@ function rotateElement2Mouse($actionCaller, $target) {
         const rect = $actionCaller.getBoundingClientRect();
         const cardX = e.clientX - rect.left; //x position within the element.
         const cardY = e.clientY - rect.top;  //y position within the element.
-        const centerX = (cardX - $target.offsetLeft) - ($target.offsetWidth/2);
-        const centerY = (cardY - $target.offsetTop) - $target.offsetHeight/2;
+        const centerX = (cardX - $target.clientWidth) - ($target.clientWidth/2);
+        const centerY = (cardY - $target.clientHeight) - $target.clientHeight/2;
 
         const moveX = (e.clientX - cardW) / (-cardW) * -moveForce;
         const moveY = -(e.clientY - cardH) / (-cardH) * -moveForce;
 
-        const rotateX = (- centerY / rect.width) * rotateForce * 3;
+        const rotateX = (- centerY / rect.width) * rotateForce * 6;
         const rotateY = (centerX / rect.height) * rotateForce  * 2  - rotateForce;
         $target.style.left = `${moveX}px`;
         $target.style.top = `${moveY}px`;

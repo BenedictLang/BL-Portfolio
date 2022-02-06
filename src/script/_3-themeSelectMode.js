@@ -55,7 +55,7 @@ function loadSVGColors() {
     const svg = document.querySelectorAll('.svg');
     svg.forEach(svg => {
         const element = svg.contentDocument;
-        if (element == null) return console.log(svg);
+        if (element == null) return console.log(svg.className);
         const textClr = element.querySelectorAll('.svg-element__textClr');
         if(textClr != null) {
             textClr.forEach(e => {
@@ -89,4 +89,3 @@ function loadThemeIcon(){
         });
     }
 }
-

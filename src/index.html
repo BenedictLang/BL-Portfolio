@@ -75,7 +75,7 @@
         </g>
     </svg>
 </div>
-<!-- ================================== BANNERS, COOKIES ================================== -->
+<!-- ================================== BANNERS ================================== -->
 <div class="banner-section darkMode">
     <div class="banner__info banner" title="information">
         <div class="banner__content">
@@ -104,15 +104,16 @@
             <i class="uil uil-times icon"></i>
         </button>
     </div>
-    <div class="cookie-banner banner" style="display:none;">
-        <div class="banner__content">
-            <i class="uil uil-comment-info-alt icon banner__icon"></i>
-            <span>We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.</span>
-        </div>
-        <button type="button" class="banner-close">
-            <i class="uil uil-times icon"></i>
-        </button>
+</div>
+<!-- ================================== COOKIES ================================== -->
+<div class="cookie-banner" style="display:none">
+    <div class="banner__content">
+        <i class="uil uil-comment-info-alt icon banner__icon"></i>
+        <span>We use functional cookies to ensure that we give you the best experience on our website. Are happy with it?</span>
     </div>
+    <button type="button" class="banner-close">
+        <i class="uil uil-times icon"></i>
+    </button>
 </div>
 <div id="main-grid">
     <div id="wrapper" class="wrapper blur">
@@ -209,7 +210,7 @@
                                         </a>
                                     </li>
                                     <li id="nav__item-portfolio" class="nav__item" data-url="portfolio">
-                                        <a  href="#0" class="nav__link">
+                                        <a href="#0" class="nav__link">
                                             <i class="nav__icon uil uil-presentation-play"></i>
                                             Portfolio
                                             <i class="uil uil-angle-right dropdown-arrow"></i>
@@ -472,7 +473,7 @@
                         </div>
                         <div class="home__container container grid">
                             <div class="home__content grid">
-                                <div class="home__socials">
+                                <div class="home__socials parallax" data-rate=".1" data-direction="vertical">
                                     <a href="https://github.com/BenedictLang" class="home__social-icon"
                                        aria-label="GitHub Profil (new tab)"
                                        target="_blank" title="GitHub">
@@ -499,7 +500,7 @@
                                         <i class="uil uil-dribbble"></i>
                                     </a>
                                 </div>
-                                <div class="home__image">
+                                <div class="home__image parallax" data-rate="-.4" data-direction="vertical">
                                     <svg id="profile-img" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
                                          aria-label="Profilbild Benedict Lang"
                                          xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1298,97 +1299,309 @@
                                 <h4 class="fade-in">Kenntnisse & Fähigkeiten</h4>
                             </div>
                             <ul class="skills__container container">
-                                <li class="skills__group" data-title="language">
-                                    <div class="skills__header">
+                                <li class="skills__group">
+                                    <input id="skill-languages" type="radio" name="skill_group" checked>
+                                    <label for="skill-languages" class="skill__wrapper" data-title="language">
                                         <i class="skills__icon uil uil-english-to-chinese"></i>
-                                        <h5 class="skills__title">
-                                            Sprachen
-                                        </h5>
-                                    </div>
+                                        Sprachen
+                                    </label>
                                 </li>
-                                <li class="skills__group" data-title="frontend">
-                                    <div class="skills__header">
+                                <li class="skills__group">
+                                    <input id="skill-frontend" type="radio" name="skill_group">
+                                    <label for="skill-frontend" class="skills__header" data-title="frontend">
                                         <i class="skills__icon uil uil-english-to-chinese"></i>
-                                        <h5 class="skills__title">
-                                            Frontend
-                                        </h5>
-                                    </div>
+                                        Frontend
+                                    </label>
                                 </li>
-                                <li class="skills__group" data-title="backend">
-                                    <div class="skills__header">
+                                <li class="skills__group" >
+                                    <input id="skill-backend" type="radio" name="skill_group">
+                                    <label for="skill-backend" class="skills__header" data-title="backend">
                                         <i class="skills__icon uil uil-english-to-chinese"></i>
-                                        <h5 class="skills__title">
-                                            Backend
-                                        </h5>
-                                    </div>
+                                        Backend
+                                    </label>
                                 </li>
-                                <li class="skills__group" data-title="software">
-                                    <div class="skills__header">
+                                <li class="skills__group">
+                                    <input id="skill-software" type="radio" name="skill_group">
+                                    <label for="skill-software" class="skills__header" data-title="software">
                                         <i class="skills__icon uil uil-english-to-chinese"></i>
-                                        <h5 class="skills__title">
-                                            Software
-                                        </h5>
-                                    </div>
+                                        Software
+                                    </label>
                                 </li>
                             </ul>
-                            <br>
+                        </div>
+                        <div class="skills__aside">
+                            <div class="card">
+                                <ul id="skills-languages" class="cloud">
+                                    <li data-weight="6">Italienisch
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Italienisch</h5>
+                                                    <p>CEFR Level: B1</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="8">Deutsch
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Deutsch</h5>
+                                                    <p>Muttersprache</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="7">Englisch
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Englisch</h5>
+                                                    <p>CEFR Level: C1/C2</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="3">Französisch
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Französisch</h5>
+                                                    <p>CEFR Level: B1</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul id="skills-frontend" class="cloud hidden">
+                                    <li data-weight="7">
+                                        CSS
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="8">
+                                        HTML
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="7">
+                                        SASS
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>SCSS</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="6">
+                                        JavaScript
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="4">
+                                        React
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul id="skills-backend" class="cloud hidden">
+                                    <li data-weight="6">
+                                        SQL
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="8">
+                                        Java
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>Java, JavaFX</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="4">
+                                        Python
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="5">
+                                        PHP
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>-</h5>
+                                                    <p>-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul id="skills-software" class="cloud hidden">
+                                    <li data-weight="6">
+                                        VSC
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Softwareentwicklung</h5>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="8">
+                                        IDEA
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Softwareentwicklung</h5>
+                                                    <p>IntelliJ, WebStorm, DataGrip, PyCharm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="8">
+                                        Adobe
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Grafikdesign & Bildbearbeitung</h5>
+                                                    <p>Illustrator, Photoshop, Indesign, After Effects, XD</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="6">
+                                        Figma
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>Prototyping</h5>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="4">
+                                        ArchiCAD
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>CAD 3D</h5>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="5">
+                                        Solidworks
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>CAD Modelling</h5>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-weight="7">
+                                        Android Studio
+                                        <div class="item-hints" type="button">
+                                            <div class="hint" data-position="4">
+                                                <span class="hint-radius" aria-hidden="true"></span>
+                                                <span class="hint-dot" aria-hidden="true"></span>
+                                                <div class="hint-content">
+                                                    <h5>App Entwicklung</h5>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                             <a href="https://www.linkedin.com/in/benedict-lang-72b78721a"
                                class="btn button__flex fade-in" aria-label="linkedIn Profil (new tab)" target="_blank">
                                 Kenntnistests ansehen<i class="uil uil-linkedin-alt button__icon"></i>
                             </a>
                         </div>
-                        <div class="card">
-                            <ul class="skills_languages cloud">
-                                <li data-weight="6">Italienisch
-                                    <div class="item-hints" type="button">
-                                        <div class="hint" data-position="4">
-                                            <span class="hint-radius" aria-hidden="true"></span>
-                                            <span class="hint-dot" aria-hidden="true"></span>
-                                            <div class="hint-content">
-                                                <h5>Italienisch</h5>
-                                                <p>CEFR Level: B1</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-weight="8">Deutsch
-                                    <div class="item-hints" type="button">
-                                        <div class="hint" data-position="4">
-                                            <span class="hint-radius" aria-hidden="true"></span>
-                                            <span class="hint-dot" aria-hidden="true"></span>
-                                            <div class="hint-content">
-                                                <h5>Deutsch</h5>
-                                                <p>Muttersprache</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-weight="7">Englisch
-                                    <div class="item-hints" type="button">
-                                        <div class="hint" data-position="4">
-                                            <span class="hint-radius" aria-hidden="true"></span>
-                                            <span class="hint-dot" aria-hidden="true"></span>
-                                            <div class="hint-content">
-                                                <h5>Englisch</h5>
-                                                <p>CEFR Level: C1/C2</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-weight="3">Französisch
-                                    <div class="item-hints" type="button">
-                                        <div class="hint" data-position="4">
-                                            <span class="hint-radius" aria-hidden="true"></span>
-                                            <span class="hint-dot" aria-hidden="true"></span>
-                                            <div class="hint-content">
-                                                <h5>Französisch</h5>
-                                                <p>CEFR Level: B1</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+
                     </section>
                     <!-- ================================== LOGOS ================================== -->
                     <section id="customers" class="page-section">
@@ -1396,51 +1609,87 @@
                             <div class="slider-shadow"></div>
                             <ul class="slide-track">
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Praxis%20Lang%20weiß.svg"
-                                         alt="Customer Logo Dentistry Lang"/>
+                                    <a href="https://78647zahnarzt.de/" aria-label="Zahnarztpraxis Lang (new tab)"
+                                       target="_blank">
+                                        <img src="media/icons/logos/Logo%20Praxis%20Lang%20weiß.svg"
+                                             alt="Customer Logo Dentistry Lang"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Med%20Dent%20Consult.svg"
-                                         alt="Customer Logo Med Dent Consult"/>
+                                    <a href="https://medeconsult.de/" aria-label="Medeconsult (new tab)" target="_blank"
+                                       style="--scale: .9">
+                                        <img src="media/icons/logos/Logo%20Med%20Dent%20Consult.svg"
+                                             alt="Customer Logo Med Dent Consult"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Kanzlei%20Lang.svg"
-                                         alt="Customer Logo Law Office Lang"/>
+                                    <a href="https://www.anwaltskanzlei-dres-lang.de/"
+                                       aria-label="Kanzlei Lang (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20Kanzlei%20Lang.svg"
+                                             alt="Customer Logo Law Office Lang"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20CD.svg"
-                                         alt="Customer Logo Christoph Duwenkamp Photography"/>
+                                    <a href="https://1x.com/christophduwenkamp"
+                                       aria-label="Christoph Duwenkamp Fotografie (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20CD.svg"
+                                             alt="Customer Logo Christoph Duwenkamp Photography"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Zoopra.svg" alt="Customer Logo Zoopra"/>
+                                    <a href="https://www.zoopra.de/" aria-label="Zoopra UG (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20Zoopra.svg" alt="Customer Logo Zoopra"
+                                             style="--scale: .8"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20HdM.svg"
-                                         alt="Customer Logo University of Media Stuttgart"/>
+                                    <a href="https://www.hdm-stuttgart.de/" aria-label="HDM Stuttgart (new tab)"
+                                       target="_blank">
+                                        <img src="media/icons/logos/Logo%20HdM.svg"
+                                             alt="Customer Logo University of Media Stuttgart" style="--scale: .9"/>
+                                    </a>
                                 </li>
-                                <!--TODO-->
+                                <!--TODO avoid copy-->
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Praxis%20Lang%20weiß.svg"
-                                         alt="Customer Logo Dentistry Lang"/>
-                                </li>
-                                <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Med%20Dent%20Consult.svg"
-                                         alt="Customer Logo Med Dent Consult"/>
-                                </li>
-                                <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Kanzlei%20Lang.svg"
-                                         alt="Customer Logo Law Office Lang"/>
+                                    <a href="https://78647zahnarzt.de/" aria-label="Zahnarztpraxis Lang (new tab)"
+                                       target="_blank">
+                                        <img src="media/icons/logos/Logo%20Praxis%20Lang%20weiß.svg"
+                                             alt="Customer Logo Dentistry Lang"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20CD.svg"
-                                         alt="Customer Logo Christoph Duwenkamp Photography"/>
+                                    <a href="https://medeconsult.de/" aria-label="Medeconsult (new tab)" target="_blank"
+                                       style="--scale: .9">
+                                        <img src="media/icons/logos/Logo%20Med%20Dent%20Consult.svg"
+                                             alt="Customer Logo Med Dent Consult"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20Zoopra.svg" alt="Customer Logo Zoopra"/>
+                                    <a href="https://www.anwaltskanzlei-dres-lang.de/"
+                                       aria-label="Kanzlei Lang (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20Kanzlei%20Lang.svg"
+                                             alt="Customer Logo Law Office Lang"/>
+                                    </a>
                                 </li>
                                 <li class="customer-logo">
-                                    <img src="media/icons/logos/Logo%20HdM.svg"
-                                         alt="Customer Logo University of Media Stuttgart"/>
+                                    <a href="https://1x.com/christophduwenkamp"
+                                       aria-label="Christoph Duwenkamp Fotografie (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20CD.svg"
+                                             alt="Customer Logo Christoph Duwenkamp Photography"/>
+                                    </a>
+                                </li>
+                                <li class="customer-logo">
+                                    <a href="https://www.zoopra.de/" aria-label="Zoopra UG (new tab)" target="_blank">
+                                        <img src="media/icons/logos/Logo%20Zoopra.svg" alt="Customer Logo Zoopra"
+                                             style="--scale: .8"/>
+                                    </a>
+                                </li>
+                                <li class="customer-logo">
+                                    <a href="https://www.hdm-stuttgart.de/" aria-label="HDM Stuttgart (new tab)"
+                                       target="_blank">
+                                        <img src="media/icons/logos/Logo%20HdM.svg"
+                                             alt="Customer Logo University of Media Stuttgart" style="--scale: .9"/>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

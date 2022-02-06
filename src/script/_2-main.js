@@ -166,7 +166,7 @@ navItem.forEach($entry => {
     if (arrow != null) {
         ['click'].forEach(evt => {
             navLink.addEventListener(evt, () => {
-                if(!bpWs.matches){
+                if (!bpWs.matches) {
                     const elem = document.getElementById($entry.getAttribute('data-url'));
                     window.scrollTo(0, elem.offsetTop);
                     console.log("Target" + elem);
@@ -175,7 +175,7 @@ navItem.forEach($entry => {
                     rotate90(arrow, true);
                     subMenu.classList.remove('hidden');
                 } else {
-                        rotate90(arrow, false);
+                    rotate90(arrow, false);
                     subMenu.classList.add('hidden');
                 }
             });
@@ -214,25 +214,56 @@ function resizeBG() {
 }
 
 /* ==== SKILLS SECTION ====*/
+const skillGroups = document.querySelectorAll('input[name="skill_group"]');
+const card = document.querySelector(".card");
 const wClouds = document.querySelectorAll('.cloud');
+skillGroups.forEach(sG => {
+    sG.addEventListener('input', evt => switchCloud(evt.target))
+});
+
+function switchCloud($target) {
+    wClouds.forEach(cloud => cloud.classList.add('hidden'));
+    switch ($target.id) {
+        case 'skill-languages':
+            document.getElementById('skills-languages').classList.remove("hidden");
+            break;
+        case 'skill-frontend':
+            document.getElementById('skills-frontend').classList.remove("hidden");
+            break;
+        case 'skill-backend':
+            document.getElementById('skills-backend').classList.remove("hidden");
+            break;
+        case 'skill-software':
+            document.getElementById('skills-software').classList.remove("hidden");
+            break;
+        default:
+            break;
+    }
+}
+
 wClouds.forEach(cloud => {
     const cloudItems = cloud.querySelectorAll('li')
     cloudItems.forEach(item => {
         ['mouseover', 'focus'].forEach(e => {
             item.addEventListener(e, function () {
                 cloudItems.forEach(cItem => {
-                    if (cItem !== item) cItem.classList.add('blur-light');
+                    if (cItem !== item) {
+                        cItem.classList.add('blur-light', 'shrink');
+                    } else {
+                        cItem.classList.add('grow');
+                    }
                 });
             });
         });
         item.addEventListener('mouseleave', function () {
-            cloudItems.forEach(cItem => cItem.classList.remove('blur-light'));
+            cloudItems.forEach(cItem => {
+                cItem.classList.remove('blur-light', 'shrink', 'grow');
+            });
         });
     });
 });
 
 /* ==== 3D HEADER ====*/
-//TODO
 
 /* ==== 3D FOOTER ====*/
 
@@ -310,6 +341,8 @@ setHeaderOffset();*/
 
 
 //reCaptcha for forms
+document.cookie = 'Secure';
+
 function onSubmit($token) {
     document.getElementById("contact-form").submit();
 }
@@ -400,6 +433,8 @@ document.getElementById("experience-dev").innerHTML = (new Date().getFullYear() 
  * Date: 2013-05-09 18:54:22 +0200
 */
 
+/*
+TODO
 (function ($) {
     "use strict";
     $.fn.jQCloud = function (word_array, options) {
@@ -661,4 +696,4 @@ var word_arrays = [
     {text: "card card withdraw", weight: 3, html: {class: "category withdraw"}},
     {text: "debit card withdraw", weight: 4, html: {class: "category withdraw"}},
     {text: "withdraw", weight: 9.1, html: {class: "category withdraw"}},
-];
+];*/

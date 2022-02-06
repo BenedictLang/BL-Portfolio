@@ -7,7 +7,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "prod": "parcel build"
+    "prod": "parcel build --no-source-maps"
   },
   "dependencies": {
     "npm": "^8.1.2",
