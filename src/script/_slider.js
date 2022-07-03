@@ -84,6 +84,34 @@ export const slideData = [
         sub: 'Collaborative Trip Planner',
         desc: 'Profile Settings, Invitations',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_profile.png'
+    },
+    {
+        index: 12,
+        headline: 'MRoast',
+        sub: 'Canteen Food Disadviser',
+        desc: 'Home Screen, Feed',
+        src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast_home.png'
+    },
+    {
+        index: 13,
+        headline: 'MRoast',
+        sub: 'Canteen Food Disadviser',
+        desc: 'Statisic calculation',
+        src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast_stats.png'
+    },
+    {
+        index: 14,
+        headline: 'MRoast',
+        sub: 'Canteen Food Disadviser',
+        desc: 'Empty Feed',
+        src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast.png'
+    },
+    {
+        index: 15,
+        headline: 'MRoast',
+        sub: 'Canteen Food Disadviser',
+        desc: 'Feed filter',
+        src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast_filter.png'
     }
 ]
 
