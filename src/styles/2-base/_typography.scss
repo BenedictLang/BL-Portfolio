@@ -121,14 +121,13 @@ button {
   font-size: clamp(0.125rem, 1rem + 1vw, 1rem);
 }
 
-@media (max-width: var(--bp-wideS)) {
-  .page .page-content .page-section h1 {
-    max-width: 720px;
-    font-size: calc(24px + 2.58vw);
-    line-height: calc(24px + 2.58vw);
-  }
-
-  p, li, input, span {
-    font-size: clamp(1.125rem, 1rem + 10vw, 3rem);
-  }
+/*
+.page .page-content .page-section h1 {
+  max-width: 720px;
+  font-size: calc(24px + 2.58vw);
+  line-height: calc(24px + 2.58vw);
 }
+
+p, li, input, span {
+  font-size: clamp(1.125rem, 1rem + 10vw, 3rem);
+}*/

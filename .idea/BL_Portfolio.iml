@@ -83,5 +83,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scrollreveal" level="application" />
     <orderEntry type="library" name="aos" level="application" />
+    <orderEntry type="library" name="api" level="application" />
+    <orderEntry type="library" name="line" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="gsap" level="application" />
+    <orderEntry type="library" name="react" level="application" />
   </component>
 </module>

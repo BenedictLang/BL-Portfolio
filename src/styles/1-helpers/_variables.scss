@@ -40,7 +40,7 @@ hsl(225,72,63)
   --bpWideS: 1200px;
 
   --clr-slider: linear-gradient(75deg, rgba(255, 255, 255, 0.95) 35%, var(--clr-third));
-  --pdd-side: clamp(4vw, calc(1.15em + 10vw), 40vw);
+  --pdd-side: clamp(4vw, calc(1.15em + 6vw), 20vw);
 }
 
 /* theme dark style */

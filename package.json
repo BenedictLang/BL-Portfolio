@@ -7,12 +7,12 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "prod": "parcel build --no-source-maps"
+    "prod": "parcel build --no-source-maps --dist-dir public/ --public-url ./"
   },
   "dependencies": {
-    "npm": "^8.1.2",
-    "script": "^0.1.4",
-    "src": "^1.1.2"
+    "npm": "^8.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@parcel/optimizer-data-url": "^2.0.0",
@@ -20,10 +20,11 @@
     "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-inline-string": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "jquery": "^1.11.1",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "parcel": "^2.0.0",
     "parcel-plugin-nuke-dist": "^1.0.1",
+    "process": "^0.11.10",
     "sass": "^1.38.1"
   }
 }
