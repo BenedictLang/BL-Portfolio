@@ -3,111 +3,118 @@ import React from "react";
 export const slideData = [
     {
         index: 0,
+        headline: 'AI GauGAN',
+        sub: 'KI Bildgenerierung',
+        desc: 'Python Web-App die GANs zur synthetischen Bildgenerierung nutzt',
+        src: 'https://apps.benedict.lang-familie.de/media/portfolio/GauGAN.png'
+    },
+    {
+        index: 1,
         headline: 'HoRST 3D',
         sub: 'Raumsuch-Terminal',
         desc: 'PWA programmiert mit ThreeJS',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/horst3dDesktop.png'
     },
     {
-        index: 1,
+        index: 2,
         headline: 'HoRST 3D',
         sub: 'Raumsuch-Terminal',
         desc: 'Progressive Web App - Mobil Demo',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/horst3dMobil.png'
     },
     {
-        index: 2,
+        index: 3,
         headline: 'HoRST 3D',
         sub: 'Raumsuch-Terminal',
         desc: 'Progressive Web App - Tablet Demo',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/horst3dTablet.png'
     },
     {
-        index: 3,
+        index: 4,
         headline: 'VoidMe',
         sub: 'Location Blacklisting',
         desc: 'Android App',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/VoidMe.png'
     },
     {
-        index: 4,
+        index: 5,
         headline: 'VoidMe',
         sub: 'Location Blacklisting',
         desc: 'Android App - Add Location',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/VoidMe_add.jpg'
     },
     {
-        index: 5,
+        index: 6,
         headline: 'VoidMe',
         sub: 'Location Blacklisting',
         desc: 'Android App - Google Map',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/VoidMe_map.jpg'
     },
     {
-        index: 6,
+        index: 7,
         headline: 'getFact',
         sub: 'Fakten-Trainer',
         desc: '(Java, JavaFX, MySQL)',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/getFact.png'
     },
     {
-        index: 7,
+        index: 8,
         headline: 'Tripy',
         sub: 'Collaborative Trip Planner',
         desc: 'Login with verification, password hashing, reset token over SMTP (Java, JavaFX, Firebase)',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_login.png'
     },
     {
-        index: 8,
+        index: 9,
         headline: 'Tripy',
         sub: 'Collaborative Trip Planner',
         desc: 'Home Screen, Collaborative trips',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_home.png'
     },
     {
-        index: 9,
+        index: 10,
         headline: 'Tripy',
         sub: 'Collaborative Trip Planner',
         desc: 'Trip Details',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_trip.png'
     },
     {
-        index: 10,
+        index: 11,
         headline: 'Tripy',
         sub: 'Collaborative Trip Planner',
         desc: 'Trip Members',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_trip_members.png'
     },
     {
-        index: 11,
+        index: 12,
         headline: 'Tripy',
         sub: 'Collaborative Trip Planner',
         desc: 'Profile Settings, Invitations',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/Tripy_profile.png'
     },
     {
-        index: 12,
+        index: 13,
         headline: 'MRoast',
         sub: 'Canteen Food Disadviser',
         desc: 'Home Screen, Feed',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast_home.png'
     },
     {
-        index: 13,
+        index: 14,
         headline: 'MRoast',
         sub: 'Canteen Food Disadviser',
         desc: 'Statisic calculation',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast_stats.png'
     },
     {
-        index: 14,
+        index: 15,
         headline: 'MRoast',
         sub: 'Canteen Food Disadviser',
         desc: 'Empty Feed',
         src: 'https://apps.benedict.lang-familie.de/media/portfolio/MRoast.png'
     },
     {
-        index: 15,
+        index: 16,
         headline: 'MRoast',
         sub: 'Canteen Food Disadviser',
         desc: 'Feed filter',
