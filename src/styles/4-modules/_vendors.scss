@@ -24,7 +24,7 @@
   &:hover ~ .g-captcha__notice,
   &:focus-within ~ .g-captcha__notice{
     opacity: 1;
-    font-size: medium;
+    //font-size: medium;
     @include m.smoothTransition(.3s);
   }
   @include m.speedUpTransition(1.5s);
@@ -38,7 +38,7 @@
   max-width: 600px;
   &:hover, &:focus-within {
     opacity: 1;
-    font-size: medium;
+    //font-size: medium;
     & ~ .rc-anchor-logo-img {
       opacity: 1;
     }
